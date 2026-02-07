@@ -61,14 +61,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-navy-800 antialiased font-sans">
+<body class="bg-white text-navy-800 antialiased font-sans scroll-smooth">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy-900 focus:text-white focus:rounded">Skip to main content</a>
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-navy-100">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-navy-100" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5">
       <div class="flex items-center justify-between">
-        <a href="#" class="font-display text-2xl text-navy-900 tracking-tight">Skyward</a>
+        <a href="#" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
+        <!-- Desktop menu -->
         <div class="hidden md:flex items-center gap-10 text-sm font-medium text-navy-600">
           <a href="#services" class="hover:text-navy-900 transition-colors">Services</a>
           <a href="#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
@@ -76,11 +77,25 @@
           <a href="#case-studies" class="hover:text-navy-900 transition-colors">Case Studies</a>
           <a href="#contact" class="bg-navy-900 text-white px-5 py-2.5 rounded-full hover:bg-navy-800 transition-colors">Contact</a>
         </div>
-        <button class="md:hidden p-2 text-navy-600" aria-label="Open menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <!-- Mobile menu button -->
+        <button id="menu-toggle" class="md:hidden p-2 -mr-2 text-navy-600 hover:text-navy-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
     </div>
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1">
+        <a href="#services" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
+        <a href="#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
+        <a href="#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
+        <a href="#case-studies" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Case Studies</a>
+        <a href="#contact" class="mobile-nav-link block py-4 text-lg font-medium text-white bg-navy-900 hover:bg-navy-800 rounded-full text-center mt-2 transition-colors">Contact</a>
+      </div>
+    </div>
+    <!-- Mobile menu backdrop -->
+    <div id="menu-backdrop" class="md:hidden fixed inset-0 top-[73px] z-30 bg-navy-900/20 backdrop-blur-sm opacity-0 invisible transition-opacity duration-200" aria-hidden="true"></div>
   </nav>
 
   <main id="main">
@@ -116,7 +131,7 @@
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-32 lg:py-40 bg-white">
+  <section id="services" class="py-32 lg:py-40 bg-white scroll-mt-20">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mb-24">
         <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">What We Do</p>
@@ -154,7 +169,7 @@
   </section>
 
   <!-- How We're Different -->
-  <section id="different" class="relative py-32 lg:py-40 overflow-hidden">
+  <section id="different" class="relative py-32 lg:py-40 overflow-hidden scroll-mt-20">
     <div class="absolute inset-0 bg-gradient-to-br from-navy-100/80 via-sky-50/60 to-navy-100/80"></div>
     <div class="absolute inset-0 opacity-30 pointer-events-none">
       <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-400 rounded-full blur-3xl"></div>
@@ -197,7 +212,7 @@
   </section>
 
   <!-- Process: The Skyward Flight Path -->
-  <section id="process" class="py-32 lg:py-40 bg-gray-50">
+  <section id="process" class="py-32 lg:py-40 bg-gray-50 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="text-center max-w-3xl mx-auto mb-20">
         <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">Our Process</p>
@@ -258,7 +273,7 @@
   </section>
 
   <!-- Case Studies -->
-  <section id="case-studies" class="py-32 lg:py-40 bg-white">
+  <section id="case-studies" class="py-32 lg:py-40 bg-white scroll-mt-20">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-20">
         <div class="max-w-2xl">
@@ -303,7 +318,7 @@
   </section>
 
   <!-- Contact / Final CTA -->
-  <section id="contact" class="py-32 lg:py-40 bg-navy-900">
+  <section id="contact" class="py-32 lg:py-40 bg-navy-900 scroll-mt-20">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="max-w-3xl mx-auto text-center">
         <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-6">Let's Talk</p>
@@ -353,5 +368,58 @@
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var menuToggle = document.getElementById('menu-toggle');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var menuBackdrop = document.getElementById('menu-backdrop');
+      var iconOpen = document.getElementById('menu-icon-open');
+      var iconClose = document.getElementById('menu-icon-close');
+      var navLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function openMenu() {
+        mobileMenu.classList.remove('opacity-0', 'invisible', 'translate-y-[-10px]');
+        mobileMenu.classList.add('opacity-100', 'visible', 'translate-y-0');
+        menuBackdrop.classList.remove('opacity-0', 'invisible');
+        menuBackdrop.classList.add('opacity-100', 'visible');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.setAttribute('aria-label', 'Close menu');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        menuBackdrop.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.add('opacity-0', 'invisible', 'translate-y-[-10px]');
+        mobileMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+        menuBackdrop.classList.add('opacity-0', 'invisible');
+        menuBackdrop.classList.remove('opacity-100', 'visible');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open menu');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        menuBackdrop.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      menuToggle.addEventListener('click', function() {
+        var isOpen = mobileMenu.classList.contains('opacity-100');
+        isOpen ? closeMenu() : openMenu();
+      });
+
+      menuBackdrop.addEventListener('click', closeMenu);
+
+      navLinks.forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) closeMenu();
+      });
+    })();
+  </script>
 </body>
 </html>
