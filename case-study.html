@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case study: How Skyward Works grew Budgetocity using SEO and conversion design. Real results from strategic organic growth and UX optimization.">
+  <title>Case Study: How I Grew Budgetocity Using SEO and Conversion Design | Skyward Works</title>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#f0f4f8',
+              100: '#d9e2ec',
+              200: '#bcccdc',
+              300: '#9fb3c8',
+              400: '#829ab1',
+              500: '#627d98',
+              600: '#486581',
+              700: '#334e68',
+              800: '#243b53',
+              900: '#102a43',
+              950: '#0a1929',
+            },
+            sky: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            },
+          },
+          fontFamily: {
+            display: ['DM Serif Display', 'serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-navy-800 antialiased font-sans scroll-smooth">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy-900 focus:text-white focus:rounded">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-navy-100" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
+        <div class="hidden md:flex items-center gap-10 text-sm font-medium text-navy-600">
+          <a href="index.html#services" class="hover:text-navy-900 transition-colors">Services</a>
+          <a href="index.html#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
+          <a href="index.html#process" class="hover:text-navy-900 transition-colors">Process</a>
+          <a href="index.html#case-studies" class="hover:text-navy-900 transition-colors">Case Studies</a>
+          <a href="index.html#contact" class="bg-navy-900 text-white px-5 py-2.5 rounded-full hover:bg-navy-800 transition-colors">Contact</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden p-2 -mr-2 text-navy-600 hover:text-navy-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1">
+        <a href="index.html#services" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
+        <a href="index.html#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
+        <a href="index.html#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
+        <a href="index.html#case-studies" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Case Studies</a>
+        <a href="index.html#contact" class="mobile-nav-link block py-4 text-lg font-medium text-white bg-navy-900 hover:bg-navy-800 rounded-full text-center mt-2 transition-colors">Contact</a>
+      </div>
+    </div>
+    <div id="menu-backdrop" class="md:hidden fixed inset-0 top-[73px] z-30 bg-navy-900/20 backdrop-blur-sm opacity-0 invisible transition-opacity duration-200" aria-hidden="true"></div>
+  </nav>
+
+  <main id="main">
+    <!-- Case Study Hero -->
+    <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden" aria-label="Case study header">
+      <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-700 to-white"></div>
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-sky-400 rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
+        <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">Case Study</p>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.15] tracking-tight mb-6">
+          How I Grew Budgetocity Using SEO and Conversion Design
+        </h1>
+        <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+          Strategic organic growth and UX optimization that moved the needle for a budget-planning SaaS.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm text-navy-200">
+          <span class="flex items-center gap-2"><span class="text-sky-400 font-medium">Client:</span> Budgetocity</span>
+          <span class="flex items-center gap-2"><span class="text-sky-400 font-medium">Focus:</span> SEO · Conversion Design</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Challenge -->
+    <section class="py-16 md:py-24 bg-white scroll-mt-20" aria-labelledby="challenge-heading">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">The Challenge</p>
+        <h2 id="challenge-heading" class="font-display text-3xl md:text-4xl text-navy-900 leading-tight mb-8">
+          Traffic was flat. Sign-ups weren't converting.
+        </h2>
+        <p class="text-lg text-navy-600 leading-relaxed mb-8">
+          Budgetocity had a solid product for budget-conscious consumers and small businesses, but organic visibility was limited and the sign-up flow had too much friction. We needed to grow qualified traffic and improve conversion without a major product overhaul.
+        </p>
+        <p class="text-navy-600 leading-relaxed">
+          Goals: increase organic sessions, improve rankings for high-intent keywords, and lift free-trial conversion through clearer value proposition and streamlined UX.
+        </p>
+      </div>
+    </section>
+
+    <!-- Approach: SEO -->
+    <section class="py-16 md:py-24 bg-gray-50 scroll-mt-20" aria-labelledby="seo-heading">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">The Approach</p>
+        <h2 id="seo-heading" class="font-display text-3xl md:text-4xl text-navy-900 leading-tight mb-6">
+          SEO: Owning the "budget" space
+        </h2>
+        <p class="text-lg text-navy-600 leading-relaxed mb-10">
+          We ran a full content and technical audit, then built a topical cluster around budget planning, savings tools, and comparison content. On-page optimization and internal linking tied it all together so Budgetocity could rank for both informational and commercial-intent queries.
+        </p>
+        <!-- Screenshot placeholder: SEO (e.g. SERP or dashboard) -->
+        <div class="rounded-2xl border-2 border-dashed border-navy-200 bg-navy-50/50 overflow-hidden">
+          <div class="aspect-video w-full flex items-center justify-center text-navy-500 text-sm font-medium">
+            <span>Screenshot placeholder: SEO rankings or content dashboard</span>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-navy-500 text-center">Replace with real screenshot of rankings, GSC, or content hub.</p>
+      </div>
+    </section>
+
+    <!-- Approach: Conversion Design -->
+    <section class="py-16 md:py-24 bg-white scroll-mt-20" aria-labelledby="conversion-heading">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <h2 id="conversion-heading" class="font-display text-3xl md:text-4xl text-navy-900 leading-tight mb-6">
+          Conversion Design: Less friction, clearer value
+        </h2>
+        <p class="text-lg text-navy-600 leading-relaxed mb-10">
+          We redesigned the landing and sign-up flow: clearer headlines, social proof above the fold, and a simplified form. A/B tests on CTA copy and layout led to a new default that we then rolled out site-wide.
+        </p>
+        <!-- Screenshot placeholder: Before/after or new landing page -->
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="rounded-2xl border-2 border-dashed border-navy-200 bg-navy-50/50 overflow-hidden">
+            <div class="aspect-[4/3] w-full flex items-center justify-center text-navy-500 text-sm font-medium px-4 text-center">
+              Screenshot placeholder: Before (landing/sign-up)
+            </div>
+          </div>
+          <div class="rounded-2xl border-2 border-dashed border-navy-200 bg-navy-50/50 overflow-hidden">
+            <div class="aspect-[4/3] w-full flex items-center justify-center text-navy-500 text-sm font-medium px-4 text-center">
+              Screenshot placeholder: After (redesigned)
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-navy-500 text-center">Replace with before/after or key screen captures.</p>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="py-16 md:py-24 bg-gray-50 scroll-mt-20" aria-labelledby="results-heading">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">Results</p>
+        <h2 id="results-heading" class="font-display text-3xl md:text-4xl text-navy-900 leading-tight mb-10">
+          Measurable impact
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
+          <div class="p-8 bg-white rounded-2xl border border-navy-100 shadow-sm text-center">
+            <p class="font-display text-4xl md:text-5xl text-sky-600 mb-2">+187%</p>
+            <p class="text-navy-600 font-medium">Organic sessions (YoY)</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl border border-navy-100 shadow-sm text-center">
+            <p class="font-display text-4xl md:text-5xl text-sky-600 mb-2">+62%</p>
+            <p class="text-navy-600 font-medium">Free-trial conversion rate</p>
+          </div>
+          <div class="p-8 bg-white rounded-2xl border border-navy-100 shadow-sm text-center sm:col-span-2 lg:col-span-1">
+            <p class="font-display text-4xl md:text-5xl text-sky-600 mb-2">3x</p>
+            <p class="text-navy-600 font-medium">Keywords in top 10</p>
+          </div>
+        </div>
+        <p class="text-lg text-navy-600 leading-relaxed mb-10">
+          Within 12 months, Budgetocity saw a substantial lift in organic traffic and sign-ups. The combination of targeted SEO and conversion-focused design made the biggest difference on high-intent pages.
+        </p>
+        <!-- Screenshot placeholder: Results dashboard -->
+        <div class="rounded-2xl border-2 border-dashed border-navy-200 bg-navy-50/50 overflow-hidden">
+          <div class="aspect-video w-full flex items-center justify-center text-navy-500 text-sm font-medium">
+            Screenshot placeholder: Analytics or results dashboard
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-navy-500 text-center">Replace with real chart or dashboard screenshot.</p>
+      </div>
+    </section>
+
+    <!-- Takeaway / CTA -->
+    <section class="py-16 md:py-24 bg-navy-900 scroll-mt-20" aria-labelledby="takeaway-heading">
+      <div class="max-w-3xl mx-auto px-6 lg:px-12 text-center">
+        <h2 id="takeaway-heading" class="font-display text-3xl md:text-4xl text-white leading-tight mb-6">
+          SEO and conversion design work better together.
+        </h2>
+        <p class="text-xl text-navy-200 leading-relaxed mb-10">
+          Driving more traffic only pays off when your experience converts. We paired strategic SEO with focused UX changes to grow Budgetocity's pipeline without scaling spend.
+        </p>
+        <a href="index.html#contact" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-8 py-4 rounded-full transition-colors">
+          Start Your Project
+        </a>
+        <p class="mt-8">
+          <a href="index.html#case-studies" class="text-sky-400 hover:text-sky-300 font-medium transition-colors">← Back to Case Studies</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy-950 text-navy-300 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div>
+          <a href="index.html" class="font-display text-2xl text-white hover:text-sky-400 transition-colors">Skyward Works</a>
+          <p class="mt-4 text-sm max-w-xs">Strategic digital marketing for ambitious brands.</p>
+        </div>
+        <div class="flex gap-12 text-sm">
+          <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+          <a href="#" class="hover:text-white transition-colors">Twitter</a>
+          <a href="#" class="hover:text-white transition-colors">Instagram</a>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-navy-800 flex flex-col sm:flex-row sm:justify-between gap-4 text-sm">
+        <p>© 2025 Skyward. All rights reserved.</p>
+        <div class="flex gap-8">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var menuToggle = document.getElementById('menu-toggle');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var menuBackdrop = document.getElementById('menu-backdrop');
+      var iconOpen = document.getElementById('menu-icon-open');
+      var iconClose = document.getElementById('menu-icon-close');
+      var navLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function openMenu() {
+        mobileMenu.classList.remove('opacity-0', 'invisible', 'translate-y-[-10px]');
+        mobileMenu.classList.add('opacity-100', 'visible', 'translate-y-0');
+        menuBackdrop.classList.remove('opacity-0', 'invisible');
+        menuBackdrop.classList.add('opacity-100', 'visible');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.setAttribute('aria-label', 'Close menu');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        menuBackdrop.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.add('opacity-0', 'invisible', 'translate-y-[-10px]');
+        mobileMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
+        menuBackdrop.classList.add('opacity-0', 'invisible');
+        menuBackdrop.classList.remove('opacity-100', 'visible');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open menu');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        menuBackdrop.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+          var isOpen = mobileMenu.classList.contains('opacity-100');
+          isOpen ? closeMenu() : openMenu();
+        });
+      }
+      if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
+      navLinks.forEach(function(link) { link.addEventListener('click', closeMenu); });
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
