@@ -67,11 +67,11 @@
         #0a1929 0%,
         #102a43 15%,
         #1e3a5f 28%,
-        #b45309 38%,
+        #4f46e5 38%,
         #0ea5e9 48%,
-        #4c1d95 60%,
-        #9f1239 72%,
-        #102a43 88%,
+        #6366f1 55%,
+        #8b5cf6 65%,
+        #102a43 85%,
         #0a1929 100%
       );
       background-size: 400% 400%;
@@ -89,7 +89,7 @@
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy-900 focus:text-white focus:rounded">Skip to main content</a>
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-navy-100" aria-label="Main navigation">
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-navy-100 md:bg-white/80 md:backdrop-blur-md" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5">
       <div class="flex items-center justify-between">
         <a href="#" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
@@ -99,6 +99,7 @@
           <a href="#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
           <a href="#process" class="hover:text-navy-900 transition-colors">Process</a>
           <a href="#case-studies" class="hover:text-navy-900 transition-colors">Case Studies</a>
+          <a href="blog/" class="hover:text-navy-900 transition-colors">Blog</a>
           <a href="#contact" class="bg-sky-500 text-white px-5 py-2.5 rounded-full hover:bg-sky-400 transition-colors">Get a Free Consultation</a>
         </div>
         <!-- Mobile menu button -->
@@ -109,12 +110,13 @@
       </div>
     </div>
     <!-- Mobile menu overlay -->
-    <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true">
+    <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 shadow-xl opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true" style="background-color: #ffffff;">
       <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1">
         <a href="services.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
         <a href="#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
         <a href="#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
         <a href="#case-studies" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Case Studies</a>
+        <a href="blog/" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Blog</a>
         <a href="#contact" class="mobile-nav-link block py-4 text-lg font-medium text-white bg-sky-500 hover:bg-sky-400 rounded-full text-center mt-2 transition-colors">Get a Free Consultation</a>
       </div>
     </div>
@@ -161,6 +163,24 @@
     </div>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10" aria-hidden="true">
       <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+  </section>
+
+  <!-- Free Local Marketing Advice - Latest Blog Post -->
+  <section id="latest-post" class="py-12 lg:py-16 bg-navy-50 border-b border-navy-100 scroll-mt-20" aria-labelledby="latest-post-heading">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div id="latest-post-card" class="max-w-4xl mx-auto rounded-2xl bg-white border border-navy-100 shadow-sm p-8 lg:p-10">
+        <h2 id="latest-post-heading" class="font-display text-2xl sm:text-3xl text-navy-900 leading-tight mb-4">Want free local marketing advice?</h2>
+        <p class="text-navy-600 leading-relaxed mb-6">I document exactly how I rank local businesses using SEO, content, and smart site structure. Learn from what I'm doing in real time.</p>
+        <div id="latest-post-content" class="mb-6">
+          <h3 id="latest-post-title" class="font-display text-lg sm:text-xl text-navy-900 mb-2">Local SEO for Home Service Businesses: A Complete Guide</h3>
+          <p id="latest-post-excerpt" class="text-navy-600 text-sm sm:text-base leading-relaxed mb-4">How to rank your plumbing, HVAC, roofing, or landscaping business in local search. Site structure, Google Business Profile, content strategy, and the mistakes that hold most contractors back.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <a id="latest-post-cta" href="blog/local-seo-for-home-service-businesses.html" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-6 py-3 rounded-full transition-colors text-sm">Read the Latest Post</a>
+          <a href="blog/" class="text-sm text-sky-600 hover:text-sky-500 font-medium">Or browse all marketing articles →</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -447,6 +467,21 @@
     </div>
   </footer>
 
+  <script src="blog/posts-data.js"></script>
+  <script>
+    (function() {
+      var posts = (window.BLOG_POSTS || []).slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+      var latest = posts[0];
+      if (latest) {
+        var titleEl = document.getElementById('latest-post-title');
+        var excerptEl = document.getElementById('latest-post-excerpt');
+        var ctaEl = document.getElementById('latest-post-cta');
+        if (titleEl) titleEl.textContent = latest.title;
+        if (excerptEl) excerptEl.textContent = latest.excerpt;
+        if (ctaEl) ctaEl.href = 'blog/' + latest.slug + '.html';
+      }
+    })();
+  </script>
   <script>
     (function() {
       // Hero form handler

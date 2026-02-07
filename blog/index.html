@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Google Ads services from Skyward Works. PPC campaigns that put your brand in front of people actively searching for your products or services.">
-  <title>Google Ads Services | PPC & Search Advertising | Skyward Works</title>
+  <meta name="description" content="Marketing articles and local SEO advice from Skyward Works. Learn how we rank local businesses using SEO, content, and smart site structure.">
+  <title>Blog | Marketing Articles & Local SEO Advice | Skyward Works</title>
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -14,6 +14,8 @@
           colors: {
             navy: { 50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8', 400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68', 800: '#243b53', 900: '#102a43', 950: '#0a1929' },
             sky: { 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+            violet: { 500: '#8b5cf6', 600: '#7c3aed' },
+            indigo: { 500: '#6366f1', 600: '#4f46e5' },
           },
           fontFamily: { display: ['DM Serif Display', 'serif'], sans: ['DM Sans', 'system-ui', 'sans-serif'] },
         },
@@ -54,13 +56,14 @@
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-navy-100 md:bg-white/80 md:backdrop-blur-md" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5">
       <div class="flex items-center justify-between">
-        <a href="index.html" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
+        <a href="../index.html" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
         <div class="hidden md:flex items-center gap-10 text-sm font-medium text-navy-600">
-          <a href="services.html" class="hover:text-navy-900 transition-colors">Services</a>
-          <a href="index.html#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
-          <a href="index.html#process" class="hover:text-navy-900 transition-colors">Process</a>
-          <a href="index.html#case-studies" class="hover:text-navy-900 transition-colors">Case Studies</a>
-          <a href="index.html#contact" class="bg-sky-500 text-white px-5 py-2.5 rounded-full hover:bg-sky-400 transition-colors">Get a Free Consultation</a>
+          <a href="../services.html" class="hover:text-navy-900 transition-colors">Services</a>
+          <a href="../index.html#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
+          <a href="../index.html#process" class="hover:text-navy-900 transition-colors">Process</a>
+          <a href="../index.html#case-studies" class="hover:text-navy-900 transition-colors">Case Studies</a>
+          <a href="index.html" class="text-navy-900 font-medium">Blog</a>
+          <a href="../index.html#contact" class="bg-sky-500 text-white px-5 py-2.5 rounded-full hover:bg-sky-400 transition-colors">Get a Free Consultation</a>
         </div>
         <button id="menu-toggle" class="md:hidden p-2 -mr-2 text-navy-600 hover:text-navy-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -70,55 +73,38 @@
     </div>
     <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 shadow-xl opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true" style="background-color: #ffffff;">
       <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1">
-        <a href="services.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
-        <a href="index.html#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
-        <a href="index.html#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
-        <a href="index.html#case-studies" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Case Studies</a>
-        <a href="index.html#contact" class="mobile-nav-link block py-4 text-lg font-medium text-white bg-sky-500 hover:bg-sky-400 rounded-full text-center mt-2 transition-colors">Get a Free Consultation</a>
+        <a href="../services.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
+        <a href="../index.html#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
+        <a href="../index.html#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
+        <a href="../index.html#case-studies" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Case Studies</a>
+        <a href="index.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-900 bg-navy-50 rounded-lg px-4 -mx-4">Blog</a>
+        <a href="../index.html#contact" class="mobile-nav-link block py-4 text-lg font-medium text-white bg-sky-500 hover:bg-sky-400 rounded-full text-center mt-2 transition-colors">Get a Free Consultation</a>
       </div>
     </div>
     <div id="menu-backdrop" class="md:hidden fixed inset-0 top-[73px] z-30 bg-navy-900/20 backdrop-blur-sm opacity-0 invisible transition-opacity duration-200" aria-hidden="true"></div>
   </nav>
 
   <main id="main">
-    <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden" aria-label="Google Ads header">
+    <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden" aria-label="Blog header">
       <div id="hero-gradient" class="absolute inset-0"></div>
       <div class="absolute inset-0 opacity-20 pointer-events-none">
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-400 rounded-full blur-3xl"></div>
         <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-400/70 rounded-full blur-3xl"></div>
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
-        <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">Service</p>
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.15] tracking-tight mb-6">Google Ads</h1>
-        <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">Capture high-intent search traffic. We run PPC campaigns on Google that put your brand in front of people actively looking for your products or services.</p>
-        <a href="index.html#contact" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-8 py-4 rounded-full transition-colors">Get a Free Consultation</a>
+        <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">Marketing Articles</p>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.15] tracking-tight mb-6">Blog</h1>
+        <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">Free local marketing advice. I document exactly how I rank local businesses using SEO, content, and smart site structure.</p>
       </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-white scroll-mt-20">
-      <div class="max-w-4xl mx-auto px-6 lg:px-12">
-        <h2 class="font-display text-3xl md:text-4xl text-navy-900 leading-tight mb-8">Paid search that captures high-intent customers</h2>
-        <p class="text-lg text-navy-600 leading-relaxed mb-6">When someone searches on Google, they're already in buying mode. We build Search, Display, and Shopping campaigns that reach them at the right moment—with the right messaging—and convert that intent into leads and sales.</p>
-        <p class="text-navy-600 leading-relaxed mb-10">From keyword strategy and bid management to landing page optimization, we maximize every dollar in your Google Ads budget. Our data-driven approach keeps your CPA low and your ROI high.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="index.html#contact" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-8 py-4 rounded-full transition-colors">Start Your Project</a>
-          <a href="services.html" class="inline-flex items-center text-sky-600 hover:text-sky-500 font-medium">← Back to Services</a>
+    <section class="py-16 md:py-24 bg-white scroll-mt-20" aria-labelledby="posts-heading">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <h2 id="posts-heading" class="sr-only">Marketing articles</h2>
+        <div id="blog-posts-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Posts rendered by JS from posts-data.js -->
         </div>
-        <div class="mt-16 pt-12 border-t border-navy-200">
-          <p class="text-sm font-medium text-navy-500 uppercase tracking-wider mb-4">Explore How Skyward Assists</p>
-          <div class="flex flex-wrap gap-3 mb-6">
-            <a href="data-driven-velocity.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Data-Driven Velocity</a>
-            <a href="ai-assisted-precision.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">AI-Assisted Precision</a>
-            <a href="semantic-seo.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Semantic SEO</a>
-          </div>
-          <p class="text-sm font-medium text-navy-500 uppercase tracking-wider mb-4">Other Services</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="seo.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">SEO</a>
-            <a href="web-design.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Web Design</a>
-            <a href="content-creation.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Content Creation</a>
-            <a href="meta-ads.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Meta Ads</a>
-          </div>
-        </div>
+        <p id="no-posts-message" class="text-center text-navy-500 py-12 hidden">No posts yet. Check back soon.</p>
       </div>
     </section>
   </main>
@@ -127,7 +113,7 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
         <div>
-          <a href="index.html" class="font-display text-2xl text-white hover:text-sky-400 transition-colors">Skyward Works</a>
+          <a href="../index.html" class="font-display text-2xl text-white hover:text-sky-400 transition-colors">Skyward Works</a>
           <p class="mt-4 text-sm max-w-xs">Strategic digital marketing for ambitious brands.</p>
         </div>
         <div class="flex gap-12 text-sm">
@@ -146,8 +132,36 @@
     </div>
   </footer>
 
+  <script src="posts-data.js"></script>
   <script>
     (function() {
+      function formatDate(dateStr) {
+        var d = new Date(dateStr);
+        return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      }
+      var posts = (window.BLOG_POSTS || []).slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
+      var grid = document.getElementById('blog-posts-grid');
+      var noPosts = document.getElementById('no-posts-message');
+      if (posts.length === 0) {
+        noPosts.classList.remove('hidden');
+      } else {
+        posts.forEach(function(p) {
+          var card = document.createElement('article');
+          card.className = 'group flex flex-col bg-white rounded-2xl shadow-sm border border-navy-100 overflow-hidden hover:shadow-xl hover:border-sky-200 transition-all duration-300';
+          card.innerHTML =
+            '<div class="aspect-[4/3] bg-gradient-to-br from-navy-100 to-sky-50 flex items-center justify-center p-8">' +
+            '  <svg class="w-12 h-12 text-navy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>' +
+            '</div>' +
+            '<div class="p-6 lg:p-8 flex flex-col flex-1">' +
+            '  <time class="text-sm text-navy-500 mb-2" datetime="' + p.date + '">' + formatDate(p.date) + '</time>' +
+            '  <h3 class="font-display text-xl text-navy-900 mb-2 group-hover:text-sky-600 transition-colors">' + p.title + '</h3>' +
+            '  <p class="text-navy-600 text-sm leading-relaxed mb-6 flex-1">' + p.excerpt + '</p>' +
+            '  <a href="' + p.slug + '.html" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold py-3 px-6 rounded-full transition-colors text-sm">Read More</a>' +
+            '</div>';
+          grid.appendChild(card);
+        });
+      }
+
       var menuToggle = document.getElementById('menu-toggle');
       var mobileMenu = document.getElementById('mobile-menu');
       var menuBackdrop = document.getElementById('menu-backdrop');
