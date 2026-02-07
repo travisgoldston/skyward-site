@@ -23,6 +23,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    #hero-gradient {
+      background: linear-gradient(
+        135deg,
+        #0a1929 0%,
+        #102a43 15%,
+        #1e3a5f 28%,
+        #b45309 38%,
+        #0ea5e9 48%,
+        #4c1d95 60%,
+        #9f1239 72%,
+        #102a43 88%,
+        #0a1929 100%
+      );
+      background-size: 400% 400%;
+      animation: hero-gradient-flow 45s ease-in-out infinite;
+    }
+    @keyframes hero-gradient-flow {
+      0%, 100% { background-position: 0% 50%; }
+      25% { background-position: 100% 25%; }
+      50% { background-position: 50% 100%; }
+      75% { background-position: 25% 0%; }
+    }
+  </style>
 </head>
 <body class="bg-white text-navy-800 antialiased font-sans scroll-smooth">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy-900 focus:text-white focus:rounded">Skip to main content</a>
@@ -58,10 +82,10 @@
 
   <main id="main">
     <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden" aria-label="Content Creation header">
-      <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-700 to-white"></div>
-      <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-sky-400 rounded-full blur-3xl"></div>
+      <div id="hero-gradient" class="absolute inset-0"></div>
+      <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-400 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-400/70 rounded-full blur-3xl"></div>
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">Service</p>
