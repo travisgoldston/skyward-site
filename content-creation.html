@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Content creation services from Skyward Works. Blog posts, landing pages, and on-brand copy that builds authority and drives conversions.">
+  <title>Content Creation Services | Skyward Works</title>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { 50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8', 400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68', 800: '#243b53', 900: '#102a43', 950: '#0a1929' },
+            sky: { 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+          },
+          fontFamily: { display: ['DM Serif Display', 'serif'], sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-navy-800 antialiased font-sans scroll-smooth">
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy-900 focus:text-white focus:rounded">Skip to main content</a>
+
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-navy-100" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
+        <div class="hidden md:flex items-center gap-10 text-sm font-medium text-navy-600">
+          <a href="services.html" class="hover:text-navy-900 transition-colors">Services</a>
+          <a href="index.html#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
+          <a href="index.html#process" class="hover:text-navy-900 transition-colors">Process</a>
+          <a href="index.html#case-studies" class="hover:text-navy-900 transition-colors">Case Studies</a>
+          <a href="index.html#contact" class="bg-sky-500 text-white px-5 py-2.5 rounded-full hover:bg-sky-400 transition-colors">Get a Free Consultation</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden p-2 -mr-2 text-navy-600 hover:text-navy-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1">
+        <a href="services.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
+        <a href="index.html#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
+        <a href="index.html#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
+        <a href="index.html#case-studies" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Case Studies</a>
+        <a href="index.html#contact" class="mobile-nav-link block py-4 text-lg font-medium text-white bg-sky-500 hover:bg-sky-400 rounded-full text-center mt-2 transition-colors">Get a Free Consultation</a>
+      </div>
+    </div>
+    <div id="menu-backdrop" class="md:hidden fixed inset-0 top-[73px] z-30 bg-navy-900/20 backdrop-blur-sm opacity-0 invisible transition-opacity duration-200" aria-hidden="true"></div>
+  </nav>
+
+  <main id="main">
+    <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden" aria-label="Content Creation header">
+      <div class="absolute inset-0 bg-gradient-to-b from-navy-900 via-navy-700 to-white"></div>
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-sky-400 rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
+        <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">Service</p>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.15] tracking-tight mb-6">Content Creation</h1>
+        <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">Content that engages and ranks. From blog posts to landing pages, we create on-brand copy that builds authority and drives conversions.</p>
+        <a href="index.html#contact" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-8 py-4 rounded-full transition-colors">Get a Free Consultation</a>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white scroll-mt-20">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <h2 class="font-display text-3xl md:text-4xl text-navy-900 leading-tight mb-8">Copy that connects, converts, and performs</h2>
+        <p class="text-lg text-navy-600 leading-relaxed mb-6">Great content does more than inform—it persuades, builds trust, and moves readers to action. We craft blog posts, landing pages, product descriptions, and editorial content in your brand voice.</p>
+        <p class="text-navy-600 leading-relaxed mb-10">Whether you need SEO-focused articles, conversion-driven landing copy, or ongoing content support, we deliver messaging that resonates with your audience and supports your growth goals.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="index.html#contact" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-8 py-4 rounded-full transition-colors">Start Your Project</a>
+          <a href="services.html" class="inline-flex items-center text-sky-600 hover:text-sky-500 font-medium">← Back to Services</a>
+        </div>
+        <div class="mt-16 pt-12 border-t border-navy-200">
+          <p class="text-sm font-medium text-navy-500 uppercase tracking-wider mb-4">Explore Other Services</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="seo.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">SEO</a>
+            <a href="web-design.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Web Design</a>
+            <a href="meta-ads.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Meta Ads</a>
+            <a href="google-ads.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Google Ads</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy-950 text-navy-300 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+        <div>
+          <a href="index.html" class="font-display text-2xl text-white hover:text-sky-400 transition-colors">Skyward Works</a>
+          <p class="mt-4 text-sm max-w-xs">Strategic digital marketing for ambitious brands.</p>
+        </div>
+        <div class="flex gap-12 text-sm">
+          <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+          <a href="#" class="hover:text-white transition-colors">Twitter</a>
+          <a href="#" class="hover:text-white transition-colors">Instagram</a>
+        </div>
+      </div>
+      <div class="mt-16 pt-8 border-t border-navy-800 flex flex-col sm:flex-row sm:justify-between gap-4 text-sm">
+        <p>© 2025 Skyward. All rights reserved.</p>
+        <div class="flex gap-8">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var menuToggle = document.getElementById('menu-toggle');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var menuBackdrop = document.getElementById('menu-backdrop');
+      var iconOpen = document.getElementById('menu-icon-open');
+      var iconClose = document.getElementById('menu-icon-close');
+      var navLinks = document.querySelectorAll('.mobile-nav-link');
+      function openMenu() { mobileMenu.classList.remove('opacity-0','invisible','translate-y-[-10px]'); mobileMenu.classList.add('opacity-100','visible','translate-y-0'); menuBackdrop.classList.remove('opacity-0','invisible'); menuBackdrop.classList.add('opacity-100','visible'); iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden'); menuToggle.setAttribute('aria-expanded','true'); menuToggle.setAttribute('aria-label','Close menu'); document.body.style.overflow='hidden'; }
+      function closeMenu() { mobileMenu.classList.add('opacity-0','invisible','translate-y-[-10px]'); mobileMenu.classList.remove('opacity-100','visible','translate-y-0'); menuBackdrop.classList.add('opacity-0','invisible'); menuBackdrop.classList.remove('opacity-100','visible'); iconOpen.classList.remove('hidden'); iconClose.classList.add('hidden'); menuToggle.setAttribute('aria-expanded','false'); menuToggle.setAttribute('aria-label','Open menu'); document.body.style.overflow=''; }
+      if (menuToggle) menuToggle.addEventListener('click', function() { document.getElementById('mobile-menu').classList.contains('opacity-100') ? closeMenu() : openMenu(); });
+      if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
+      navLinks.forEach(function(l) { l.addEventListener('click', closeMenu); });
+      window.addEventListener('resize', function() { if (window.innerWidth >= 768) closeMenu(); });
+    })();
+  </script>
+</body>
+</html>
