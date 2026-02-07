@@ -49,8 +49,8 @@
             },
           },
           fontFamily: {
-            display: ['DM Serif Display', 'serif'],
-            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+            sans: ['Montserrat', 'system-ui', 'sans-serif'],
           },
         },
       },
@@ -59,7 +59,7 @@
   <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     #hero-gradient {
       background: linear-gradient(
@@ -92,10 +92,23 @@
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-navy-100 md:bg-white/80 md:backdrop-blur-md" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5">
       <div class="flex items-center justify-between">
-        <a href="#" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
+        <a href="index.html" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
         <!-- Desktop menu -->
         <div class="hidden md:flex items-center gap-10 text-sm font-medium text-navy-600">
-          <a href="services.html" class="hover:text-navy-900 transition-colors">Services</a>
+          <a href="index.html" class="hover:text-navy-900 transition-colors">Home</a>
+          <div class="relative group">
+            <a href="services.html" class="hover:text-navy-900 transition-colors inline-flex items-center gap-1">Services</a>
+            <div class="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="bg-white border border-navy-100 rounded-lg shadow-lg py-2 min-w-[180px]">
+                <a href="services.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">All Services</a>
+                <a href="seo.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">SEO</a>
+                <a href="web-design.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Web Design</a>
+                <a href="content-creation.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Content Creation</a>
+                <a href="meta-ads.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Meta Ads</a>
+                <a href="google-ads.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Google Ads</a>
+              </div>
+            </div>
+          </div>
           <a href="#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
           <a href="#process" class="hover:text-navy-900 transition-colors">Process</a>
           <a href="#case-studies" class="hover:text-navy-900 transition-colors">Case Studies</a>
@@ -112,7 +125,15 @@
     <!-- Mobile menu overlay -->
     <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 shadow-xl opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true" style="background-color: #ffffff;">
       <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1">
+        <a href="index.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Home</a>
         <a href="services.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
+        <div class="pl-4 border-l-2 border-navy-100 space-y-1">
+          <a href="seo.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">SEO</a>
+          <a href="web-design.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Web Design</a>
+          <a href="content-creation.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Content Creation</a>
+          <a href="meta-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Meta Ads</a>
+          <a href="google-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Google Ads</a>
+        </div>
         <a href="#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
         <a href="#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
         <a href="#case-studies" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Case Studies</a>
@@ -135,7 +156,7 @@
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-32 flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
       <div class="flex-1 max-w-2xl lg:max-w-none">
         <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-6">Digital Marketing Agency</p>
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.15] tracking-tight mb-6">
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">
           Local Digital Marketing that moves the needle.
         </h1>
         <p class="text-lg sm:text-xl text-white/90 leading-relaxed mb-10 max-w-xl">
@@ -170,7 +191,7 @@
   <section id="latest-post" class="py-12 lg:py-16 bg-navy-50 border-b border-navy-100 scroll-mt-20" aria-labelledby="latest-post-heading">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div id="latest-post-card" class="max-w-4xl mx-auto rounded-2xl bg-white border border-navy-100 shadow-sm p-8 lg:p-10">
-        <h2 id="latest-post-heading" class="font-display text-2xl sm:text-3xl text-navy-900 leading-tight mb-4">Want free local marketing advice?</h2>
+          <h2 id="latest-post-heading" class="font-display text-2xl sm:text-3xl font-bold text-navy-900 leading-tight mb-4">Want free local marketing advice?</h2>
         <p class="text-navy-600 leading-relaxed mb-6">I document exactly how I rank local businesses using SEO, content, and smart site structure. Learn from what I'm doing in real time.</p>
         <div id="latest-post-content" class="mb-6">
           <h3 id="latest-post-title" class="font-display text-lg sm:text-xl text-navy-900 mb-2">Local SEO for Home Service Businesses: A Complete Guide</h3>
@@ -215,7 +236,7 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mb-16 lg:mb-24">
         <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">Our Services</p>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy-900 leading-tight">
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 leading-tight">
           Full-spectrum digital expertise.
         </h2>
         <p class="mt-6 text-lg text-navy-600 leading-relaxed">
@@ -270,7 +291,7 @@
     <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mb-24">
         <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">How We're Different</p>
-        <h2 class="font-display text-4xl lg:text-5xl text-navy-900 leading-tight">
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy-900 leading-tight">
           Built for the AI-first era.
         </h2>
         <p class="mt-6 text-lg text-navy-600 leading-relaxed">
@@ -314,7 +335,7 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="text-center max-w-3xl mx-auto mb-20">
         <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">Our Process</p>
-        <h2 class="font-display text-4xl lg:text-5xl text-navy-900 leading-tight mb-6">
+        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy-900 leading-tight mb-6">
           The Skyward Flight Path
         </h2>
         <p class="text-lg text-navy-600 leading-relaxed">
@@ -375,7 +396,7 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="max-w-2xl mb-16 lg:mb-20">
         <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">Our Work</p>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-navy-900 leading-tight">
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 leading-tight">
           Brands we've helped soar.
         </h2>
         <p class="mt-6 text-lg text-navy-600 leading-relaxed">
@@ -416,7 +437,7 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <div>
-          <h2 class="font-display text-3xl sm:text-4xl text-navy-900 leading-tight mb-6">
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">
             Proven Results, Satisfied Clients
           </h2>
           <p class="text-lg text-navy-600 leading-relaxed mb-8">
@@ -425,7 +446,7 @@
           <p class="text-navy-600 font-medium">— Satisfied client</p>
         </div>
         <div class="bg-navy-900 rounded-2xl p-8 lg:p-12 text-center lg:text-left">
-          <h3 class="font-display text-2xl sm:text-3xl text-white leading-tight mb-4">Get in Touch</h3>
+          <h3 class="font-display text-2xl sm:text-3xl font-semibold text-white leading-tight mb-4">Get in Touch</h3>
           <p class="text-lg text-navy-200 leading-relaxed mb-8">
             Ready to elevate your marketing? Let's chat.
           </p>
