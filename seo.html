@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SEO services from Skyward Works. Rank higher, attract qualified organic traffic, and grow your visibility in search engines.">
-  <title>SEO Services | Search Engine Optimization | Skyward Works</title>
+  <meta name="description" content="How Skyward uses SEO to own entire topical clusters. Beyond keywords: entity relationships, topical authority, and content hubs that dominate search.">
+  <title>SEO | Topical Clusters & Content Hubs | Skyward Works</title>
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -51,7 +51,6 @@
 <body class="bg-white text-navy-800 antialiased font-sans scroll-smooth">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy-900 focus:text-white focus:rounded">Skip to main content</a>
 
-  <!-- Navigation -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-navy-100 md:bg-white/80 md:backdrop-blur-md" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5">
       <div class="flex items-center justify-between">
@@ -65,7 +64,6 @@
                 <a href="services.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">All Services</a>
                 <a href="performance-marketing.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Performance Marketing</a>
                 <a href="brand-strategy.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Brand Strategy</a>
-                <a href="content-seo.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Content & SEO</a>
                 <a href="seo.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900 font-medium">SEO</a>
                 <a href="web-design.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Web Design</a>
                 <a href="content-creation.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Content Creation</a>
@@ -76,6 +74,7 @@
           </div>
           <a href="index.html#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
           <a href="index.html#process" class="hover:text-navy-900 transition-colors">Process</a>
+          <a href="blog/" class="hover:text-navy-900 transition-colors">Blog</a>
           <a href="index.html#contact" class="bg-sky-500 text-white px-5 py-2.5 rounded-full hover:bg-sky-400 transition-colors">Get a Free Consultation</a>
         </div>
         <button id="menu-toggle" class="md:hidden p-2 -mr-2 text-navy-600 hover:text-navy-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -85,18 +84,27 @@
       </div>
     </div>
     <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 shadow-xl opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true" style="background-color: #ffffff;">
-      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1 overflow-y-auto max-h-[calc(100vh-120px)]">
         <a href="index.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Home</a>
-        <a href="services.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
-        <div class="pl-4 border-l-2 border-navy-100 space-y-1">
-          <a href="seo.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">SEO</a>
-          <a href="web-design.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Web Design</a>
-          <a href="content-creation.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Content Creation</a>
-          <a href="meta-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Meta Ads</a>
-          <a href="google-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Google Ads</a>
+        <div class="border-b border-navy-100 -mx-4 px-4">
+          <button type="button" id="mobile-services-toggle" class="mobile-services-toggle flex items-center justify-between w-full py-4 text-lg font-medium text-navy-700 hover:text-navy-900 rounded-lg text-left" aria-expanded="false" aria-controls="mobile-services-submenu">
+            Services
+            <svg id="mobile-services-chevron" class="w-5 h-5 text-navy-500 transition-transform duration-200 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-services-submenu" class="hidden pl-4 border-l-2 border-navy-100 space-y-1 pb-4" aria-hidden="true">
+            <a href="services.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">All Services</a>
+            <a href="performance-marketing.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Performance Marketing</a>
+            <a href="brand-strategy.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Brand Strategy</a>
+            <a href="seo.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">SEO</a>
+            <a href="web-design.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Web Design</a>
+            <a href="content-creation.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Content Creation</a>
+            <a href="meta-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Meta Ads</a>
+            <a href="google-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Google Ads</a>
+          </div>
         </div>
         <a href="index.html#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
         <a href="index.html#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
+        <a href="blog/" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Blog</a>
         <a href="index.html#contact" class="mobile-nav-link block py-4 text-lg font-medium text-white bg-sky-500 hover:bg-sky-400 rounded-full text-center mt-2 transition-colors">Get a Free Consultation</a>
       </div>
     </div>
@@ -111,34 +119,41 @@
         <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-400/70 rounded-full blur-3xl"></div>
       </div>
       <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
-        <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">Service</p>
+        <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">How Skyward Assists</p>
         <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">SEO</h1>
-        <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">Get found where it matters. We optimize your site for search engines so you rank for high-intent keywords and attract qualified organic traffic.</p>
+        <p class="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl mx-auto mb-10">Going beyond keywords to own entire topical clusters. Skyward maps entity relationships, uses natural language understanding, and builds content hubs that satisfy search intent. That way you rank for entire themes, not just single queries.</p>
         <a href="index.html#contact" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-8 py-4 rounded-full transition-colors">Get a Free Consultation</a>
       </div>
     </section>
 
     <section class="py-16 md:py-24 bg-white scroll-mt-20">
       <div class="max-w-4xl mx-auto px-6 lg:px-12">
-        <h2 class="font-display text-3xl md:text-4xl font-semibold text-navy-900 leading-tight mb-8">Strategic search visibility that drives growth</h2>
-        <p class="text-lg text-navy-600 leading-relaxed mb-6">SEO is the foundation of lasting organic traffic. We run technical and content audits, build topical authority, and optimize on-page elements so your site ranks for the queries that matter to your business.</p>
-        <p class="text-navy-600 leading-relaxed mb-10">From keyword research and schema markup to internal linking and E-E-A-T optimization, we take a holistic approach that positions you to compete and win in search.</p>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-navy-900 leading-tight mb-8">How Skyward dominates search with topical authority</h2>
+        <p class="text-lg text-navy-600 leading-relaxed mb-6">Modern search engines understand meaning, not just keywords. Skyward's SEO approach maps the entities, concepts, and relationships that matter in your industry, then builds content hubs that cover whole topics, answer user intent, and signal expertise to algorithms.</p>
+        <p class="text-navy-600 leading-relaxed mb-8">We identify topical clusters, create pillar pages, and link related content so your site becomes the go-to authority. Paired with our <a href="ai-assisted-precision.html" class="text-sky-600 hover:text-sky-500 underline">AI-assisted precision</a> and <a href="data-driven-velocity.html" class="text-sky-600 hover:text-sky-500 underline">data-driven velocity</a>, you scale visibility without diluting quality.</p>
+
+        <div class="py-8 border-y border-navy-200 mb-12">
+          <h3 class="font-display text-xl text-navy-900 mb-4">What we deliver</h3>
+          <ul class="space-y-3 text-navy-600">
+            <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Topical cluster mapping and gap analysis</li>
+            <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Pillar pages and hub architecture</li>
+            <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Entity-focused content for search intent</li>
+            <li class="flex gap-3"><span class="text-sky-500 font-bold">•</span> Internal linking strategies for topical authority</li>
+          </ul>
+        </div>
+
         <div class="flex flex-wrap gap-4">
           <a href="index.html#contact" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-8 py-4 rounded-full transition-colors">Start Your Project</a>
-          <a href="services.html" class="inline-flex items-center text-sky-600 hover:text-sky-500 font-medium">← Back to Services</a>
+          <a href="index.html#different" class="inline-flex items-center text-sky-600 hover:text-sky-500 font-medium">← Back to How We're Different</a>
         </div>
+
         <div class="mt-16 pt-12 border-t border-navy-200">
-          <p class="text-sm font-medium text-navy-500 uppercase tracking-wider mb-4">Explore How Skyward Assists</p>
-          <div class="flex flex-wrap gap-3 mb-6">
-            <a href="semantic-seo.html" class="px-4 py-2 rounded-full bg-sky-100 text-sky-700 hover:bg-sky-200 text-sm font-medium transition-colors">Semantic SEO</a>
+          <p class="text-sm font-medium text-navy-500 uppercase tracking-wider mb-4">Related: How Skyward Assists & Services</p>
+          <div class="flex flex-wrap gap-3">
             <a href="ai-assisted-precision.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">AI-Assisted Precision</a>
             <a href="data-driven-velocity.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Data-Driven Velocity</a>
-          </div>
-          <p class="text-sm font-medium text-navy-500 uppercase tracking-wider mb-4">Other Services</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="content-seo.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Content & SEO</a>
-            <a href="web-design.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Web Design</a>
             <a href="content-creation.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Content Creation</a>
+            <a href="web-design.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Web Design</a>
             <a href="meta-ads.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Meta Ads</a>
             <a href="google-ads.html" class="px-4 py-2 rounded-full bg-navy-100 text-navy-700 hover:bg-sky-100 hover:text-sky-700 text-sm font-medium transition-colors">Google Ads</a>
           </div>
@@ -183,6 +198,19 @@
       if (menuToggle) menuToggle.addEventListener('click', function() { document.getElementById('mobile-menu').classList.contains('opacity-100') ? closeMenu() : openMenu(); });
       if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
       navLinks.forEach(function(l) { l.addEventListener('click', closeMenu); });
+      var servicesToggle = document.getElementById('mobile-services-toggle');
+      var servicesSubmenu = document.getElementById('mobile-services-submenu');
+      var servicesChevron = document.getElementById('mobile-services-chevron');
+      if (servicesToggle && servicesSubmenu) {
+        servicesToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var expanded = servicesSubmenu.classList.contains('hidden');
+          servicesSubmenu.classList.toggle('hidden', !expanded);
+          servicesSubmenu.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+          servicesToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+          if (servicesChevron) servicesChevron.style.transform = expanded ? 'rotate(180deg)' : '';
+        });
+      }
       window.addEventListener('resize', function() { if (window.innerWidth >= 768) closeMenu(); });
     })();
   </script>

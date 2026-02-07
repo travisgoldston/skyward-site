@@ -51,7 +51,6 @@
                 <a href="../services.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">All Services</a>
                 <a href="../performance-marketing.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Performance Marketing</a>
                 <a href="../brand-strategy.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Brand Strategy</a>
-                <a href="../content-seo.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Content & SEO</a>
                 <a href="../seo.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">SEO</a>
                 <a href="../web-design.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Web Design</a>
                 <a href="../content-creation.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Content Creation</a>
@@ -72,18 +71,23 @@
       </div>
     </div>
     <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 shadow-xl opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true" style="background-color: #ffffff;">
-      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1 overflow-y-auto max-h-[calc(100vh-120px)]">
         <a href="../index.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Home</a>
-        <a href="../services.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Services</a>
-        <div class="pl-4 border-l-2 border-navy-100 space-y-1">
-          <a href="../performance-marketing.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Performance Marketing</a>
-          <a href="../brand-strategy.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Brand Strategy</a>
-          <a href="../content-seo.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Content & SEO</a>
-          <a href="../seo.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">SEO</a>
-          <a href="../web-design.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Web Design</a>
-          <a href="../content-creation.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Content Creation</a>
-          <a href="../meta-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Meta Ads</a>
-          <a href="../google-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Google Ads</a>
+        <div class="border-b border-navy-100 -mx-4 px-4">
+          <button type="button" id="mobile-services-toggle" class="mobile-services-toggle flex items-center justify-between w-full py-4 text-lg font-medium text-navy-700 hover:text-navy-900 rounded-lg text-left" aria-expanded="false" aria-controls="mobile-services-submenu">
+            Services
+            <svg id="mobile-services-chevron" class="w-5 h-5 text-navy-500 transition-transform duration-200 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="mobile-services-submenu" class="hidden pl-4 border-l-2 border-navy-100 space-y-1 pb-4" aria-hidden="true">
+            <a href="../services.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">All Services</a>
+            <a href="../performance-marketing.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Performance Marketing</a>
+            <a href="../brand-strategy.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Brand Strategy</a>
+            <a href="../seo.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">SEO</a>
+            <a href="../web-design.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Web Design</a>
+            <a href="../content-creation.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Content Creation</a>
+            <a href="../meta-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Meta Ads</a>
+            <a href="../google-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Google Ads</a>
+          </div>
         </div>
         <a href="../index.html#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
         <a href="../index.html#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
@@ -238,6 +242,19 @@
       if (menuToggle) menuToggle.addEventListener('click', function() { document.getElementById('mobile-menu').classList.contains('opacity-100') ? closeMenu() : openMenu(); });
       if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
       navLinks.forEach(function(l) { l.addEventListener('click', closeMenu); });
+      var servicesToggle = document.getElementById('mobile-services-toggle');
+      var servicesSubmenu = document.getElementById('mobile-services-submenu');
+      var servicesChevron = document.getElementById('mobile-services-chevron');
+      if (servicesToggle && servicesSubmenu) {
+        servicesToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var expanded = servicesSubmenu.classList.contains('hidden');
+          servicesSubmenu.classList.toggle('hidden', !expanded);
+          servicesSubmenu.setAttribute('aria-hidden', expanded ? 'false' : 'true');
+          servicesToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+          if (servicesChevron) servicesChevron.style.transform = expanded ? 'rotate(180deg)' : '';
+        });
+      }
       window.addEventListener('resize', function() { if (window.innerWidth >= 768) closeMenu(); });
     })();
   </script>
