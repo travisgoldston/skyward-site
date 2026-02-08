@@ -10,6 +10,7 @@ window.BLOG_POSTS = [
     slug: 'local-seo-for-home-service-businesses',
     title: 'Local SEO for Home Service Businesses: A Complete Guide',
     excerpt: 'How to rank your plumbing, HVAC, roofing, or landscaping business in local search. Site structure, Google Business Profile, content strategy, and the mistakes that hold most contractors back.',
-    date: '2025-02-07'
+    date: '2025-02-07',
+    image: 'images/local-seo-banner.png'
   }
 ];

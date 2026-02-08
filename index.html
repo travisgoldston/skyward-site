@@ -427,7 +427,13 @@
   <!-- Free Local Marketing Advice - Latest Blog Post -->
   <section id="latest-post" class="py-12 lg:py-16 bg-navy-50 border-t border-navy-100 scroll-mt-20" aria-labelledby="latest-post-heading">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div id="latest-post-card" class="max-w-4xl mx-auto rounded-2xl bg-white border border-navy-100 shadow-sm p-8 lg:p-10">
+      <div id="latest-post-card" class="max-w-4xl mx-auto rounded-2xl bg-white border border-navy-100 shadow-sm overflow-hidden">
+        <div id="latest-post-image-wrap" class="hidden w-full overflow-hidden rounded-t-2xl bg-navy-100">
+          <a id="latest-post-image-link" href="blog/local-seo-for-home-service-businesses.html" class="block aspect-[3/2] sm:aspect-[16/9] w-full">
+            <img id="latest-post-image" src="blog/images/local-seo-banner.png" alt="Local SEO for home service businesses" class="w-full h-full object-cover" loading="lazy">
+          </a>
+        </div>
+        <div class="p-6 sm:p-8 lg:p-10">
         <h2 id="latest-post-heading" class="font-display text-2xl sm:text-3xl font-bold text-navy-900 leading-tight mb-4">Want free local marketing advice?</h2>
         <p class="text-lg text-navy-600 leading-relaxed mb-6">I document exactly how I rank local businesses using SEO, content, and smart site structure. Learn from what I'm doing in real time.</p>
         <div id="latest-post-content" class="mb-6">
@@ -437,6 +443,7 @@
         <div class="flex flex-col sm:flex-row sm:items-center gap-4">
           <a id="latest-post-cta" href="blog/local-seo-for-home-service-businesses.html" class="inline-flex items-center justify-center bg-sky-500 hover:bg-sky-400 text-navy-950 font-semibold px-6 py-3 rounded-full transition-colors text-sm">Read the Latest Post</a>
           <a href="blog/" class="text-sm text-sky-600 hover:text-sky-500 font-medium">Or browse all marketing articles →</a>
+        </div>
         </div>
       </div>
     </div>
@@ -507,9 +514,17 @@
         var titleEl = document.getElementById('latest-post-title');
         var excerptEl = document.getElementById('latest-post-excerpt');
         var ctaEl = document.getElementById('latest-post-cta');
+        var imgWrap = document.getElementById('latest-post-image-wrap');
+        var imgLink = document.getElementById('latest-post-image-link');
+        var imgEl = document.getElementById('latest-post-image');
         if (titleEl) titleEl.textContent = latest.title;
         if (excerptEl) excerptEl.textContent = latest.excerpt;
         if (ctaEl) ctaEl.href = 'blog/' + latest.slug + '.html';
+        if (latest.image && imgWrap && imgLink && imgEl) {
+          imgWrap.classList.remove('hidden');
+          imgLink.href = 'blog/' + latest.slug + '.html';
+          imgEl.src = 'blog/' + latest.image;
+        }
       }
     })();
   </script>
