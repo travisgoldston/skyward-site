@@ -60,6 +60,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    /* Aurora/mesh hero: deep blue–purple base + warm golden–orange blob at bottom-center */
+    .hero-aurora {
+      background-color: #2d1b6e;
+      background-image:
+        linear-gradient(135deg, rgba(26,58,143,0.92) 0%, rgba(75,45,158,0.92) 48%, rgba(45,27,110,0.98) 100%),
+        radial-gradient(ellipse 140% 90% at 50% 100%, rgba(245,200,66,0.4) 0%, rgba(232,133,90,0.28) 28%, rgba(75,45,158,0.08) 50%, transparent 62%),
+        radial-gradient(ellipse 90% 55% at 50% 98%, rgba(245,200,66,0.32) 0%, rgba(232,133,90,0.18) 40%, transparent 58%),
+        linear-gradient(160deg, #1a3a8f 0%, #4b2d9e 42%, #2d1b6e 100%);
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
 </head>
 <body class="bg-white text-navy-800 antialiased font-sans scroll-smooth">
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy-900 focus:text-white focus:rounded">Skip to main content</a>
@@ -133,18 +147,15 @@
 
   <main id="main">
   <!-- Hero -->
-  <section class="relative min-h-screen flex flex-col bg-navy-50 border-b border-navy-100" aria-label="Hero">
-    <div class="absolute inset-0 opacity-30 pointer-events-none">
-      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-400 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-navy-200 rounded-full blur-3xl"></div>
-    </div>
+  <section class="relative min-h-screen flex flex-col overflow-hidden" aria-label="Hero">
+    <div class="hero-aurora absolute inset-0"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-32 flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
       <div class="flex-1 max-w-2xl lg:max-w-none">
-        <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-6">Skyward Works</p>
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 leading-[1.15] tracking-tight mb-6">
+        <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-6">Skyward Works</p>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">
           Digital Marketing that gets you found.
         </h1>
-        <p class="text-lg sm:text-xl text-navy-600 leading-relaxed mb-10 max-w-xl">
+        <p class="text-lg sm:text-xl text-white/90 leading-relaxed mb-10 max-w-xl">
           Full-service strategy, SEO, and paid media built on proof. We get you in front of the right people.
         </p>
         <a href="#contact" class="inline-flex items-center justify-center bg-sky-600 hover:bg-sky-500 text-white font-semibold px-8 py-4 rounded-full transition-colors">
@@ -152,7 +163,7 @@
         </a>
       </div>
       <div class="w-full lg:w-auto lg:flex-shrink-0 lg:max-w-[320px]">
-        <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-navy-100">
+        <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-white/20">
           <h2 class="font-display text-lg text-navy-900 mb-4">Get a Free Consultation</h2>
           <form id="hero-form" class="space-y-3" method="post" action="#" aria-label="Quick contact form">
             <input type="text" name="name" placeholder="Full Name" autocomplete="name" class="w-full px-4 py-2.5 text-sm rounded-lg border border-navy-200 text-navy-800 placeholder:text-navy-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20 outline-none transition-all" aria-label="Full name">
@@ -168,7 +179,7 @@
       </div>
     </div>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10" aria-hidden="true">
-      <svg class="w-6 h-6 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
     </div>
   </section>
 

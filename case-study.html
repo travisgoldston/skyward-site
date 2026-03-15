@@ -45,27 +45,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
-    #hero-gradient {
-      background: linear-gradient(
-        135deg,
-        #0a1929 0%,
-        #102a43 15%,
-        #1e3a5f 28%,
-        #4f46e5 38%,
-        #0ea5e9 48%,
-        #6366f1 55%,
-        #8b5cf6 65%,
-        #102a43 85%,
-        #0a1929 100%
-      );
-      background-size: 400% 400%;
-      animation: hero-gradient-flow 20s ease-in-out infinite;
-    }
-    @keyframes hero-gradient-flow {
-      0%, 100% { background-position: 0% 50%; }
-      25% { background-position: 100% 25%; }
-      50% { background-position: 50% 100%; }
-      75% { background-position: 25% 0%; }
+    .hero-aurora {
+      background-color: #2d1b6e;
+      background-image:
+        linear-gradient(135deg, rgba(26,58,143,0.92) 0%, rgba(75,45,158,0.92) 48%, rgba(45,27,110,0.98) 100%),
+        radial-gradient(ellipse 140% 90% at 50% 100%, rgba(245,200,66,0.4) 0%, rgba(232,133,90,0.28) 28%, rgba(75,45,158,0.08) 50%, transparent 62%),
+        radial-gradient(ellipse 90% 55% at 50% 98%, rgba(245,200,66,0.32) 0%, rgba(232,133,90,0.18) 40%, transparent 58%),
+        linear-gradient(160deg, #1a3a8f 0%, #4b2d9e 42%, #2d1b6e 100%);
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   </style>
 </head>
@@ -136,11 +125,7 @@
   <main id="main">
     <!-- Case Study Hero -->
     <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden" aria-label="Case study header">
-      <div id="hero-gradient" class="absolute inset-0"></div>
-      <div class="absolute inset-0 opacity-20 pointer-events-none">
-        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-400 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-400/70 rounded-full blur-3xl"></div>
-      </div>
+      <div class="hero-aurora absolute inset-0"></div>
       <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-4">Case Study</p>
         <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">
