@@ -337,6 +337,17 @@
       box-shadow: 0 28px 90px rgba(15,23,42,.24);
       padding: 18px;
     }
+    .visual-stage::after{
+      content:"";
+      position:absolute;
+      inset:-30%;
+      background:
+        linear-gradient(115deg, rgba(4,172,236,.0) 28%, rgba(4,172,236,.26) 46%, rgba(60,180,76,.22) 58%, rgba(60,180,76,0) 74%);
+      transform: rotate(-14deg);
+      opacity: .9;
+      pointer-events:none;
+      mix-blend-mode: screen;
+    }
     .visual-stage::before{
       content:"";
       position:absolute;
@@ -364,6 +375,7 @@
       display:flex;
       gap: 12px;
       align-items:flex-start;
+      z-index: 2;
       transform: translateY(8px);
       opacity: 0;
       animation: floatIn .8s var(--ease) forwards;
@@ -395,13 +407,15 @@
     .statfloat{
       position:absolute;
       inset: auto;
-      width: min(320px, 80%);
+      width: 260px;
       transform: translateZ(0);
       animation: bob 6.5s var(--ease) infinite;
       pointer-events:none;
+      z-index: 1;
+      opacity: .82;
     }
-    .statfloat.one{ right: -8px; top: 26px; }
-    .statfloat.two{ left: -8px; bottom: 10px; animation-delay: .8s; }
+    .statfloat.one{ right: 12px; top: 14px; }
+    .statfloat.two{ left: 12px; bottom: 14px; animation-delay: .8s; }
     .microcard{
       border-radius: 18px;
       background: rgba(15,23,42,.16);
@@ -706,7 +720,7 @@
   <header aria-label="Header">
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="Skyward Works home">
-        <img src="assets/logo.png" width="40" height="40" alt="Skyward Works logo">
+        <img src="assets/logo.svg" width="40" height="40" alt="Skyward Works logo">
         <span>Skyward Works</span>
       </a>
 
@@ -786,8 +800,8 @@
           </div>
 
           <div class="hero-visual" aria-label="Hero visual">
-            <div class="visual-stage">
-              <div class="visual-grid" aria-hidden="true">
+            <div class="visual-stage" aria-hidden="true">
+              <div class="visual-grid">
                 <div class="statcard">
                   <div class="statbadge">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -1142,7 +1156,7 @@
   <footer aria-label="Footer">
     <div class="container">
       <div class="brand" aria-label="Skyward Works">
-        <img src="assets/logo.png" width="40" height="40" alt="" aria-hidden="true">
+        <img src="assets/logo.svg" width="40" height="40" alt="" aria-hidden="true">
         <span style="color:#fff;">Skyward Works</span>
       </div>
 
