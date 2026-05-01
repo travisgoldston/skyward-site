@@ -10,17 +10,82 @@
   <link rel="alternate icon" href="assets/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/logo.png">
 
-  <!-- JSON-LD Organization / ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "LocalBusiness",
     "name": "Skyward Works",
-    "description": "SEO, content strategy, and web design for ambitious businesses who want to get found on Google and win more leads.",
-    "url": "https://skywardagency.com",
-    "areaServed": "Worldwide",
+    "description": "SEO, digital marketing, web design, paid media, and brand strategy for businesses across North Dallas–Fort Worth.",
+    "url": "https://skywardworks.com",
+    "email": "hello@skyward.agency",
     "priceRange": "$$",
-    "serviceType": ["SEO", "Content Strategy", "Web Design", "Conversion Optimization"]
+    "areaServed": [
+      { "@type": "City", "name": "McKinney", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Frisco", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Melissa", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Anna", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Prosper", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Allen", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Plano", "containedInPlace": { "@type": "State", "name": "Texas" } },
+      { "@type": "City", "name": "Celina", "containedInPlace": { "@type": "State", "name": "Texas" } }
+    ],
+    "serviceType": [
+      "SEO",
+      "Digital Marketing",
+      "Web Design",
+      "Google Ads",
+      "Meta Ads",
+      "Content Creation",
+      "Brand Strategy"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Skyward Works serves North Dallas–Fort Worth, including McKinney, Frisco, Melissa, Anna, Prosper, Allen, Plano, and Celina, Texas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What services does Skyward Works offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer SEO, digital marketing strategy, web design, Google Ads, Meta Ads, content creation, and brand strategy—focused on getting you found and turning visibility into leads."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Skyward Works different from other agencies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You work directly with the people doing the work—clear priorities, honest reporting, and modern approaches including AI-assisted research and LLM/geographic visibility planning so you stay competitive as search evolves."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you require long contracts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We focus on clarity and results first. Engagement terms are discussed up front so you know what you’re buying and what success looks like—without unnecessary lock-in."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Book a strategy call or request a free visibility check via hello@skyward.agency. We’ll review your site, market, and the fastest practical next steps."
+        }
+      }
+    ]
   }
   </script>
 
@@ -641,6 +706,21 @@
     }
     .plainlink:hover{ transform: translateY(-1px); background: rgba(15,23,42,.14); }
 
+    .localdfw{
+      background:
+        radial-gradient(900px 420px at 12% 0%, rgba(4,172,236,.08), transparent 55%),
+        radial-gradient(800px 400px at 88% 30%, rgba(60,180,76,.07), transparent 55%),
+        var(--surface);
+      border-top: 1px solid var(--line);
+    }
+    .localdfw .sub a{
+      color: var(--cyan);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .localdfw .sub a:hover{ color: #0390c7; }
+
     footer{
       background: #0B1224;
       color: rgba(255,255,255,.78);
@@ -1154,6 +1234,26 @@
         </div>
       </div>
     </section>
+
+    <section id="local" class="localdfw" aria-label="Service area">
+      <div class="container">
+        <div class="sectionhead">
+          <div class="eyebrow">Local</div>
+          <h2>Serving North DFW</h2>
+          <p class="sub">
+            Proudly serving businesses across
+            <a href="mckinney/">McKinney</a>,
+            <a href="frisco/">Frisco</a>,
+            <a href="melissa/">Melissa</a>,
+            <a href="anna/">Anna</a>,
+            <a href="prosper/">Prosper</a>,
+            <a href="allen/">Allen</a>,
+            <a href="plano/">Plano</a>, and
+            <a href="celina/">Celina</a>—with SEO, web design, and paid media built for how North Texas customers actually search.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer aria-label="Footer">
@@ -1183,6 +1283,7 @@
         </div>
         <div class="stack" style="gap:10px;">
           <h3>Contact</h3>
+          <span style="color: rgba(255,255,255,.78); font-weight: 650;">McKinney, TX</span>
           <a href="mailto:hello@skyward.agency">hello@skyward.agency</a>
           <a href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Request a visibility check</a>
           <a href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Book a consultation</a>
