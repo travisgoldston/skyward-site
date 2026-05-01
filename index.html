@@ -23,7 +23,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Sora:wght@500..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
   <style>
     :root{
       --bg: #F9FAFB;
@@ -34,9 +34,11 @@
       --line: rgba(15,23,42,.10);
 
       --navy: #0F172A;
-      --blue: #4A5FFF;
-      --pink: #FF6B9D;
-      --orange: #FFB36B;
+      --offwhite: #F9FAFB;
+      --cyan: #04ACEC;
+      --green: #3CB44C;
+      --cyan-2: rgba(4,172,236,.14);
+      --green-2: rgba(60,180,76,.14);
 
       --radius-xl: 22px;
       --radius-lg: 18px;
@@ -46,6 +48,7 @@
       --shadow-sm: 0 10px 24px rgba(15,23,42,.08);
       --shadow-md: 0 18px 48px rgba(15,23,42,.12);
       --shadow-lg: 0 28px 80px rgba(15,23,42,.16);
+      --shadow-nav: 0 14px 42px rgba(2,6,23,.28);
 
       --max: 1120px;
       --px: 20px;
@@ -71,7 +74,7 @@
     }
     a{ color: inherit; text-decoration: none; }
     a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible{
-      outline: 3px solid rgba(74,95,255,.35);
+      outline: 3px solid rgba(4,172,236,.45);
       outline-offset: 3px;
       border-radius: 10px;
     }
@@ -109,35 +112,51 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(249,250,251,.72);
+      background: rgba(15,23,42,.90);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow-nav);
     }
     .nav{
       display:flex;
       align-items:center;
       justify-content: space-between;
-      padding: 14px 0;
+      padding: 18px 0;
     }
     .brand{
       display:flex;
       align-items:center;
-      gap: 10px;
-      font-family: Sora, ui-sans-serif, system-ui;
+      gap: 12px;
       letter-spacing: -0.02em;
-      font-weight: 700;
+      font-weight: 800;
+      color: var(--offwhite);
     }
-    .brand svg{ width: 30px; height: 30px; flex: 0 0 auto; }
+    .brand svg, .brand img{ width: 40px; height: 40px; flex: 0 0 auto; }
+    .brand span{ font-size: 17px; line-height: 1; }
     .navlinks{
       display:none;
       align-items:center;
-      gap: 18px;
+      gap: 14px;
       font-size: 14px;
-      color: var(--muted);
-      font-weight: 600;
+      color: rgba(249,250,251,.78);
+      font-weight: 650;
     }
-    .navlinks a{ padding: 10px 10px; border-radius: 12px; }
-    .navlinks a:hover{ color: var(--text); background: rgba(15,23,42,.04); }
+    .navlinks a{ padding: 10px 10px; border-radius: 12px; position: relative; }
+    .navlinks a::after{
+      content:"";
+      position:absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 7px;
+      height: 1.5px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(4,172,236,.0), rgba(4,172,236,.9), rgba(60,180,76,.9), rgba(60,180,76,0));
+      transform: scaleX(.25);
+      opacity: 0;
+      transition: transform .28s var(--ease), opacity .28s var(--ease);
+    }
+    .navlinks a:hover{ color: rgba(249,250,251,.95); }
+    .navlinks a:hover::after{ transform: scaleX(1); opacity: 1; }
 
     .cta{
       display:inline-flex;
@@ -146,28 +165,28 @@
       gap: 10px;
       padding: 12px 16px;
       border-radius: 999px;
-      border: 1px solid rgba(74,95,255,.22);
-      background: linear-gradient(180deg, rgba(74,95,255,1), rgba(74,95,255,.92));
-      color: #fff;
-      font-weight: 700;
-      box-shadow: 0 16px 48px rgba(74,95,255,.22);
+      border: 1px solid rgba(60,180,76,.36);
+      background: linear-gradient(180deg, rgba(60,180,76,1), rgba(46,164,66,1));
+      color: #07140d;
+      font-weight: 850;
+      box-shadow: 0 18px 60px rgba(60,180,76,.18);
       transition: transform .25s var(--ease), box-shadow .25s var(--ease), filter .25s var(--ease);
       will-change: transform;
     }
     .cta:hover{
       transform: translateY(-1px);
-      box-shadow: 0 22px 70px rgba(74,95,255,.28);
+      box-shadow: 0 26px 86px rgba(60,180,76,.22);
       filter: saturate(1.05);
     }
     .cta.secondary{
-      background: rgba(255,255,255,.10);
-      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(4,172,236,.40);
       box-shadow: none;
-      color: #fff;
+      color: rgba(249,250,251,.95);
     }
     .cta.secondary:hover{
       transform: translateY(-1px);
-      background: rgba(255,255,255,.14);
+      background: rgba(4,172,236,.14);
     }
 
     details.mobile{
@@ -178,9 +197,9 @@
       cursor:pointer;
       padding: 10px 12px;
       border-radius: 12px;
-      border: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--text);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(249,250,251,.95);
       font-weight: 700;
       display:inline-flex;
       align-items:center;
@@ -191,8 +210,8 @@
     details.mobile[open] summary{ box-shadow: var(--shadow-sm); }
     .mobilepanel{
       margin-top: 12px;
-      border: 1px solid var(--line);
-      background: var(--surface);
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(15,23,42,.92);
       border-radius: var(--radius-lg);
       padding: 10px;
       box-shadow: var(--shadow-sm);
@@ -201,11 +220,11 @@
       display:block;
       padding: 12px 12px;
       border-radius: 12px;
-      color: var(--muted);
+      color: rgba(249,250,251,.84);
       font-weight: 700;
       font-size: 14px;
     }
-    .mobilepanel a:hover{ background: rgba(15,23,42,.04); color: var(--text); }
+    .mobilepanel a:hover{ background: rgba(255,255,255,.06); color: rgba(249,250,251,.98); }
 
     main{ overflow-x: clip; }
 
@@ -221,11 +240,11 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(900px 600px at 22% 24%, rgba(255,107,157,.38) 0%, transparent 62%),
-        radial-gradient(820px 520px at 70% 18%, rgba(74,95,255,.40) 0%, transparent 62%),
-        radial-gradient(900px 700px at 56% 100%, rgba(255,179,107,.32) 0%, transparent 62%),
-        linear-gradient(135deg, rgba(74,95,255,1) 0%, rgba(255,107,157,1) 38%, rgba(255,179,107,1) 100%);
-      filter: saturate(1.1);
+        radial-gradient(900px 580px at 16% 22%, rgba(4,172,236,.34) 0%, transparent 62%),
+        radial-gradient(880px 560px at 76% 16%, rgba(60,180,76,.24) 0%, transparent 62%),
+        radial-gradient(960px 680px at 56% 104%, rgba(4,172,236,.18) 0%, transparent 62%),
+        linear-gradient(135deg, #0B1224 0%, #0F172A 38%, #091020 100%);
+      filter: saturate(1.05);
     }
     .hero::after{
       content:"";
@@ -255,7 +274,7 @@
       max-width: 62ch;
     }
     .hero h1{
-      font-family: Sora, ui-sans-serif, system-ui;
+      font-family: Inter, ui-sans-serif, system-ui;
       font-size: var(--h1);
       line-height: 1.04;
       letter-spacing: -0.03em;
@@ -356,14 +375,14 @@
       border-radius: 14px;
       display:grid;
       place-items:center;
-      background: linear-gradient(180deg, rgba(74,95,255,.14), rgba(255,107,157,.12));
-      border: 1px solid rgba(74,95,255,.18);
+      background: linear-gradient(180deg, rgba(4,172,236,.14), rgba(60,180,76,.12));
+      border: 1px solid rgba(4,172,236,.20);
       color: var(--navy);
     }
     .statbadge svg{ width: 20px; height: 20px; }
     .statmeta{ display:flex; flex-direction: column; gap: 4px; }
     .statmeta strong{
-      font-family: Sora, ui-sans-serif, system-ui;
+      font-family: Inter, ui-sans-serif, system-ui;
       letter-spacing: -0.02em;
       font-size: 18px;
     }
@@ -393,7 +412,7 @@
       box-shadow: 0 22px 70px rgba(15,23,42,.22);
     }
     .microcard .k{
-      font-family: Sora, ui-sans-serif, system-ui;
+      font-family: Inter, ui-sans-serif, system-ui;
       font-weight: 750;
       letter-spacing:-0.02em;
       font-size: 14px;
@@ -416,7 +435,7 @@
       color: rgba(15,23,42,.62);
     }
     h2{
-      font-family: Sora, ui-sans-serif, system-ui;
+      font-family: Inter, ui-sans-serif, system-ui;
       font-size: var(--h2);
       line-height: 1.12;
       letter-spacing: -0.03em;
@@ -448,10 +467,10 @@
     .card:hover{
       transform: translateY(-3px);
       box-shadow: var(--shadow-md);
-      border-color: rgba(74,95,255,.22);
+      border-color: rgba(4,172,236,.22);
     }
     .card h3{
-      font-family: Sora, ui-sans-serif, system-ui;
+      font-family: Inter, ui-sans-serif, system-ui;
       font-size: var(--h3);
       letter-spacing: -0.02em;
       margin: 10px 0 8px;
@@ -468,8 +487,8 @@
       border-radius: 14px;
       display:grid;
       place-items:center;
-      background: linear-gradient(180deg, rgba(74,95,255,.12), rgba(255,107,157,.10));
-      border: 1px solid rgba(74,95,255,.14);
+      background: linear-gradient(180deg, rgba(4,172,236,.12), rgba(60,180,76,.10));
+      border: 1px solid rgba(4,172,236,.16);
       color: var(--navy);
     }
     .icon svg{ width: 22px; height: 22px; }
@@ -485,7 +504,7 @@
       bottom: 16px;
       width: 4px;
       border-radius: 999px;
-      background: linear-gradient(180deg, rgba(74,95,255,.20), rgba(255,107,157,.22));
+      background: linear-gradient(180deg, rgba(4,172,236,.22), rgba(60,180,76,.22));
       transform: scaleY(.2);
       transform-origin: top;
       transition: transform .28s var(--ease);
@@ -496,7 +515,7 @@
       align-items:center;
       gap: 10px;
       margin-top: 14px;
-      color: rgba(74,95,255,1);
+      color: rgba(4,172,236,1);
       font-weight: 800;
       font-size: 14px;
       width: fit-content;
@@ -506,7 +525,7 @@
     }
     .learn:hover{
       transform: translateY(-1px);
-      background: rgba(74,95,255,.06);
+      background: rgba(4,172,236,.08);
     }
     .learn svg{ width: 16px; height: 16px; transition: transform .28s var(--ease); }
     .learn:hover svg{ transform: translateX(3px); }
@@ -533,13 +552,13 @@
       border-radius: 999px;
       display:grid;
       place-items:center;
-      font-family: Sora, ui-sans-serif, system-ui;
+      font-family: Inter, ui-sans-serif, system-ui;
       font-weight: 800;
       color: rgba(15,23,42,.92);
       border: 1px solid rgba(15,23,42,.10);
       background:
-        radial-gradient(closest-side at 40% 30%, rgba(74,95,255,.18), transparent 60%),
-        radial-gradient(closest-side at 70% 80%, rgba(255,107,157,.16), transparent 60%),
+        radial-gradient(closest-side at 40% 30%, rgba(4,172,236,.18), transparent 60%),
+        radial-gradient(closest-side at 70% 80%, rgba(60,180,76,.16), transparent 60%),
         #fff;
       box-shadow: 0 18px 60px rgba(15,23,42,.10);
     }
@@ -558,14 +577,14 @@
       background: var(--surface);
       padding: 18px;
     }
-    .panel h3{ margin: 0 0 10px; font-size: 18px; font-family: Sora, ui-sans-serif, system-ui; letter-spacing: -0.02em; }
+    .panel h3{ margin: 0 0 10px; font-size: 18px; font-family: Inter, ui-sans-serif, system-ui; letter-spacing: -0.02em; }
     .panel ul{ margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.7; }
     .panel li{ margin: 8px 0; }
     .panel.after{
-      border-color: rgba(74,95,255,.22);
+      border-color: rgba(4,172,236,.22);
       background:
-        radial-gradient(600px 260px at 16% 0%, rgba(74,95,255,.12), transparent 60%),
-        radial-gradient(520px 260px at 92% 100%, rgba(255,107,157,.10), transparent 60%),
+        radial-gradient(600px 260px at 16% 0%, rgba(4,172,236,.12), transparent 60%),
+        radial-gradient(520px 260px at 92% 100%, rgba(60,180,76,.10), transparent 60%),
         linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
       box-shadow: var(--shadow-sm);
     }
@@ -583,9 +602,11 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(900px 600px at 20% 18%, rgba(255,255,255,.16), transparent 64%),
-        radial-gradient(900px 620px at 60% 110%, rgba(15,23,42,.24), transparent 58%),
-        linear-gradient(135deg, rgba(74,95,255,1) 0%, rgba(255,107,157,1) 44%, rgba(255,179,107,1) 100%);
+        radial-gradient(900px 600px at 20% 18%, rgba(255,255,255,.14), transparent 64%),
+        radial-gradient(900px 620px at 60% 110%, rgba(2,6,23,.28), transparent 58%),
+        radial-gradient(820px 520px at 76% 22%, rgba(60,180,76,.22), transparent 66%),
+        radial-gradient(820px 520px at 20% 70%, rgba(4,172,236,.26), transparent 66%),
+        linear-gradient(135deg, #0B1224 0%, #0F172A 70%, #091020 100%);
     }
     .ctaBand .container{ position: relative; z-index: 2; }
     .ctaBand h2{ color:#fff; }
@@ -616,7 +637,7 @@
     }
     footer h3{
       margin:0 0 12px;
-      font-family: Sora, ui-sans-serif, system-ui;
+      font-family: Inter, ui-sans-serif, system-ui;
       color:#fff;
       font-size: 14px;
       letter-spacing: .08em;
@@ -685,32 +706,17 @@
   <header aria-label="Header">
     <div class="container nav">
       <a class="brand" href="index.html" aria-label="Skyward Works home">
-        <!-- Layered upward arrow mark (geometric, 3-layer depth) -->
-        <svg viewBox="0 0 48 48" role="img" aria-label="Skyward Works logo">
-          <defs>
-            <linearGradient id="arrowA" x1="8" y1="40" x2="44" y2="8" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="rgba(255,107,157,1)"/>
-              <stop offset="1" stop-color="rgba(74,95,255,1)"/>
-            </linearGradient>
-            <linearGradient id="arrowB" x1="10" y1="42" x2="42" y2="10" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="rgba(255,179,107,1)"/>
-              <stop offset="1" stop-color="rgba(255,107,157,1)"/>
-            </linearGradient>
-          </defs>
-          <path d="M24 6l14 14-6 0v22H16V20H10L24 6z" fill="url(#arrowA)" opacity=".92"/>
-          <path d="M24 10l10 10-6 0v18H20V20h-6L24 10z" fill="url(#arrowB)" opacity=".85"/>
-          <path d="M24 14l6 6-6 0v14h-4V20h-6l10-10z" fill="rgba(255,255,255,.92)"/>
-        </svg>
+        <img src="assets/logo.png" width="40" height="40" alt="Skyward Works logo">
         <span>Skyward Works</span>
       </a>
 
       <nav class="navlinks" aria-label="Primary">
-        <a href="#problem">Why it’s hard</a>
+        <a href="#main">Home</a>
         <a href="#solution">Services</a>
-        <a href="#process">Process</a>
-        <a href="#transformation">What changes</a>
-        <a href="blog/">Blog</a>
-        <a class="cta" href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Get a Free Consultation</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Book a Strategy Call</a>
       </nav>
 
       <details class="mobile" aria-label="Mobile navigation">
@@ -721,12 +727,12 @@
           Menu
         </summary>
         <div class="mobilepanel">
-          <a href="#problem">Why it’s hard</a>
+          <a href="#main">Home</a>
           <a href="#solution">Services</a>
-          <a href="#process">Process</a>
-          <a href="#transformation">What changes</a>
-          <a href="blog/">Blog</a>
-          <a href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Get a Free Consultation</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact">Book a Strategy Call</a>
         </div>
       </details>
     </div>
@@ -743,7 +749,7 @@
               <span>Direct access. Clear next steps.</span>
             </div>
 
-            <h1 class="fadeUp d2">Get found on Google.<br>Get more leads.</h1>
+            <h1 class="fadeUp d2">Digital marketing that gets you found.</h1>
 
             <p class="lead fadeUp d3">
               If your best customers can’t find you, you’re not “missing out” — you’re getting outpaced.
@@ -753,8 +759,8 @@
             </p>
 
             <div class="hero-actions fadeUp d4">
-              <a class="cta" href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Get a Free Consultation</a>
-              <a class="cta secondary" href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Request a free visibility check</a>
+              <a class="cta" href="#contact">Book a Strategy Call</a>
+              <a class="cta secondary" href="#contact">Free visibility check</a>
             </div>
 
             <div class="trustline fadeUp d4" aria-label="Trust signals">
@@ -1023,6 +1029,99 @@
       </div>
     </section>
 
+    <!-- Work -->
+    <section id="work" aria-label="Work">
+      <div class="container">
+        <div class="sectionhead">
+          <div class="eyebrow">Work</div>
+          <h2>Proof over promises.</h2>
+          <p class="sub">A few examples of what we build: high-intent pages, content systems, and conversion-focused redesigns that turn visibility into leads.</p>
+        </div>
+
+        <div class="cards" role="list">
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M4 5h16v14H4z"/>
+                <path d="M8 9h8M8 13h6"/>
+              </svg>
+            </div>
+            <h3>Search landing pages</h3>
+            <p>Pages built around what customers actually search, with a clear offer and an obvious next step.</p>
+          </article>
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M4 4h16v16H4z"/>
+                <path d="M8 16V8M12 16V6M16 16v-4"/>
+              </svg>
+            </div>
+            <h3>Content that ranks</h3>
+            <p>Not “blog for blogging.” Topic maps, internal links, and publishing cadence that compounds.</p>
+          </article>
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M3 12h18"/>
+                <path d="M12 3v18"/>
+              </svg>
+            </div>
+            <h3>Conversion cleanup</h3>
+            <p>Sharper messaging, fewer leaks, better calls-to-action—so the traffic you earn turns into calls.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-label="About">
+      <div class="container">
+        <div class="sectionhead">
+          <div class="eyebrow">About</div>
+          <h2>You’re the hero. We’re the guide.</h2>
+          <p class="sub">You don’t need more marketing noise. You need a simple plan, clean execution, and someone who tells you the truth.</p>
+        </div>
+
+        <div class="cards" role="list">
+          <article class="card" role="listitem">
+            <h3>Direct communication</h3>
+            <p>No account-manager maze. You talk to the person building the strategy and shipping the work.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Clear priorities</h3>
+            <p>We pick the few actions that move the needle and ignore everything that just looks busy.</p>
+          </article>
+          <article class="card" role="listitem">
+            <h3>Measured outcomes</h3>
+            <p>Rankings, traffic, leads. If it doesn’t connect to growth, we don’t do it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-label="Contact">
+      <div class="container">
+        <div class="sectionhead">
+          <div class="eyebrow">Contact</div>
+          <h2>Want to know what you could be ranking for?</h2>
+          <p class="sub">Send your website and we’ll reply with a quick, honest visibility snapshot and the next 2–3 moves we’d make.</p>
+        </div>
+
+        <div class="cards" role="list" style="grid-template-columns: 1fr;">
+          <article class="card" role="listitem">
+            <h3 style="margin-top:0;">Book a strategy call</h3>
+            <p>Tell us what you sell, where you operate, and what “more leads” would mean for you.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:14px;">
+              <a class="cta" href="mailto:hello@skyward.agency?subject=Strategy%20Call%20%7C%20Skyward%20Works">Email to book</a>
+              <a class="cta secondary" href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Request a visibility check</a>
+            </div>
+            <p style="margin-top:14px; color: var(--muted-2); font-weight:650;">Email: <a href="mailto:hello@skyward.agency" style="color: var(--cyan); font-weight:800;">hello@skyward.agency</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Band -->
     <section class="ctaBand" aria-label="Call to action">
       <div class="container">
@@ -1032,8 +1131,8 @@
           <p>Let’s talk about your growth potential. No pressure — just clarity.</p>
 
           <div class="ctaRow">
-            <a class="cta" href="mailto:hello@skyward.agency?subject=Book%20a%20Free%20Consultation%20%7C%20Skyward%20Works">Book a Free Consultation</a>
-            <a class="plainlink" href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Or request a free visibility check</a>
+            <a class="cta" href="#contact">Book a Strategy Call</a>
+            <a class="plainlink" href="#contact">Or request a free visibility check</a>
           </div>
         </div>
       </div>
@@ -1043,11 +1142,7 @@
   <footer aria-label="Footer">
     <div class="container">
       <div class="brand" aria-label="Skyward Works">
-        <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
-          <path d="M24 6l14 14-6 0v22H16V20H10L24 6z" fill="rgba(74,95,255,1)" opacity=".85"/>
-          <path d="M24 10l10 10-6 0v18H20V20h-6L24 10z" fill="rgba(255,107,157,1)" opacity=".78"/>
-          <path d="M24 14l6 6-6 0v14h-4V20h-6l10-10z" fill="rgba(255,255,255,.90)"/>
-        </svg>
+        <img src="assets/logo.png" width="40" height="40" alt="" aria-hidden="true">
         <span style="color:#fff;">Skyward Works</span>
       </div>
 
