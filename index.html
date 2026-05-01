@@ -3,646 +3,1088 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Skyward Works: digital marketing that gets you found. Performance marketing, SEO, and brand strategy built on proof. We get you in front of the right people.">
-  <title>Skyward | Digital Marketing That Gets You Found</title>
-  <!-- JSON-LD ProfessionalService Schema -->
+  <meta name="description" content="Skyward Works helps ambitious businesses get found on Google and turn that visibility into more leads. SEO, content strategy, and web design—direct, practical, and built for results.">
+  <meta name="theme-color" content="#0F172A">
+  <title>Skyward Works | Get found on Google. Get more leads.</title>
+
+  <!-- JSON-LD Organization / ProfessionalService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Skyward Works",
-    "description": "Digital marketing that gets you found. Performance marketing, SEO, and brand strategy built on proof. We get you in front of the right people.",
+    "description": "SEO, content strategy, and web design for ambitious businesses who want to get found on Google and win more leads.",
     "url": "https://skywardagency.com",
-    "image": "https://skywardagency.com/og-image.jpg",
-    "priceRange": "$$",
     "areaServed": "Worldwide",
-    "serviceType": ["Digital Marketing", "Performance Marketing", "Brand Strategy", "Content Marketing", "SEO"],
-    "slogan": "Digital Marketing That Gets You Found",
-    "knowsAbout": ["Performance Marketing", "Brand Strategy", "SEO", "AI-Assisted Content", "RAG Pipelines", "E-E-A-T"]
+    "priceRange": "$$",
+    "serviceType": ["SEO", "Content Strategy", "Web Design", "Conversion Optimization"]
   }
   </script>
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy: {
-              50: '#f0f4f8',
-              100: '#d9e2ec',
-              200: '#bcccdc',
-              300: '#9fb3c8',
-              400: '#829ab1',
-              500: '#627d98',
-              600: '#486581',
-              700: '#334e68',
-              800: '#243b53',
-              900: '#102a43',
-              950: '#0a1929',
-            },
-            sky: {
-              400: '#38bdf8',
-              500: '#0ea5e9',
-              600: '#0284c7',
-              700: '#0369a1',
-            },
-          },
-          fontFamily: {
-            display: ['Montserrat', 'sans-serif'],
-            sans: ['Montserrat', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
-  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=Sora:wght@500..800&display=swap" rel="stylesheet">
   <style>
-    /* Aurora/mesh hero: deep blue–purple base with warm golden–orange pool at bottom-center */
-    .hero-aurora {
-      background-color: #2d1b6e;
-      background-image:
-        /* Primary warm pool, anchored bottom-center */
-        radial-gradient(
-          ellipse 150% 95% at 50% 100%,
-          rgba(245,200,66,0.90) 0%,
-          rgba(245,200,66,0.78) 14%,
-          rgba(232,133,90,0.70) 30%,
-          rgba(137,78,171,0.42) 50%,
-          transparent 72%
-        ),
-        /* Secondary soft glow to extend warmth upward */
-        radial-gradient(
-          ellipse 110% 60% at 50% 92%,
-          rgba(245,200,66,0.55) 0%,
-          rgba(232,133,90,0.45) 28%,
-          rgba(75,45,158,0.16) 52%,
-          transparent 70%
-        ),
-        /* Subtle diagonal indigo wash so the blob feels embedded in the field, not sitting on top */
-        linear-gradient(
-          135deg,
-          rgba(26,58,143,0.70) 0%,
-          rgba(75,45,158,0.78) 40%,
-          rgba(45,27,110,0.96) 100%
-        ),
-        /* Base deep blue–to–purple gradient */
-        linear-gradient(160deg, #1a3a8f 0%, #4b2d9e 42%, #2d1b6e 100%);
-      background-size: 100% 100%;
-      background-position: center;
-      background-repeat: no-repeat;
+    :root{
+      --bg: #F9FAFB;
+      --surface: #FFFFFF;
+      --text: #0F172A;
+      --muted: rgba(15,23,42,.72);
+      --muted-2: rgba(15,23,42,.56);
+      --line: rgba(15,23,42,.10);
+
+      --navy: #0F172A;
+      --blue: #4A5FFF;
+      --pink: #FF6B9D;
+      --orange: #FFB36B;
+
+      --radius-xl: 22px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-sm: 12px;
+
+      --shadow-sm: 0 10px 24px rgba(15,23,42,.08);
+      --shadow-md: 0 18px 48px rgba(15,23,42,.12);
+      --shadow-lg: 0 28px 80px rgba(15,23,42,.16);
+
+      --max: 1120px;
+      --px: 20px;
+      --section: clamp(56px, 6vw, 108px);
+      --h1: clamp(40px, 5vw, 64px);
+      --h2: clamp(28px, 3.2vw, 44px);
+      --h3: 20px;
+      --lead: clamp(17px, 2vw, 20px);
+
+      --ease: cubic-bezier(.2,.9,.2,1);
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a{ color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible{
+      outline: 3px solid rgba(74,95,255,.35);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+
+    .skip{
+      position:absolute;
+      left:-9999px;
+      top: 12px;
+      padding: 10px 14px;
+      background: var(--navy);
+      color:#fff;
+      border-radius: 12px;
+      z-index: 1000;
+    }
+    .skip:focus{ left: 12px; }
+
+    .container{ width: min(var(--max), 100% - (var(--px) * 2)); margin-inline:auto; }
+    .grid{ display:grid; gap: 18px; }
+    .stack{ display:flex; flex-direction: column; gap: 12px; }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,.16);
+      color: rgba(255,255,255,.88);
+      border-radius: 999px;
+      background: rgba(15,23,42,.12);
+      backdrop-filter: blur(10px);
+      width: fit-content;
+    }
+    .pill strong{ font-weight: 700; color:#fff; }
+
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(249,250,251,.72);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-family: Sora, ui-sans-serif, system-ui;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+    .brand svg{ width: 30px; height: 30px; flex: 0 0 auto; }
+    .navlinks{
+      display:none;
+      align-items:center;
+      gap: 18px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .navlinks a{ padding: 10px 10px; border-radius: 12px; }
+    .navlinks a:hover{ color: var(--text); background: rgba(15,23,42,.04); }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(74,95,255,.22);
+      background: linear-gradient(180deg, rgba(74,95,255,1), rgba(74,95,255,.92));
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 16px 48px rgba(74,95,255,.22);
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), filter .25s var(--ease);
+      will-change: transform;
+    }
+    .cta:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 22px 70px rgba(74,95,255,.28);
+      filter: saturate(1.05);
+    }
+    .cta.secondary{
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: none;
+      color: #fff;
+    }
+    .cta.secondary:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.14);
+    }
+
+    details.mobile{
+      display:block;
+    }
+    details.mobile summary{
+      list-style:none;
+      cursor:pointer;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 700;
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      user-select:none;
+    }
+    details.mobile summary::-webkit-details-marker{ display:none; }
+    details.mobile[open] summary{ box-shadow: var(--shadow-sm); }
+    .mobilepanel{
+      margin-top: 12px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 10px;
+      box-shadow: var(--shadow-sm);
+    }
+    .mobilepanel a{
+      display:block;
+      padding: 12px 12px;
+      border-radius: 12px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .mobilepanel a:hover{ background: rgba(15,23,42,.04); color: var(--text); }
+
+    main{ overflow-x: clip; }
+
+    .hero{
+      position: relative;
+      padding: calc(var(--section) - 6px) 0 var(--section);
+      min-height: clamp(720px, 92vh, 960px);
+      display:grid;
+      align-items:center;
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(900px 600px at 22% 24%, rgba(255,107,157,.38) 0%, transparent 62%),
+        radial-gradient(820px 520px at 70% 18%, rgba(74,95,255,.40) 0%, transparent 62%),
+        radial-gradient(900px 700px at 56% 100%, rgba(255,179,107,.32) 0%, transparent 62%),
+        linear-gradient(135deg, rgba(74,95,255,1) 0%, rgba(255,107,157,1) 38%, rgba(255,179,107,1) 100%);
+      filter: saturate(1.1);
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(600px 380px at 48% 34%, rgba(255,255,255,.18), transparent 62%),
+        radial-gradient(800px 520px at 50% 100%, rgba(15,23,42,.22), transparent 60%);
+      pointer-events:none;
+      mix-blend-mode: overlay;
+    }
+    .hero-inner{
+      position: relative;
+      z-index: 2;
+      display:grid;
+      gap: 28px;
+    }
+    .hero-layout{
+      display:grid;
+      gap: 26px;
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+
+    .hero-copy{
+      color:#fff;
+      max-width: 62ch;
+    }
+    .hero h1{
+      font-family: Sora, ui-sans-serif, system-ui;
+      font-size: var(--h1);
+      line-height: 1.04;
+      letter-spacing: -0.03em;
+      margin: 10px 0 10px;
+    }
+    .hero p.lead{
+      font-size: var(--lead);
+      line-height: 1.55;
+      margin: 0;
+      color: rgba(255,255,255,.90);
+      max-width: 58ch;
+    }
+    .hero p.body{
+      margin: 14px 0 0;
+      color: rgba(255,255,255,.84);
+      line-height: 1.65;
+      max-width: 62ch;
+      font-size: 15.5px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+      align-items:center;
+    }
+    .trustline{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+      color: rgba(255,255,255,.86);
+      font-size: 13px;
+      font-weight: 650;
+    }
+    .trustline span{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(15,23,42,.14);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(10px);
+    }
+    .trustline svg{ width: 16px; height: 16px; opacity: .92; }
+
+    .hero-visual{
+      position: relative;
+      min-height: 320px;
+    }
+    .visual-stage{
+      position: relative;
+      border-radius: clamp(22px, 3.5vw, 34px);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(14px);
+      overflow: hidden;
+      box-shadow: 0 28px 90px rgba(15,23,42,.24);
+      padding: 18px;
+    }
+    .visual-stage::before{
+      content:"";
+      position:absolute;
+      inset:-50%;
+      background:
+        radial-gradient(closest-side at 56% 44%, rgba(255,255,255,.18), transparent 65%),
+        conic-gradient(from 210deg, rgba(255,255,255,.10), transparent 70%, rgba(255,255,255,.14));
+      transform: rotate(7deg);
+      opacity: .7;
+      pointer-events:none;
+    }
+    .visual-grid{
+      position: relative;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .statcard{
+      position: relative;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.92);
+      border: 1px solid rgba(15,23,42,.10);
+      box-shadow: 0 18px 60px rgba(15,23,42,.18);
+      padding: 16px 16px;
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+      transform: translateY(8px);
+      opacity: 0;
+      animation: floatIn .8s var(--ease) forwards;
+    }
+    .statcard:nth-child(2){ animation-delay: .12s; }
+    .statbadge{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(180deg, rgba(74,95,255,.14), rgba(255,107,157,.12));
+      border: 1px solid rgba(74,95,255,.18);
+      color: var(--navy);
+    }
+    .statbadge svg{ width: 20px; height: 20px; }
+    .statmeta{ display:flex; flex-direction: column; gap: 4px; }
+    .statmeta strong{
+      font-family: Sora, ui-sans-serif, system-ui;
+      letter-spacing: -0.02em;
+      font-size: 18px;
+    }
+    .statmeta span{
+      color: rgba(15,23,42,.70);
+      font-size: 13.5px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+    .statfloat{
+      position:absolute;
+      inset: auto;
+      width: min(320px, 80%);
+      transform: translateZ(0);
+      animation: bob 6.5s var(--ease) infinite;
+      pointer-events:none;
+    }
+    .statfloat.one{ right: -8px; top: 26px; }
+    .statfloat.two{ left: -8px; bottom: 10px; animation-delay: .8s; }
+    .microcard{
+      border-radius: 18px;
+      background: rgba(15,23,42,.16);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.92);
+      padding: 14px 14px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 22px 70px rgba(15,23,42,.22);
+    }
+    .microcard .k{
+      font-family: Sora, ui-sans-serif, system-ui;
+      font-weight: 750;
+      letter-spacing:-0.02em;
+      font-size: 14px;
+      margin:0 0 6px;
+    }
+    .microcard .v{ margin:0; font-size: 13.5px; line-height: 1.35; color: rgba(255,255,255,.84); font-weight: 600; }
+
+    section{ padding: var(--section) 0; }
+    .sectionhead{
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+    .eyebrow{
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgba(15,23,42,.62);
+    }
+    h2{
+      font-family: Sora, ui-sans-serif, system-ui;
+      font-size: var(--h2);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin:0;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 16.5px;
+      line-height: 1.65;
+      margin:0;
+      max-width: 70ch;
+    }
+
+    .cards{
+      display:grid;
+      gap: 14px;
+      grid-template-columns: 1fr;
+    }
+    .card{
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      box-shadow: 0 1px 0 rgba(15,23,42,.02);
+      transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease);
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(74,95,255,.22);
+    }
+    .card h3{
+      font-family: Sora, ui-sans-serif, system-ui;
+      font-size: var(--h3);
+      letter-spacing: -0.02em;
+      margin: 10px 0 8px;
+    }
+    .card p{
+      margin:0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 15.5px;
+    }
+    .icon{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(180deg, rgba(74,95,255,.12), rgba(255,107,157,.10));
+      border: 1px solid rgba(74,95,255,.14);
+      color: var(--navy);
+    }
+    .icon svg{ width: 22px; height: 22px; }
+
+    .service{
+      padding-left: 16px;
+    }
+    .service::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top: 16px;
+      bottom: 16px;
+      width: 4px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(74,95,255,.20), rgba(255,107,157,.22));
+      transform: scaleY(.2);
+      transform-origin: top;
+      transition: transform .28s var(--ease);
+    }
+    .service:hover::before{ transform: scaleY(1); }
+    .learn{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      margin-top: 14px;
+      color: rgba(74,95,255,1);
+      font-weight: 800;
+      font-size: 14px;
+      width: fit-content;
+      padding: 10px 12px;
+      border-radius: 12px;
+      transition: transform .28s var(--ease), background .28s var(--ease);
+    }
+    .learn:hover{
+      transform: translateY(-1px);
+      background: rgba(74,95,255,.06);
+    }
+    .learn svg{ width: 16px; height: 16px; transition: transform .28s var(--ease); }
+    .learn:hover svg{ transform: translateX(3px); }
+
+    .process{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .step{
+      display:grid;
+      grid-template-columns: auto 1fr;
+      gap: 14px;
+      align-items:flex-start;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.84));
+    }
+    .stepnum{
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      display:grid;
+      place-items:center;
+      font-family: Sora, ui-sans-serif, system-ui;
+      font-weight: 800;
+      color: rgba(15,23,42,.92);
+      border: 1px solid rgba(15,23,42,.10);
+      background:
+        radial-gradient(closest-side at 40% 30%, rgba(74,95,255,.18), transparent 60%),
+        radial-gradient(closest-side at 70% 80%, rgba(255,107,157,.16), transparent 60%),
+        #fff;
+      box-shadow: 0 18px 60px rgba(15,23,42,.10);
+    }
+    .step h3{ margin: 0 0 6px; font-size: 18px; }
+    .step p{ margin:0; color: var(--muted); line-height: 1.65; font-size: 15.5px; }
+
+    .transform{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .panel{
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      padding: 18px;
+    }
+    .panel h3{ margin: 0 0 10px; font-size: 18px; font-family: Sora, ui-sans-serif, system-ui; letter-spacing: -0.02em; }
+    .panel ul{ margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.7; }
+    .panel li{ margin: 8px 0; }
+    .panel.after{
+      border-color: rgba(74,95,255,.22);
+      background:
+        radial-gradient(600px 260px at 16% 0%, rgba(74,95,255,.12), transparent 60%),
+        radial-gradient(520px 260px at 92% 100%, rgba(255,107,157,.10), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ctaBand{
+      position: relative;
+      padding: calc(var(--section) + 10px) 0;
+      color:#fff;
+      overflow:hidden;
+      border-top: 1px solid rgba(255,255,255,.14);
+      border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+    .ctaBand::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(900px 600px at 20% 18%, rgba(255,255,255,.16), transparent 64%),
+        radial-gradient(900px 620px at 60% 110%, rgba(15,23,42,.24), transparent 58%),
+        linear-gradient(135deg, rgba(74,95,255,1) 0%, rgba(255,107,157,1) 44%, rgba(255,179,107,1) 100%);
+    }
+    .ctaBand .container{ position: relative; z-index: 2; }
+    .ctaBand h2{ color:#fff; }
+    .ctaBand p{ color: rgba(255,255,255,.90); margin: 12px 0 0; font-size: 16.5px; line-height: 1.65; max-width: 70ch; }
+    .ctaRow{ display:flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; align-items:center; }
+    .plainlink{
+      color: rgba(255,255,255,.92);
+      font-weight: 800;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(15,23,42,.10);
+      transition: transform .25s var(--ease), background .25s var(--ease);
+      width: fit-content;
+    }
+    .plainlink:hover{ transform: translateY(-1px); background: rgba(15,23,42,.14); }
+
+    footer{
+      background: #0B1224;
+      color: rgba(255,255,255,.78);
+      padding: 56px 0;
+    }
+    .footergrid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding-top: 18px;
+    }
+    footer h3{
+      margin:0 0 12px;
+      font-family: Sora, ui-sans-serif, system-ui;
+      color:#fff;
+      font-size: 14px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    footer a{ color: rgba(255,255,255,.78); font-weight: 650; }
+    footer a:hover{ color: #fff; }
+    .footnote{
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.10);
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13.5px;
+      color: rgba(255,255,255,.62);
+    }
+    .footnote a{ color: rgba(255,255,255,.70); font-weight: 700; }
+
+    .fadeUp{
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeUp .9s var(--ease) forwards;
+    }
+    .d1{ animation-delay: .06s; }
+    .d2{ animation-delay: .12s; }
+    .d3{ animation-delay: .18s; }
+    .d4{ animation-delay: .24s; }
+
+    @keyframes fadeUp{
+      to{ opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floatIn{
+      to{ opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bob{
+      0%,100%{ transform: translateY(0); }
+      50%{ transform: translateY(-10px); }
+    }
+
+    @media (min-width: 720px){
+      .cards{ grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .process{ grid-template-columns: repeat(2, 1fr); }
+      .transform{ grid-template-columns: 1fr 1fr; }
+      .footergrid{ grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 18px; }
+      details.mobile{ display:none; }
+      .navlinks{ display:flex; }
+    }
+    @media (min-width: 980px){
+      .hero-layout{
+        grid-template-columns: 1.2fr .9fr;
+        gap: 28px;
+      }
+      .visual-grid{ grid-template-columns: 1fr; }
+      .hero-visual{ min-height: 520px; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      *{ animation: none !important; transition: none !important; }
     }
   </style>
 </head>
-<body class="bg-white text-navy-800 antialiased font-sans scroll-smooth">
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-navy-900 focus:text-white focus:rounded">Skip to main content</a>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-navy-100 md:bg-white/80 md:backdrop-blur-md" aria-label="Main navigation">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5">
-      <div class="flex items-center justify-between">
-        <a href="index.html" class="font-display text-2xl text-navy-900 tracking-tight">Skyward Works</a>
-        <!-- Desktop menu -->
-        <div class="hidden md:flex items-center gap-10 text-sm font-medium text-navy-600">
-          <a href="index.html" class="hover:text-navy-900 transition-colors">Home</a>
-          <div class="relative group">
-            <a href="services.html" class="hover:text-navy-900 transition-colors inline-flex items-center gap-1">Services</a>
-            <div class="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div class="bg-white border border-navy-100 rounded-lg shadow-lg py-2 min-w-[200px]">
-                <a href="services.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">All Services</a>
-                <a href="performance-marketing.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Performance Marketing</a>
-                <a href="brand-strategy.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Brand Strategy</a>
-                <a href="seo.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">SEO</a>
-                <a href="web-design.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Web Design</a>
-                <a href="content-creation.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Content Creation</a>
-                <a href="meta-ads.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Meta Ads</a>
-                <a href="google-ads.html" class="block px-4 py-2 text-navy-700 hover:bg-navy-50 hover:text-navy-900">Google Ads</a>
+  <header aria-label="Header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Skyward Works home">
+        <!-- Layered upward arrow mark (geometric, 3-layer depth) -->
+        <svg viewBox="0 0 48 48" role="img" aria-label="Skyward Works logo">
+          <defs>
+            <linearGradient id="arrowA" x1="8" y1="40" x2="44" y2="8" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="rgba(255,107,157,1)"/>
+              <stop offset="1" stop-color="rgba(74,95,255,1)"/>
+            </linearGradient>
+            <linearGradient id="arrowB" x1="10" y1="42" x2="42" y2="10" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="rgba(255,179,107,1)"/>
+              <stop offset="1" stop-color="rgba(255,107,157,1)"/>
+            </linearGradient>
+          </defs>
+          <path d="M24 6l14 14-6 0v22H16V20H10L24 6z" fill="url(#arrowA)" opacity=".92"/>
+          <path d="M24 10l10 10-6 0v18H20V20h-6L24 10z" fill="url(#arrowB)" opacity=".85"/>
+          <path d="M24 14l6 6-6 0v14h-4V20h-6l10-10z" fill="rgba(255,255,255,.92)"/>
+        </svg>
+        <span>Skyward Works</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#problem">Why it’s hard</a>
+        <a href="#solution">Services</a>
+        <a href="#process">Process</a>
+        <a href="#transformation">What changes</a>
+        <a href="blog/">Blog</a>
+        <a class="cta" href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Get a Free Consultation</a>
+      </nav>
+
+      <details class="mobile" aria-label="Mobile navigation">
+        <summary>
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          Menu
+        </summary>
+        <div class="mobilepanel">
+          <a href="#problem">Why it’s hard</a>
+          <a href="#solution">Services</a>
+          <a href="#process">Process</a>
+          <a href="#transformation">What changes</a>
+          <a href="blog/">Blog</a>
+          <a href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Get a Free Consultation</a>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <div class="container hero-inner">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <div class="pill fadeUp d1">
+              <strong>No long contracts.</strong>
+              <span>Direct access. Clear next steps.</span>
+            </div>
+
+            <h1 class="fadeUp d2">Get found on Google.<br>Get more leads.</h1>
+
+            <p class="lead fadeUp d3">
+              If your best customers can’t find you, you’re not “missing out” — you’re getting outpaced.
+            </p>
+            <p class="body fadeUp d4">
+              Skyward Works helps ambitious businesses show up when people search, sound credible when they land, and turn that attention into calls. You’ll know what we’re doing, why it matters, and what happens next.
+            </p>
+
+            <div class="hero-actions fadeUp d4">
+              <a class="cta" href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Get a Free Consultation</a>
+              <a class="cta secondary" href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Request a free visibility check</a>
+            </div>
+
+            <div class="trustline fadeUp d4" aria-label="Trust signals">
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M20 7l-8.5 10L4 11"/>
+                </svg>
+                No long contracts
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                </svg>
+                Talk directly with the person doing the work
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                  <path d="M3 12l2-2 4 4L19 4l2 2-12 12z"/>
+                </svg>
+                Clear wins in the first 30 days
+              </span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Hero visual">
+            <div class="visual-stage">
+              <div class="visual-grid" aria-hidden="true">
+                <div class="statcard">
+                  <div class="statbadge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                      <path d="M4 19V5M20 19V9M8 19V11M12 19V7M16 19V14"/>
+                    </svg>
+                  </div>
+                  <div class="statmeta">
+                    <strong>247% avg. traffic growth</strong>
+                    <span>When you stop guessing and build around what people actually search.</span>
+                  </div>
+                </div>
+
+                <div class="statcard">
+                  <div class="statbadge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                      <path d="M4 4h16v16H4z"/>
+                      <path d="M8 9h8M8 13h6M8 17h8"/>
+                    </svg>
+                  </div>
+                  <div class="statmeta">
+                    <strong>50+ articles published</strong>
+                    <span>On-brand, helpful, and structured to win search — without sounding like a robot.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="statfloat one" aria-hidden="true">
+                <div class="microcard">
+                  <p class="k">Visibility snapshot</p>
+                  <p class="v">“You’re showing up for 3/25 high-intent searches. Let’s fix that.”</p>
+                </div>
+              </div>
+
+              <div class="statfloat two" aria-hidden="true">
+                <div class="microcard">
+                  <p class="k">Conversion lift</p>
+                  <p class="v">Clear pages + clear offers = more calls, not just more clicks.</p>
+                </div>
               </div>
             </div>
           </div>
-          <a href="#different" class="hover:text-navy-900 transition-colors">How We're Different</a>
-          <a href="#process" class="hover:text-navy-900 transition-colors">Process</a>
-          <a href="#case-studies" class="hidden hover:text-navy-900 transition-colors">Case Studies</a>
-          <a href="blog/" class="hover:text-navy-900 transition-colors">Blog</a>
-          <a href="#contact" class="bg-sky-600 text-white px-5 py-2.5 rounded-full hover:bg-sky-500 transition-colors">Get a Free Consultation</a>
         </div>
-        <!-- Mobile menu button -->
-        <button id="menu-toggle" class="md:hidden p-2 -mr-2 text-navy-600 hover:text-navy-900 transition-colors" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
       </div>
-    </div>
-    <!-- Mobile menu overlay -->
-    <div id="mobile-menu" class="md:hidden fixed inset-0 top-[73px] z-40 bg-white border-t border-navy-100 shadow-xl opacity-0 invisible translate-y-[-10px] transition-all duration-200 ease-out" aria-hidden="true" style="background-color: #ffffff;">
-      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col gap-1 overflow-y-auto max-h-[calc(100vh-120px)]">
-        <a href="index.html" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Home</a>
-        <div class="border-b border-navy-100 -mx-4 px-4">
-          <button type="button" id="mobile-services-toggle" class="mobile-services-toggle flex items-center justify-between w-full py-4 text-lg font-medium text-navy-700 hover:text-navy-900 rounded-lg text-left" aria-expanded="false" aria-controls="mobile-services-submenu">
-            Services
-            <svg id="mobile-services-chevron" class="w-5 h-5 text-navy-500 transition-transform duration-200 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </button>
-          <div id="mobile-services-submenu" class="hidden pl-4 border-l-2 border-navy-100 space-y-1 pb-4" aria-hidden="true">
-            <a href="services.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">All Services</a>
-            <a href="performance-marketing.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Performance Marketing</a>
-            <a href="brand-strategy.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Brand Strategy</a>
-            <a href="seo.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">SEO</a>
-            <a href="web-design.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Web Design</a>
-            <a href="content-creation.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Content Creation</a>
-            <a href="meta-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Meta Ads</a>
-            <a href="google-ads.html" class="mobile-nav-link block py-2 text-base font-medium text-navy-600 hover:text-navy-900">Google Ads</a>
-          </div>
-        </div>
-        <a href="#different" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">How We're Different</a>
-        <a href="#process" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Process</a>
-        <a href="#case-studies" class="hidden mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Case Studies</a>
-        <a href="blog/" class="mobile-nav-link block py-4 text-lg font-medium text-navy-700 hover:text-navy-900 hover:bg-navy-50 rounded-lg px-4 -mx-4 transition-colors">Blog</a>
-        <a href="#contact" class="mobile-nav-link block py-4 text-lg font-medium text-white bg-sky-600 hover:bg-sky-500 rounded-full text-center mt-2 transition-colors">Get a Free Consultation</a>
-      </div>
-    </div>
-    <!-- Mobile menu backdrop -->
-    <div id="menu-backdrop" class="md:hidden fixed inset-0 top-[73px] z-30 bg-navy-900/20 backdrop-blur-sm opacity-0 invisible transition-opacity duration-200" aria-hidden="true"></div>
-  </nav>
+    </section>
 
-  <main id="main">
-  <!-- Hero -->
-  <section class="relative min-h-screen flex flex-col overflow-hidden" aria-label="Hero">
-    <div class="hero-aurora absolute inset-0"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-32 flex-1 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-      <div class="flex-1 max-w-2xl lg:max-w-none">
-        <p class="text-sky-400 text-sm font-medium tracking-[0.3em] uppercase mb-6">Skyward Works</p>
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight mb-6">
-          Digital Marketing that gets you found.
-        </h1>
-        <p class="text-lg sm:text-xl text-white/90 leading-relaxed mb-10 max-w-xl">
-          Full-service strategy, SEO, and paid media built on proof. We get you in front of the right people.
-        </p>
-        <a href="#contact" class="inline-flex items-center justify-center bg-sky-600 hover:bg-sky-500 text-white font-semibold px-8 py-4 rounded-full transition-colors">
-          Get a Free Consultation
-        </a>
-      </div>
-      <div class="w-full lg:w-auto lg:flex-shrink-0 lg:max-w-[320px]">
-        <div class="bg-white rounded-xl shadow-lg p-5 lg:p-6 border border-white/20">
-          <h2 class="font-display text-lg text-navy-900 mb-4">Get a Free Consultation</h2>
-          <form id="hero-form" class="space-y-3" method="post" action="#" aria-label="Quick contact form">
-            <input type="text" name="name" placeholder="Full Name" autocomplete="name" class="w-full px-4 py-2.5 text-sm rounded-lg border border-navy-200 text-navy-800 placeholder:text-navy-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20 outline-none transition-all" aria-label="Full name">
-            <input type="email" name="email" placeholder="Email Address" autocomplete="email" class="w-full px-4 py-2.5 text-sm rounded-lg border border-navy-200 text-navy-800 placeholder:text-navy-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20 outline-none transition-all" aria-label="Email address">
-            <input type="tel" name="phone" placeholder="Phone Number" autocomplete="tel" class="w-full px-4 py-2.5 text-sm rounded-lg border border-navy-200 text-navy-800 placeholder:text-navy-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20 outline-none transition-all" aria-label="Phone number">
-            <textarea name="message" placeholder="Message" rows="3" class="w-full px-4 py-2.5 text-sm rounded-lg border border-navy-200 text-navy-800 placeholder:text-navy-400 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/20 outline-none transition-all resize-none" aria-label="Message"></textarea>
-            <button type="submit" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-semibold py-3 text-sm rounded-full transition-colors">
-              Send Message
-            </button>
-          </form>
-          <p class="mt-3 text-xs text-navy-500">Or email us at <a href="mailto:hello@skyward.agency" class="text-sky-600 hover:text-sky-500 font-medium">hello@skyward.agency</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10" aria-hidden="true">
-      <svg class="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-    </div>
-  </section>
-
-  <!-- Trust Badges -->
-  <section class="py-12 lg:py-16 bg-white border-b border-navy-100" aria-label="Trusted by">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="flex flex-wrap items-center justify-center gap-12 lg:gap-16">
-        <div class="flex items-center gap-3 text-navy-600">
-          <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center">
-            <svg class="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <span class="font-medium text-navy-800">Trusted Partner</span>
-        </div>
-        <div class="flex items-center gap-3 text-navy-600">
-          <div class="w-10 h-10 rounded-lg bg-sky-100 flex items-center justify-center">
-            <svg class="w-5 h-5 text-sky-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          </div>
-          <span class="font-medium text-navy-800">Proven Results</span>
-        </div>
-        <div class="flex items-center gap-3 text-navy-600">
-          <div class="w-10 h-10 rounded-lg bg-navy-100 flex items-center justify-center">
-            <svg class="w-5 h-5 text-navy-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          </div>
-          <span class="font-medium text-navy-800">Data-Driven</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-20 lg:py-32 bg-white scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="max-w-2xl mb-16 lg:mb-24">
-        <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">Our Services</p>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 leading-tight">
-          Full-stack digital expertise.
-        </h2>
-        <p class="mt-6 text-lg text-navy-600 leading-relaxed">
-          From strategy to execution, we deliver end-to-end solutions that get you found.
-        </p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        <div class="group p-8 lg:p-10 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-sky-200">
-          <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-sky-500 group-hover:text-white transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-navy-900 mb-4">Performance Marketing</h3>
-          <p class="text-lg text-navy-600 leading-relaxed mb-6">Paid media that converts. We optimize every dollar across Google, Meta, and LinkedIn to maximize ROI.</p>
-          <a href="performance-marketing.html" class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-500 font-medium text-sm group/link">
-            Learn More
-            <svg class="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
-        <div class="group p-8 lg:p-10 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-sky-200">
-          <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-sky-500 group-hover:text-white transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-navy-900 mb-4">Brand Strategy</h3>
-          <p class="text-lg text-navy-600 leading-relaxed mb-6">Positioning, messaging, and creative direction that differentiates you in crowded markets.</p>
-          <a href="brand-strategy.html" class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-500 font-medium text-sm group/link">
-            Learn More
-            <svg class="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
-        <div class="group p-8 lg:p-10 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-navy-100 hover:border-sky-200">
-          <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-sky-500 group-hover:text-white transition-colors">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-navy-900 mb-4">SEO</h3>
-          <p class="text-lg text-navy-600 leading-relaxed mb-6">Get found when customers search. We optimize your site for Google so you show up for the phrases people use when they're ready to buy—and attract free traffic from search.</p>
-          <a href="seo.html" class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-500 font-medium text-sm group/link">
-            Learn More
-            <svg class="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How We're Different -->
-  <section id="different" class="relative py-32 lg:py-40 overflow-hidden scroll-mt-20">
-    <div class="absolute inset-0 bg-gradient-to-br from-navy-100/80 via-sky-50/60 to-navy-100/80"></div>
-    <div class="absolute inset-0 opacity-30 pointer-events-none">
-      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-400 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-navy-300 rounded-full blur-3xl"></div>
-    </div>
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="max-w-2xl mb-24">
-        <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">How We're Different</p>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy-900 leading-tight">
-          Built for the AI-first era.
-        </h2>
-        <p class="mt-6 text-lg text-navy-600 leading-relaxed">
-          While others use basic automation, we've built systems that deliver real results.
-        </p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
-        <div class="group p-8 lg:p-10 rounded-2xl bg-white/40 backdrop-blur-xl border border-white/60 shadow-lg hover:bg-white/60 hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-sky-500/30 transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-navy-900 mb-4">LLM GEO</h3>
-          <p class="text-lg text-navy-600 leading-relaxed mb-4">Get found when people ask AI. ChatGPT, Perplexity, and other AI assistants are becoming the new front door to the internet. We optimize your content so you show up when customers ask—not just when they search.</p>
-          <p class="text-lg text-navy-600 leading-relaxed mb-6">Learn how we help you get recommended by AI.</p>
-          <a href="ai-assisted-precision.html" class="mt-auto inline-flex items-center justify-center bg-sky-600 hover:bg-sky-500 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm">How Skyward Assists →</a>
-        </div>
-        <div class="group p-8 lg:p-10 rounded-2xl bg-white/40 backdrop-blur-xl border border-white/60 shadow-lg hover:bg-white/60 hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-sky-500/30 transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-navy-900 mb-4">SEO</h3>
-          <p class="text-lg text-navy-600 leading-relaxed mb-4">Get found when customers search. We help your business show up for the topics people actually look for—and become the go-to expert Google recommends in your industry.</p>
-          <p class="text-lg text-navy-600 leading-relaxed mb-6">See how we help you become the trusted authority in your field.</p>
-          <a href="seo.html" class="mt-auto inline-flex items-center justify-center bg-sky-600 hover:bg-sky-500 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm">How Skyward Assists →</a>
-        </div>
-        <div class="group p-8 lg:p-10 rounded-2xl bg-white/40 backdrop-blur-xl border border-white/60 shadow-lg hover:bg-white/60 hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-600 flex items-center justify-center mb-6 group-hover:bg-sky-500/30 transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-          </div>
-          <h3 class="font-display text-xl text-navy-900 mb-4">Data-Driven Velocity</h3>
-          <p class="text-lg text-navy-600 leading-relaxed mb-4">Create more content without sacrificing trust. We use data to decide what to write, automation to handle the heavy lifting, and our team to review everything—so you get speed and credibility together.</p>
-          <p class="text-lg text-navy-600 leading-relaxed mb-6">Discover how we deliver more content without cutting corners.</p>
-          <a href="data-driven-velocity.html" class="mt-auto inline-flex items-center justify-center bg-sky-600 hover:bg-sky-500 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm">How Skyward Assists →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process: The Skyward Flight Path -->
-  <section id="process" class="py-32 lg:py-40 bg-gray-50 scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="text-center max-w-3xl mx-auto mb-20">
-        <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">Our Process</p>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-navy-900 leading-tight mb-6">
-         How We Do It
-        </h2>
-        <p class="text-lg text-navy-600 leading-relaxed">
-          A proven four-step approach: we assess where you are, plan your strategy, create and publish your content, then track and improve your results so you get found online.
-        </p>
-      </div>
-
-      <!-- 4-step horizontal grid (stacks vertically on mobile) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
-        <!-- Step 1: Audit & Analysis -->
-        <div class="relative flex flex-col items-center text-center group">
-          <div class="w-16 h-16 rounded-2xl bg-white border border-navy-100 shadow-sm flex items-center justify-center mb-6 group-hover:border-sky-200 group-hover:shadow-md transition-all duration-300">
-            <iconify-icon icon="lucide:clipboard-list" class="text-sky-600 text-[2rem]" aria-hidden="true"></iconify-icon>
-          </div>
-          <span class="text-xs font-semibold text-sky-600 tracking-wider uppercase mb-2">Step 1</span>
-          <h3 class="font-display text-xl text-navy-900 mb-3">Audit & Analysis</h3>
-          <p class="text-lg text-navy-600 leading-relaxed">We review your site and content to find what's working, what's missing, and where you stand against competitors.</p>
-          <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-navy-200 to-transparent -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
-        </div>
-
-        <!-- Step 2: LLM Strategy Design -->
-        <div class="relative flex flex-col items-center text-center group">
-          <div class="w-16 h-16 rounded-2xl bg-white border border-navy-100 shadow-sm flex items-center justify-center mb-6 group-hover:border-sky-200 group-hover:shadow-md transition-all duration-300">
-            <iconify-icon icon="lucide:sparkles" class="text-sky-600 text-[2rem]" aria-hidden="true"></iconify-icon>
-          </div>
-          <span class="text-xs font-semibold text-sky-600 tracking-wider uppercase mb-2">Step 2</span>
-          <h3 class="font-display text-xl text-navy-900 mb-3">Strategy & Tools</h3>
-          <p class="text-lg text-navy-600 leading-relaxed">We design a custom plan and AI tools that match your brand voice and how your content is organized.</p>
-          <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-navy-200 to-transparent -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
-        </div>
-
-        <!-- Step 3: Content Deployment -->
-        <div class="relative flex flex-col items-center text-center group">
-          <div class="w-16 h-16 rounded-2xl bg-white border border-navy-100 shadow-sm flex items-center justify-center mb-6 group-hover:border-sky-200 group-hover:shadow-md transition-all duration-300">
-            <iconify-icon icon="lucide:rocket" class="text-sky-600 text-[2rem]" aria-hidden="true"></iconify-icon>
-          </div>
-          <span class="text-xs font-semibold text-sky-600 tracking-wider uppercase mb-2">Step 3</span>
-          <h3 class="font-display text-xl text-navy-900 mb-3">Content Deployment</h3>
-          <p class="text-lg text-navy-600 leading-relaxed">We create and publish content across your site, with our team reviewing everything before it goes live.</p>
-          <div class="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-navy-200 to-transparent -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></div>
-        </div>
-
-        <!-- Step 4: Rank Tracking & Optimization -->
-        <div class="relative flex flex-col items-center text-center group">
-          <div class="w-16 h-16 rounded-2xl bg-white border border-navy-100 shadow-sm flex items-center justify-center mb-6 group-hover:border-sky-200 group-hover:shadow-md transition-all duration-300">
-            <iconify-icon icon="lucide:trending-up" class="text-sky-600 text-[2rem]" aria-hidden="true"></iconify-icon>
-          </div>
-          <span class="text-xs font-semibold text-sky-600 tracking-wider uppercase mb-2">Step 4</span>
-          <h3 class="font-display text-xl text-navy-900 mb-3">Track & Improve</h3>
-          <p class="text-lg text-navy-600 leading-relaxed">We monitor your results, test what works, and keep improving so you show up better in Google and get more leads.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Studies (hidden until ready) -->
-  <section id="case-studies" class="hidden py-20 lg:py-32 bg-navy-50 scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="max-w-2xl mb-16 lg:mb-20">
-        <p class="text-sky-600 text-sm font-medium tracking-[0.3em] uppercase mb-4">Our Work</p>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 leading-tight">
-          Brands we've helped soar.
-        </h2>
-        <p class="mt-6 text-lg text-navy-600 leading-relaxed">
-          Recent success stories with measurable results.
-        </p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        <article class="group flex flex-col bg-white rounded-2xl shadow-sm border border-navy-100 overflow-hidden hover:shadow-xl hover:border-sky-200 transition-all duration-300">
-          <div class="aspect-[4/3] bg-gradient-to-br from-navy-100 to-navy-200 flex items-center justify-center p-8">
-            <div class="w-full h-full max-w-[200px] rounded-lg bg-white/80 flex items-center justify-center border border-navy-200">
-              <svg class="w-12 h-12 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-            </div>
-          </div>
-          <div class="p-6 lg:p-8 flex flex-col flex-1">
-            <h3 class="font-display text-xl text-navy-900 mb-2">3Comm</h3>
-            <p class="text-lg text-navy-600 leading-relaxed mb-6 flex-1">Elevate your marketing results. How we scaled paid acquisition while cutting CPA by 40% for a B2B payments platform.</p>
-            <a href="case-study.html" class="inline-flex items-center justify-center bg-sky-600 hover:bg-sky-500 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm">View Case Study</a>
-          </div>
-        </article>
-        <article class="group flex flex-col bg-white rounded-2xl shadow-sm border border-navy-100 overflow-hidden hover:shadow-xl hover:border-sky-200 transition-all duration-300">
-          <div class="aspect-[4/3] bg-gradient-to-br from-navy-100 to-sky-100 flex items-center justify-center p-8">
-            <div class="w-24 h-40 rounded-lg bg-white/90 border border-navy-200 flex items-center justify-center shadow-sm">
-              <svg class="w-8 h-8 text-navy-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-            </div>
-          </div>
-          <div class="p-6 lg:p-8 flex flex-col flex-1">
-            <h3 class="font-display text-xl text-navy-900 mb-2">Orchard</h3>
-            <p class="text-lg text-navy-600 leading-relaxed mb-6 flex-1">Delivered to 2000 sign-ups. Omnichannel strategy that 5x'd their email list for a luxury skincare brand.</p>
-            <a href="case-study.html" class="inline-flex items-center justify-center bg-sky-600 hover:bg-sky-500 text-white font-semibold py-3 px-6 rounded-full transition-colors text-sm">View Case Study</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Free Local Marketing Advice - Latest Blog Post -->
-  <section id="latest-post" class="py-8 lg:py-10 bg-navy-50 border-t border-navy-100 scroll-mt-20" aria-labelledby="latest-post-heading">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div id="latest-post-card" class="max-w-2xl mx-auto rounded-xl bg-white border border-navy-100 shadow-sm overflow-hidden">
-        <div id="latest-post-image-wrap" class="hidden w-full overflow-hidden rounded-t-xl bg-navy-100">
-          <a id="latest-post-image-link" href="blog/local-seo-for-home-service-businesses.html" class="block aspect-[21/9] max-h-28 sm:max-h-32 w-full">
-            <img id="latest-post-image" src="blog/images/local-seo-banner.png" alt="Local SEO for home service businesses" class="w-full h-full object-cover object-center" loading="lazy">
-          </a>
-        </div>
-        <div class="p-5 sm:p-6">
-        <h2 id="latest-post-heading" class="font-display text-xl sm:text-2xl font-bold text-navy-900 leading-tight mb-2">Want free local marketing advice?</h2>
-        <p class="text-base text-navy-600 leading-relaxed mb-4">I document exactly how I rank local businesses using SEO, content, and smart site structure. Learn from what I'm doing in real time.</p>
-        <div id="latest-post-content" class="mb-4">
-          <h3 id="latest-post-title" class="font-display text-base sm:text-lg text-navy-900 mb-1">Local SEO for Home Service Businesses: A Complete Guide</h3>
-          <p id="latest-post-excerpt" class="text-sm text-navy-600 leading-relaxed mb-0">How to rank your plumbing, HVAC, roofing, or landscaping business in local search. Site structure, Google Business Profile, content strategy, and the mistakes that hold most contractors back.</p>
-        </div>
-        <div class="flex flex-col sm:flex-row sm:items-center gap-3">
-          <a id="latest-post-cta" href="blog/local-seo-for-home-service-businesses.html" class="inline-flex items-center justify-center bg-sky-600 hover:bg-sky-500 text-white font-semibold px-5 py-2.5 rounded-full transition-colors text-sm">Read the Latest Post</a>
-          <a href="blog/" class="text-sm text-sky-600 hover:text-sky-500 font-medium">Or browse all marketing articles →</a>
-        </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Get in Touch -->
-  <section id="contact" class="py-20 lg:py-32 bg-white scroll-mt-20">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="max-w-xl mx-auto">
-        <div class="bg-navy-900 rounded-2xl p-8 lg:p-12 text-center lg:text-left">
-          <h2 class="font-display text-2xl sm:text-3xl font-semibold text-white leading-tight mb-4">Get in Touch</h2>
-          <p class="text-lg text-navy-200 leading-relaxed mb-8">
-            Ready to elevate your marketing? Let's chat.
+    <!-- Problem -->
+    <section id="problem" aria-label="Why this feels so hard">
+      <div class="container">
+        <div class="sectionhead">
+          <div class="eyebrow">Why this feels so hard</div>
+          <h2>You’re doing the work. The internet isn’t giving you credit.</h2>
+          <p class="sub">
+            You’ve got a real business, real results, and real customers — but online you’re competing with louder, worse options. Here’s what that looks like in plain language.
           </p>
-          <form id="contact-form" class="space-y-4" method="post" action="#" aria-label="Contact form">
-            <input type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name" class="w-full px-5 py-3.5 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-navy-300 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30 outline-none transition-all" aria-label="Your name">
-            <input type="email" id="contact-email" name="email" placeholder="Email address" autocomplete="email" class="w-full px-5 py-3.5 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-navy-300 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30 outline-none transition-all" aria-label="Email address">
-            <textarea id="contact-message" name="message" placeholder="Tell us about your project..." rows="4" class="w-full px-5 py-3.5 rounded-xl border border-white/20 bg-white/5 text-white placeholder:text-navy-300 focus:border-sky-400 focus:ring-2 focus:ring-sky-400/30 outline-none transition-all resize-none" aria-label="Project details"></textarea>
-            <button type="submit" class="w-full sm:w-auto bg-sky-600 hover:bg-sky-500 text-white font-semibold px-8 py-4 rounded-full transition-colors">
-              Send Message
-            </button>
-          </form>
+        </div>
+
+        <div class="cards" role="list">
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M10 17a5 5 0 1 1 7.07-7.07A5 5 0 0 1 10 17z"/>
+                <path d="M21 21l-4.3-4.3"/>
+              </svg>
+            </div>
+            <h3>Search doesn’t show you</h3>
+            <p>People type exactly what you sell… and Google serves everyone but you. That’s not “bad luck.” It’s structure, relevance, and trust signals.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M12 2v20"/>
+                <path d="M17 7H9.5a2.5 2.5 0 0 0 0 5H14a2.5 2.5 0 0 1 0 5H6"/>
+              </svg>
+            </div>
+            <h3>Marketing feels like a gamble</h3>
+            <p>You’ve tried “a little SEO,” a few posts, maybe ads. Nothing sticks — because there’s no plan tying visibility to leads.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M3 11h18"/>
+                <path d="M7 7l-4 4 4 4"/>
+                <path d="M17 7l4 4-4 4"/>
+              </svg>
+            </div>
+            <h3>You’re losing leads to competitors</h3>
+            <p>Not because they’re better — because they’re easier to find. The internet rewards the business that shows up and makes the next step obvious.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Solution -->
+    <section id="solution" aria-label="How we fix this">
+      <div class="container">
+        <div class="sectionhead">
+          <div class="eyebrow">How we fix this</div>
+          <h2>Three core services. One outcome: more qualified leads.</h2>
+          <p class="sub">
+            We don’t throw tactics at your business. We build a simple engine: visibility → trust → action.
+          </p>
+        </div>
+
+        <div class="cards" role="list">
+          <article class="card service" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M10 17a5 5 0 1 1 7.07-7.07A5 5 0 0 1 10 17z"/>
+                <path d="M21 21l-4.3-4.3"/>
+              </svg>
+            </div>
+            <h3>SEO &amp; Content</h3>
+            <p>We map what customers search, create pages that deserve to rank, and publish content that builds trust before the first call.</p>
+            <a class="learn" href="seo.html">
+              Learn more
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M5 12h14"/>
+                <path d="M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="card service" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M4 5h16v4H4z"/>
+                <path d="M4 11h10v10H4z"/>
+                <path d="M16 11h4v10h-4z"/>
+              </svg>
+            </div>
+            <h3>Web Design</h3>
+            <p>Fast, mobile-first pages with a clear offer and clean messaging. Looks premium. Loads fast. Converts like it should.</p>
+            <a class="learn" href="web-design.html">
+              Learn more
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M5 12h14"/>
+                <path d="M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="card service" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M3 12l7-7 4 4 7-7"/>
+                <path d="M3 20h18"/>
+                <path d="M10 5v14"/>
+              </svg>
+            </div>
+            <h3>Conversion</h3>
+            <p>We tighten the story, remove friction, and make the next step easy. More calls from the same traffic.</p>
+            <a class="learn" href="services.html">
+              Learn more
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M5 12h14"/>
+                <path d="M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" aria-label="Our process">
+      <div class="container">
+        <div class="sectionhead">
+          <div class="eyebrow">Our process</div>
+          <h2>Four clear steps. No mystery work.</h2>
+          <p class="sub">
+            You’ll always know where we are, what we’re doing, and what we’re measuring.
+          </p>
+        </div>
+
+        <div class="process">
+          <article class="step">
+            <div class="stepnum" aria-hidden="true">1</div>
+            <div>
+              <h3>Audit</h3>
+              <p>We look at what you have, what’s missing, and where the easy wins are hiding (site, search, messaging).</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="stepnum" aria-hidden="true">2</div>
+            <div>
+              <h3>Strategy</h3>
+              <p>We build a simple plan: what to rank for, what to publish, and what to fix first so it actually pays off.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="stepnum" aria-hidden="true">3</div>
+            <div>
+              <h3>Execute</h3>
+              <p>We ship the work — pages, content, updates — in tight loops. You’re not waiting months to see movement.</p>
+            </div>
+          </article>
+          <article class="step">
+            <div class="stepnum" aria-hidden="true">4</div>
+            <div>
+              <h3>Measure</h3>
+              <p>We track rankings, traffic, and leads. Then we double down on what works and cut what doesn’t.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transformation -->
+    <section id="transformation" aria-label="What changes">
+      <div class="container">
+        <div class="sectionhead">
+          <div class="eyebrow">What changes</div>
+          <h2>What life looks like after.</h2>
+          <p class="sub">
+            This isn’t about “more traffic.” It’s about stability. Predictable leads. And finally knowing what’s working.
+          </p>
+        </div>
+
+        <div class="transform">
+          <div class="panel">
+            <h3>Before</h3>
+            <ul>
+              <li>Some weeks are packed. Others are silent.</li>
+              <li>No real idea what’s driving leads (or why it stopped).</li>
+              <li>That constant low-grade worry: “Are we falling behind?”</li>
+            </ul>
+          </div>
+          <div class="panel after">
+            <h3>After</h3>
+            <ul>
+              <li>Steady calls from people already looking for what you do.</li>
+              <li>Clear visibility into what’s working and what’s next.</li>
+              <li>More time running the business — not chasing the next tactic.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Band -->
+    <section class="ctaBand" aria-label="Call to action">
+      <div class="container">
+        <div class="sectionhead" style="margin-bottom: 0;">
+          <div class="eyebrow" style="color: rgba(255,255,255,.78);">Next step</div>
+          <h2>Ready to reach new heights?</h2>
+          <p>Let’s talk about your growth potential. No pressure — just clarity.</p>
+
+          <div class="ctaRow">
+            <a class="cta" href="mailto:hello@skyward.agency?subject=Book%20a%20Free%20Consultation%20%7C%20Skyward%20Works">Book a Free Consultation</a>
+            <a class="plainlink" href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Or request a free visibility check</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-navy-950 text-navy-300 py-16">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-        <div>
-          <span class="font-display text-2xl text-white">Skyward Works</span>
-          <p class="mt-4 text-sm max-w-xs">Strategic digital marketing for ambitious brands.</p>
+  <footer aria-label="Footer">
+    <div class="container">
+      <div class="brand" aria-label="Skyward Works">
+        <svg viewBox="0 0 48 48" role="img" aria-hidden="true">
+          <path d="M24 6l14 14-6 0v22H16V20H10L24 6z" fill="rgba(74,95,255,1)" opacity=".85"/>
+          <path d="M24 10l10 10-6 0v18H20V20h-6L24 10z" fill="rgba(255,107,157,1)" opacity=".78"/>
+          <path d="M24 14l6 6-6 0v14h-4V20h-6l10-10z" fill="rgba(255,255,255,.90)"/>
+        </svg>
+        <span style="color:#fff;">Skyward Works</span>
+      </div>
+
+      <div class="footergrid" role="navigation" aria-label="Footer links">
+        <div class="stack" style="gap:10px;">
+          <h3>Company</h3>
+          <a href="#problem">Why it’s hard</a>
+          <a href="#process">Process</a>
+          <a href="#transformation">What changes</a>
         </div>
-        <div class="flex gap-12 text-sm">
-          <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
-          <a href="#" class="hover:text-white transition-colors">Twitter</a>
-          <a href="#" class="hover:text-white transition-colors">Instagram</a>
+        <div class="stack" style="gap:10px;">
+          <h3>Services</h3>
+          <a href="seo.html">SEO &amp; Content</a>
+          <a href="web-design.html">Web Design</a>
+          <a href="services.html">All services</a>
+        </div>
+        <div class="stack" style="gap:10px;">
+          <h3>Resources</h3>
+          <a href="blog/">Blog</a>
+          <a href="services.html">Service overview</a>
+        </div>
+        <div class="stack" style="gap:10px;">
+          <h3>Contact</h3>
+          <a href="mailto:hello@skyward.agency">hello@skyward.agency</a>
+          <a href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Request a visibility check</a>
+          <a href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Book a consultation</a>
         </div>
       </div>
-      <div class="mt-16 pt-8 border-t border-navy-800 flex flex-col sm:flex-row sm:justify-between gap-4 text-sm">
-        <p>© 2025 Skyward. All rights reserved.</p>
-        <div class="flex gap-8">
-          <a href="#" class="hover:text-white transition-colors">Privacy</a>
-          <a href="#" class="hover:text-white transition-colors">Terms</a>
+
+      <div class="footnote">
+        <div>© <span id="y">2026</span> Skyward Works. All rights reserved.</div>
+        <div class="stack" style="flex-direction: row; flex-wrap: wrap; gap: 10px;">
+          <a href="services.html">Services</a>
+          <a href="blog/">Blog</a>
         </div>
       </div>
     </div>
   </footer>
-
-  <script src="blog/posts-data.js"></script>
-  <script>
-    (function() {
-      var posts = (window.BLOG_POSTS || []).slice().sort(function(a, b) { return b.date.localeCompare(a.date); });
-      var latest = posts[0];
-      if (latest) {
-        var titleEl = document.getElementById('latest-post-title');
-        var excerptEl = document.getElementById('latest-post-excerpt');
-        var ctaEl = document.getElementById('latest-post-cta');
-        var imgWrap = document.getElementById('latest-post-image-wrap');
-        var imgLink = document.getElementById('latest-post-image-link');
-        var imgEl = document.getElementById('latest-post-image');
-        if (titleEl) titleEl.textContent = latest.title;
-        if (excerptEl) excerptEl.textContent = latest.excerpt;
-        if (ctaEl) ctaEl.href = 'blog/' + latest.slug + '.html';
-        if (latest.image && imgWrap && imgLink && imgEl) {
-          imgWrap.classList.remove('hidden');
-          imgLink.href = 'blog/' + latest.slug + '.html';
-          imgEl.src = 'blog/' + latest.image;
-          imgEl.alt = latest.title + '—latest marketing article for contractors and home service businesses';
-        }
-      }
-    })();
-  </script>
-  <script>
-    (function() {
-      // Hero form handler
-      var heroForm = document.getElementById('hero-form');
-      if (heroForm) {
-        heroForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          var btn = this.querySelector('button[type="submit"]');
-          var orig = btn.textContent;
-          btn.disabled = true;
-          btn.textContent = 'Sending…';
-          setTimeout(function() {
-            btn.textContent = 'Message sent!';
-            btn.classList.remove('bg-sky-600', 'hover:bg-sky-500');
-            btn.classList.add('bg-emerald-500');
-            heroForm.reset();
-            setTimeout(function() {
-              btn.disabled = false;
-              btn.textContent = orig;
-btn.classList.add('bg-sky-600', 'hover:bg-sky-500');
-            btn.classList.remove('bg-emerald-500');
-            }, 3000);
-          }, 800);
-        });
-      }
-      // Contact form handler – prevents broken default submit, shows feedback
-      // To collect submissions: add action="https://formspree.io/f/YOUR_ID" (or Netlify Forms, etc.)
-      var contactForm = document.getElementById('contact-form');
-      if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          var btn = this.querySelector('button[type="submit"]');
-          var originalText = btn.textContent;
-          btn.disabled = true;
-          btn.textContent = 'Sending…';
-          // Simulate submit delay; replace with fetch() to your endpoint when ready
-          setTimeout(function() {
-            btn.textContent = 'Message sent!';
-            btn.classList.remove('bg-sky-600', 'hover:bg-sky-500');
-            btn.classList.add('bg-emerald-500');
-            contactForm.reset();
-            setTimeout(function() {
-              btn.disabled = false;
-              btn.textContent = originalText;
-btn.classList.add('bg-sky-600', 'hover:bg-sky-500');
-            btn.classList.remove('bg-emerald-500');
-            }, 3000);
-          }, 800);
-        });
-      }
-
-      var menuToggle = document.getElementById('menu-toggle');
-      var mobileMenu = document.getElementById('mobile-menu');
-      var menuBackdrop = document.getElementById('menu-backdrop');
-      var iconOpen = document.getElementById('menu-icon-open');
-      var iconClose = document.getElementById('menu-icon-close');
-      var navLinks = document.querySelectorAll('.mobile-nav-link');
-
-      function openMenu() {
-        mobileMenu.classList.remove('opacity-0', 'invisible', 'translate-y-[-10px]');
-        mobileMenu.classList.add('opacity-100', 'visible', 'translate-y-0');
-        menuBackdrop.classList.remove('opacity-0', 'invisible');
-        menuBackdrop.classList.add('opacity-100', 'visible');
-        iconOpen.classList.add('hidden');
-        iconClose.classList.remove('hidden');
-        menuToggle.setAttribute('aria-expanded', 'true');
-        menuToggle.setAttribute('aria-label', 'Close menu');
-        mobileMenu.setAttribute('aria-hidden', 'false');
-        menuBackdrop.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
-
-      function closeMenu() {
-        mobileMenu.classList.add('opacity-0', 'invisible', 'translate-y-[-10px]');
-        mobileMenu.classList.remove('opacity-100', 'visible', 'translate-y-0');
-        menuBackdrop.classList.add('opacity-0', 'invisible');
-        menuBackdrop.classList.remove('opacity-100', 'visible');
-        iconOpen.classList.remove('hidden');
-        iconClose.classList.add('hidden');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Open menu');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-        menuBackdrop.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-
-      menuToggle.addEventListener('click', function() {
-        var isOpen = mobileMenu.classList.contains('opacity-100');
-        isOpen ? closeMenu() : openMenu();
-      });
-
-      menuBackdrop.addEventListener('click', closeMenu);
-
-      navLinks.forEach(function(link) {
-        link.addEventListener('click', closeMenu);
-      });
-
-      var servicesToggle = document.getElementById('mobile-services-toggle');
-      var servicesSubmenu = document.getElementById('mobile-services-submenu');
-      var servicesChevron = document.getElementById('mobile-services-chevron');
-      if (servicesToggle && servicesSubmenu) {
-        servicesToggle.addEventListener('click', function(e) {
-          e.stopPropagation();
-          var expanded = servicesSubmenu.classList.contains('hidden');
-          servicesSubmenu.classList.toggle('hidden', !expanded);
-          servicesSubmenu.setAttribute('aria-hidden', expanded ? 'false' : 'true');
-          servicesToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-          if (servicesChevron) servicesChevron.style.transform = expanded ? 'rotate(180deg)' : '';
-        });
-      }
-
-      window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) closeMenu();
-      });
-    })();
-  </script>
 </body>
 </html>
