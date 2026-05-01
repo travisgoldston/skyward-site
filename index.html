@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Skyward Works helps ambitious businesses get found on Google and turn that visibility into more leads. SEO, content strategy, and web design—direct, practical, and built for results.">
-  <meta name="theme-color" content="#0F172A">
-  <title>Skyward Works | Get found on Google. Get more leads.</title>
+  <meta name="description" content="Skyward Works builds precision-engineered growth systems for ambitious local businesses. Local SEO systems, trust-first web design, and conversion infrastructure that compounds.">
+  <meta name="theme-color" content="#070B14">
+  <title>Skyward Works | Mission control for local growth</title>
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="alternate icon" href="assets/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/logo.png">
@@ -91,51 +91,17 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
   <style>
-    :root{
-      --bg: #F9FAFB;
-      --surface: #FFFFFF;
-      --text: #0F172A;
-      --muted: rgba(15,23,42,.72);
-      --muted-2: rgba(15,23,42,.56);
-      --line: rgba(15,23,42,.10);
-
-      --navy: #0F172A;
-      --offwhite: #F9FAFB;
-      --cyan: #04ACEC;
-      --green: #3CB44C;
-      --cyan-2: rgba(4,172,236,.14);
-      --green-2: rgba(60,180,76,.14);
-
-      --radius-xl: 22px;
-      --radius-lg: 18px;
-      --radius-md: 14px;
-      --radius-sm: 12px;
-
-      --shadow-sm: 0 10px 24px rgba(15,23,42,.08);
-      --shadow-md: 0 18px 48px rgba(15,23,42,.12);
-      --shadow-lg: 0 28px 80px rgba(15,23,42,.16);
-      --shadow-nav: 0 14px 42px rgba(2,6,23,.28);
-
-      --max: 1120px;
-      --px: 20px;
-      --section: clamp(56px, 6vw, 108px);
-      --h1: clamp(40px, 5vw, 64px);
-      --h2: clamp(28px, 3.2vw, 44px);
-      --h3: 20px;
-      --lead: clamp(17px, 2vw, 20px);
-
-      --ease: cubic-bezier(.2,.9,.2,1);
-    }
-
     *{ box-sizing:border-box; }
     html{ scroll-behavior:smooth; }
     body{
       margin:0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: var(--bg);
+      background: var(--sw-bg);
+      color: var(--sw-text);
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -147,602 +113,120 @@
       border-radius: 10px;
     }
 
-    .skip{
-      position:absolute;
-      left:-9999px;
-      top: 12px;
-      padding: 10px 14px;
-      background: var(--navy);
-      color:#fff;
-      border-radius: 12px;
-      z-index: 1000;
-    }
-    .skip:focus{ left: 12px; }
-
-    .container{ width: min(var(--max), 100% - (var(--px) * 2)); margin-inline:auto; }
-    .grid{ display:grid; gap: 18px; }
-    .stack{ display:flex; flex-direction: column; gap: 12px; }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      padding: 10px 14px;
-      border: 1px solid rgba(255,255,255,.16);
-      color: rgba(255,255,255,.88);
-      border-radius: 999px;
-      background: rgba(15,23,42,.12);
-      backdrop-filter: blur(10px);
-      width: fit-content;
-    }
-    .pill strong{ font-weight: 700; color:#fff; }
-
-    header{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(15,23,42,.90);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      box-shadow: var(--shadow-nav);
-    }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      padding: 18px 0;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap: 12px;
-      letter-spacing: -0.02em;
-      font-weight: 800;
-      color: var(--offwhite);
-    }
-    .brand svg, .brand img{ width: 40px; height: 40px; flex: 0 0 auto; }
-    .brand span{ font-size: 17px; line-height: 1; }
-    .navlinks{
-      display:none;
-      align-items:center;
-      gap: 14px;
-      font-size: 14px;
-      color: rgba(249,250,251,.78);
-      font-weight: 650;
-    }
-    .navlinks a{ padding: 10px 10px; border-radius: 12px; position: relative; }
-    .navlinks a::after{
-      content:"";
-      position:absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 7px;
-      height: 1.5px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, rgba(4,172,236,.0), rgba(4,172,236,.9), rgba(60,180,76,.9), rgba(60,180,76,0));
-      transform: scaleX(.25);
-      opacity: 0;
-      transition: transform .28s var(--ease), opacity .28s var(--ease);
-    }
-    .navlinks a:hover{ color: rgba(249,250,251,.95); }
-    .navlinks a:hover::after{ transform: scaleX(1); opacity: 1; }
-
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap: 10px;
-      padding: 12px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(60,180,76,.36);
-      background: linear-gradient(180deg, rgba(60,180,76,1), rgba(46,164,66,1));
-      color: #07140d;
-      font-weight: 850;
-      box-shadow: 0 18px 60px rgba(60,180,76,.18);
-      transition: transform .25s var(--ease), box-shadow .25s var(--ease), filter .25s var(--ease);
-      will-change: transform;
-    }
-    .cta:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 26px 86px rgba(60,180,76,.22);
-      filter: saturate(1.05);
-    }
-    .cta.secondary{
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(4,172,236,.40);
-      box-shadow: none;
-      color: rgba(249,250,251,.95);
-    }
-    .cta.secondary:hover{
-      transform: translateY(-1px);
-      background: rgba(4,172,236,.14);
-    }
-
-    details.mobile{
-      display:block;
-    }
-    details.mobile summary{
-      list-style:none;
-      cursor:pointer;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: rgba(249,250,251,.95);
-      font-weight: 700;
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      user-select:none;
-    }
-    details.mobile summary::-webkit-details-marker{ display:none; }
-    details.mobile[open] summary{ box-shadow: var(--shadow-sm); }
-    .mobilepanel{
-      margin-top: 12px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(15,23,42,.92);
-      border-radius: var(--radius-lg);
-      padding: 10px;
-      box-shadow: var(--shadow-sm);
-    }
-    .mobilepanel a{
-      display:block;
-      padding: 12px 12px;
-      border-radius: 12px;
-      color: rgba(249,250,251,.84);
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .mobilepanel a:hover{ background: rgba(255,255,255,.06); color: rgba(249,250,251,.98); }
-
     main{ overflow-x: clip; }
 
-    .hero{
+    .sw-hero{
       position: relative;
-      padding: calc(var(--section) - 6px) 0 var(--section);
-      min-height: clamp(720px, 92vh, 960px);
+      padding: clamp(74px, 8vw, 128px) 0 clamp(56px, 6vw, 112px);
+      min-height: clamp(720px, 92vh, 940px);
       display:grid;
       align-items:center;
     }
-    .hero::before{
+    .sw-hero::before{
       content:"";
       position:absolute;
       inset:0;
       background:
-        radial-gradient(900px 580px at 16% 22%, rgba(4,172,236,.34) 0%, transparent 62%),
-        radial-gradient(880px 560px at 76% 16%, rgba(60,180,76,.24) 0%, transparent 62%),
-        radial-gradient(960px 680px at 56% 104%, rgba(4,172,236,.18) 0%, transparent 62%),
-        linear-gradient(135deg, #0B1224 0%, #0F172A 38%, #091020 100%);
-      filter: saturate(1.05);
+        radial-gradient(900px 620px at 16% 18%, rgba(4,172,236,.22) 0%, transparent 62%),
+        radial-gradient(900px 620px at 72% 18%, rgba(4,172,236,.14) 0%, transparent 62%),
+        linear-gradient(135deg, #05070D 0%, #0B1224 42%, #070B14 100%);
     }
-    .hero::after{
+    .sw-hero::after{
       content:"";
       position:absolute;
       inset:-2px;
       background:
-        radial-gradient(600px 380px at 48% 34%, rgba(255,255,255,.18), transparent 62%),
-        radial-gradient(800px 520px at 50% 100%, rgba(15,23,42,.22), transparent 60%);
+        radial-gradient(720px 440px at 46% 22%, rgba(255,255,255,.10), transparent 62%),
+        radial-gradient(900px 560px at 50% 100%, rgba(0,0,0,.28), transparent 60%);
       pointer-events:none;
       mix-blend-mode: overlay;
     }
-    .hero-inner{
-      position: relative;
-      z-index: 2;
+    .sw-heroInner{ position: relative; z-index: 2; }
+    .sw-heroLayout{
       display:grid;
-      gap: 28px;
-    }
-    .hero-layout{
-      display:grid;
-      gap: 26px;
       grid-template-columns: 1fr;
+      gap: 26px;
       align-items: center;
     }
-
-    .hero-copy{
-      color:#fff;
-      max-width: 62ch;
-    }
-    .hero h1{
-      font-family: Inter, ui-sans-serif, system-ui;
-      font-size: var(--h1);
-      line-height: 1.04;
-      letter-spacing: -0.03em;
-      margin: 10px 0 10px;
-    }
-    .hero p.lead{
-      font-size: var(--lead);
-      line-height: 1.55;
-      margin: 0;
-      color: rgba(255,255,255,.90);
-      max-width: 58ch;
-    }
-    .hero p.body{
-      margin: 14px 0 0;
-      color: rgba(255,255,255,.84);
-      line-height: 1.65;
-      max-width: 62ch;
-      font-size: 15.5px;
-    }
-
-    .hero-actions{
+    .sw-heroCopy{ max-width: 64ch; }
+    .sw-actions{
       display:flex;
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 18px;
       align-items:center;
     }
-    .trustline{
+    .sw-trust{
       display:flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 16px;
-      color: rgba(255,255,255,.86);
+      color: rgba(255,255,255,.80);
       font-size: 13px;
-      font-weight: 650;
+      font-weight: 700;
     }
-    .trustline span{
+    .sw-trust span{
       display:inline-flex;
       align-items:center;
       gap: 8px;
       padding: 10px 12px;
       border-radius: 999px;
-      background: rgba(15,23,42,.14);
-      border: 1px solid rgba(255,255,255,.14);
-      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(12px);
     }
-    .trustline svg{ width: 16px; height: 16px; opacity: .92; }
+    .sw-trust svg{ width: 16px; height: 16px; opacity: .92; }
 
-    .hero-visual{
+    .sw-heroVisual{
       position: relative;
       min-height: 320px;
     }
-    .visual-stage{
+    .sw-visualStage{
       position: relative;
-      border-radius: clamp(22px, 3.5vw, 34px);
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.16);
-      backdrop-filter: blur(14px);
-      overflow: hidden;
-      box-shadow: 0 28px 90px rgba(15,23,42,.24);
-      padding: 18px;
-    }
-    .visual-stage::after{
-      content:"";
-      position:absolute;
-      inset:-30%;
-      background:
-        linear-gradient(115deg, rgba(4,172,236,.0) 28%, rgba(4,172,236,.26) 46%, rgba(60,180,76,.22) 58%, rgba(60,180,76,0) 74%);
-      transform: rotate(-14deg);
-      opacity: .9;
-      pointer-events:none;
-      mix-blend-mode: screen;
-    }
-    .visual-stage::before{
-      content:"";
-      position:absolute;
-      inset:-50%;
-      background:
-        radial-gradient(closest-side at 56% 44%, rgba(255,255,255,.18), transparent 65%),
-        conic-gradient(from 210deg, rgba(255,255,255,.10), transparent 70%, rgba(255,255,255,.14));
-      transform: rotate(7deg);
-      opacity: .7;
-      pointer-events:none;
-    }
-    .visual-grid{
-      position: relative;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-    .statcard{
-      position: relative;
-      border-radius: var(--radius-lg);
-      background: rgba(255,255,255,.92);
-      border: 1px solid rgba(15,23,42,.10);
-      box-shadow: 0 18px 60px rgba(15,23,42,.18);
-      padding: 16px 16px;
-      display:flex;
-      gap: 12px;
-      align-items:flex-start;
-      z-index: 2;
-      transform: translateY(8px);
-      opacity: 0;
-      animation: floatIn .8s var(--ease) forwards;
-    }
-    .statcard:nth-child(2){ animation-delay: .12s; }
-    .statbadge{
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display:grid;
-      place-items:center;
-      background: linear-gradient(180deg, rgba(4,172,236,.14), rgba(60,180,76,.12));
-      border: 1px solid rgba(4,172,236,.20);
-      color: var(--navy);
-    }
-    .statbadge svg{ width: 20px; height: 20px; }
-    .statmeta{ display:flex; flex-direction: column; gap: 4px; }
-    .statmeta strong{
-      font-family: Inter, ui-sans-serif, system-ui;
-      letter-spacing: -0.02em;
-      font-size: 18px;
-    }
-    .statmeta span{
-      color: rgba(15,23,42,.70);
-      font-size: 13.5px;
-      line-height: 1.35;
-      font-weight: 600;
-    }
-    .statfloat{
-      position:absolute;
-      inset: auto;
-      width: 260px;
-      transform: translateZ(0);
-      animation: bob 6.5s var(--ease) infinite;
-      pointer-events:none;
-      z-index: 1;
-      opacity: .82;
-    }
-    .statfloat.one{ right: 12px; top: 14px; }
-    .statfloat.two{ left: 12px; bottom: 14px; animation-delay: .8s; }
-    .microcard{
-      border-radius: 18px;
-      background: rgba(15,23,42,.16);
+      border-radius: clamp(18px, 2.8vw, 26px);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
       border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.92);
-      padding: 14px 14px;
-      backdrop-filter: blur(14px);
-      box-shadow: 0 22px 70px rgba(15,23,42,.22);
-    }
-    .microcard .k{
-      font-family: Inter, ui-sans-serif, system-ui;
-      font-weight: 750;
-      letter-spacing:-0.02em;
-      font-size: 14px;
-      margin:0 0 6px;
-    }
-    .microcard .v{ margin:0; font-size: 13.5px; line-height: 1.35; color: rgba(255,255,255,.84); font-weight: 600; }
-
-    section{ padding: var(--section) 0; }
-    .sectionhead{
-      display:flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 26px;
-    }
-    .eyebrow{
-      font-weight: 800;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      font-size: 12px;
-      color: rgba(15,23,42,.62);
-    }
-    h2{
-      font-family: Inter, ui-sans-serif, system-ui;
-      font-size: var(--h2);
-      line-height: 1.12;
-      letter-spacing: -0.03em;
-      margin:0;
-    }
-    .sub{
-      color: var(--muted);
-      font-size: 16.5px;
-      line-height: 1.65;
-      margin:0;
-      max-width: 70ch;
-    }
-
-    .cards{
-      display:grid;
-      gap: 14px;
-      grid-template-columns: 1fr;
-    }
-    .card{
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      padding: 18px;
-      box-shadow: 0 1px 0 rgba(15,23,42,.02);
-      transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease);
-      position: relative;
+      backdrop-filter: blur(16px);
       overflow: hidden;
-    }
-    .card:hover{
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(4,172,236,.22);
-    }
-    .card h3{
-      font-family: Inter, ui-sans-serif, system-ui;
-      font-size: var(--h3);
-      letter-spacing: -0.02em;
-      margin: 10px 0 8px;
-    }
-    .card p{
-      margin:0;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 15.5px;
-    }
-    .icon{
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      display:grid;
-      place-items:center;
-      background: linear-gradient(180deg, rgba(4,172,236,.12), rgba(60,180,76,.10));
-      border: 1px solid rgba(4,172,236,.16);
-      color: var(--navy);
-    }
-    .icon svg{ width: 22px; height: 22px; }
-
-    .service{
-      padding-left: 16px;
-    }
-    .service::before{
-      content:"";
-      position:absolute;
-      left:0;
-      top: 16px;
-      bottom: 16px;
-      width: 4px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, rgba(4,172,236,.22), rgba(60,180,76,.22));
-      transform: scaleY(.2);
-      transform-origin: top;
-      transition: transform .28s var(--ease);
-    }
-    .service:hover::before{ transform: scaleY(1); }
-    .learn{
-      display:inline-flex;
-      align-items:center;
-      gap: 10px;
-      margin-top: 14px;
-      color: rgba(4,172,236,1);
-      font-weight: 800;
-      font-size: 14px;
-      width: fit-content;
-      padding: 10px 12px;
-      border-radius: 12px;
-      transition: transform .28s var(--ease), background .28s var(--ease);
-    }
-    .learn:hover{
-      transform: translateY(-1px);
-      background: rgba(4,172,236,.08);
-    }
-    .learn svg{ width: 16px; height: 16px; transition: transform .28s var(--ease); }
-    .learn:hover svg{ transform: translateX(3px); }
-
-    .process{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: 18px;
-    }
-    .step{
-      display:grid;
-      grid-template-columns: auto 1fr;
-      gap: 14px;
-      align-items:flex-start;
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      background: linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.84));
-    }
-    .stepnum{
-      width: 48px;
-      height: 48px;
-      border-radius: 999px;
-      display:grid;
-      place-items:center;
-      font-family: Inter, ui-sans-serif, system-ui;
-      font-weight: 800;
-      color: rgba(15,23,42,.92);
-      border: 1px solid rgba(15,23,42,.10);
-      background:
-        radial-gradient(closest-side at 40% 30%, rgba(4,172,236,.18), transparent 60%),
-        radial-gradient(closest-side at 70% 80%, rgba(60,180,76,.16), transparent 60%),
-        #fff;
-      box-shadow: 0 18px 60px rgba(15,23,42,.10);
-    }
-    .step h3{ margin: 0 0 6px; font-size: 18px; }
-    .step p{ margin:0; color: var(--muted); line-height: 1.65; font-size: 15.5px; }
-
-    .transform{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-      margin-top: 18px;
-    }
-    .panel{
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--line);
-      background: var(--surface);
+      box-shadow: 0 28px 90px rgba(0,0,0,.44);
       padding: 18px;
     }
-    .panel h3{ margin: 0 0 10px; font-size: 18px; font-family: Inter, ui-sans-serif, system-ui; letter-spacing: -0.02em; }
-    .panel ul{ margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.7; }
-    .panel li{ margin: 8px 0; }
-    .panel.after{
-      border-color: rgba(4,172,236,.22);
-      background:
-        radial-gradient(600px 260px at 16% 0%, rgba(4,172,236,.12), transparent 60%),
-        radial-gradient(520px 260px at 92% 100%, rgba(60,180,76,.10), transparent 60%),
-        linear-gradient(180deg, rgba(255,255,255,1), rgba(255,255,255,.92));
-      box-shadow: var(--shadow-sm);
-    }
-
-    .ctaBand{
-      position: relative;
-      padding: calc(var(--section) + 10px) 0;
-      color:#fff;
-      overflow:hidden;
-      border-top: 1px solid rgba(255,255,255,.14);
-      border-bottom: 1px solid rgba(255,255,255,.14);
-    }
-    .ctaBand::before{
+    .sw-visualStage::before{
       content:"";
       position:absolute;
-      inset:0;
+      inset:-40%;
       background:
-        radial-gradient(900px 600px at 20% 18%, rgba(255,255,255,.14), transparent 64%),
-        radial-gradient(900px 620px at 60% 110%, rgba(2,6,23,.28), transparent 58%),
-        radial-gradient(820px 520px at 76% 22%, rgba(60,180,76,.22), transparent 66%),
-        radial-gradient(820px 520px at 20% 70%, rgba(4,172,236,.26), transparent 66%),
-        linear-gradient(135deg, #0B1224 0%, #0F172A 70%, #091020 100%);
+        radial-gradient(closest-side at 56% 44%, rgba(255,255,255,.12), transparent 66%),
+        conic-gradient(from 210deg, rgba(255,255,255,.08), transparent 72%, rgba(255,255,255,.10));
+      transform: rotate(6deg);
+      opacity: .75;
+      pointer-events:none;
     }
-    .ctaBand .container{ position: relative; z-index: 2; }
-    .ctaBand h2{ color:#fff; }
-    .ctaBand p{ color: rgba(255,255,255,.90); margin: 12px 0 0; font-size: 16.5px; line-height: 1.65; max-width: 70ch; }
-    .ctaRow{ display:flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; align-items:center; }
-    .plainlink{
-      color: rgba(255,255,255,.92);
-      font-weight: 800;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(15,23,42,.10);
-      transition: transform .25s var(--ease), background .25s var(--ease);
-      width: fit-content;
-    }
-    .plainlink:hover{ transform: translateY(-1px); background: rgba(15,23,42,.14); }
-
-    .localdfw{
-      background:
-        radial-gradient(900px 420px at 12% 0%, rgba(4,172,236,.08), transparent 55%),
-        radial-gradient(800px 400px at 88% 30%, rgba(60,180,76,.07), transparent 55%),
-        var(--surface);
-      border-top: 1px solid var(--line);
-    }
-    .localdfw .sub a{
-      color: var(--cyan);
-      font-weight: 800;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .localdfw .sub a:hover{ color: #0390c7; }
-
-    footer{
-      background: #0B1224;
-      color: rgba(255,255,255,.78);
+    .sw-stack{ display:flex; flex-direction: column; gap: 12px; }
+    .sw-footer{
+      background: #05070D;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: rgba(255,255,255,.70);
       padding: 56px 0;
     }
-    .footergrid{
+    .sw-footer a{ color: rgba(255,255,255,.72); font-weight: 650; }
+    .sw-footer a:hover{ color: rgba(255,255,255,.94); }
+    .sw-footergrid{
       display:grid;
       grid-template-columns: 1fr;
       gap: 22px;
       padding-top: 18px;
     }
-    footer h3{
+    .sw-footer h3{
       margin:0 0 12px;
-      font-family: Inter, ui-sans-serif, system-ui;
-      color:#fff;
-      font-size: 14px;
-      letter-spacing: .08em;
+      color: rgba(255,255,255,.92);
+      font-size: 13px;
+      letter-spacing: .14em;
       text-transform: uppercase;
+      font-weight: 800;
+      font-family: Inter, ui-sans-serif, system-ui;
     }
-    footer a{ color: rgba(255,255,255,.78); font-weight: 650; }
-    footer a:hover{ color: #fff; }
-    .footnote{
+    .sw-footnote{
       margin-top: 28px;
       padding-top: 18px;
       border-top: 1px solid rgba(255,255,255,.10);
@@ -750,9 +234,16 @@
       flex-direction: column;
       gap: 10px;
       font-size: 13.5px;
-      color: rgba(255,255,255,.62);
+      color: rgba(255,255,255,.56);
     }
-    .footnote a{ color: rgba(255,255,255,.70); font-weight: 700; }
+
+    .sw-visualSvg{
+      width: 100%;
+      height: clamp(360px, 42vw, 520px);
+      display:block;
+      position: relative;
+      z-index: 2;
+    }
 
     .fadeUp{
       opacity: 0;
@@ -776,20 +267,14 @@
     }
 
     @media (min-width: 720px){
-      .cards{ grid-template-columns: repeat(3, 1fr); gap: 16px; }
-      .process{ grid-template-columns: repeat(2, 1fr); }
-      .transform{ grid-template-columns: 1fr 1fr; }
-      .footergrid{ grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 18px; }
-      details.mobile{ display:none; }
-      .navlinks{ display:flex; }
+      .sw-footergrid{ grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 18px; }
     }
     @media (min-width: 980px){
-      .hero-layout{
-        grid-template-columns: 1.2fr .9fr;
+      .sw-heroLayout{
+        grid-template-columns: 1.15fr .95fr;
         gap: 28px;
       }
-      .visual-grid{ grid-template-columns: 1fr; }
-      .hero-visual{ min-height: 520px; }
+      .sw-heroVisual{ min-height: 520px; }
     }
     @media (prefers-reduced-motion: reduce){
       html{ scroll-behavior: auto; }
@@ -797,35 +282,35 @@
     }
   </style>
 </head>
-<body>
-  <a class="skip" href="#main">Skip to main content</a>
+<body class="sw-shell">
+  <a class="sw-skip" href="#main">Skip to main content</a>
 
-  <header aria-label="Header">
-    <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Skyward Works home">
-        <img src="assets/logo.svg" width="40" height="40" alt="Skyward Works logo">
+  <header class="sw-header" aria-label="Header">
+    <div class="sw-container sw-nav">
+      <a class="sw-brand" href="index.html" aria-label="Skyward Works home">
+        <img src="assets/logo.svg" width="44" height="44" alt="Skyward Works logo">
         <span>Skyward Works</span>
       </a>
 
-      <nav class="navlinks" aria-label="Primary">
+      <nav class="sw-links" aria-label="Primary">
         <a href="#main">Home</a>
-        <a href="#solution">Services</a>
+        <a href="#systems">Systems</a>
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a class="cta" href="#contact">Book a Strategy Call</a>
+        <a class="sw-btn primary" href="#contact">Book a Strategy Call</a>
       </nav>
 
-      <details class="mobile" aria-label="Mobile navigation">
+      <details class="sw-mobile" aria-label="Mobile navigation">
         <summary>
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <path d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
           Menu
         </summary>
-        <div class="mobilepanel">
+        <div class="sw-mobilepanel">
           <a href="#main">Home</a>
-          <a href="#solution">Services</a>
+          <a href="#systems">Systems</a>
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
@@ -837,462 +322,265 @@
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero" aria-label="Hero">
-      <div class="container hero-inner">
-        <div class="hero-layout">
-          <div class="hero-copy">
-            <div class="pill fadeUp d1">
-              <strong>No long contracts.</strong>
-              <span>Direct access. Clear next steps.</span>
+    <section class="sw-hero sw-gridOverlay sw-diagonal" aria-label="Hero">
+      <div class="sw-container sw-heroInner">
+        <div class="sw-heroLayout">
+          <div class="sw-heroCopy">
+            <div class="sw-chip fadeUp d1">
+              <strong>Precision-built systems.</strong>
+              <span>For local businesses that refuse to stall.</span>
             </div>
 
-            <h1 class="fadeUp d2">Digital marketing that gets you found.</h1>
+            <h1 class="sw-h1 fadeUp d2">Mission control for local business growth.</h1>
 
-            <p class="lead fadeUp d3">
-              If your best customers can’t find you, you’re not “missing out” — you’re getting outpaced.
+            <p class="sw-lead fadeUp d3">
+              We engineer visibility systems that make you the obvious choice when local customers search, compare, and decide.
             </p>
-            <p class="body fadeUp d4">
-              Skyward Works helps ambitious businesses show up when people search, sound credible when they land, and turn that attention into calls. You’ll know what we’re doing, why it matters, and what happens next.
+            <p class="sw-sub fadeUp d4">
+              Stop losing local customers to businesses that simply look easier to trust. We build the infrastructure: local SEO, trust-first pages, and conversion paths designed to compound.
             </p>
 
-            <div class="hero-actions fadeUp d4">
-              <a class="cta" href="#contact">Book a Strategy Call</a>
-              <a class="cta secondary" href="#contact">Free visibility check</a>
+            <div class="sw-actions fadeUp d4">
+              <a class="sw-btn primary" href="#contact">Book a Strategy Call</a>
+              <a class="sw-btn ghost" href="#contact">Request a Visibility Snapshot</a>
             </div>
 
-            <div class="trustline fadeUp d4" aria-label="Trust signals">
+            <div class="sw-trust fadeUp d4" aria-label="Trust signals">
               <span>
                 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                   <path d="M20 7l-8.5 10L4 11"/>
                 </svg>
-                No long contracts
+                Clear plan in 7 days
               </span>
               <span>
                 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                   <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
                 </svg>
-                Talk directly with the person doing the work
+                Direct operator access
               </span>
               <span>
                 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                   <path d="M3 12l2-2 4 4L19 4l2 2-12 12z"/>
                 </svg>
-                Clear wins in the first 30 days
+                Built for qualified leads
               </span>
             </div>
           </div>
 
-          <div class="hero-visual" aria-label="Hero visual">
-            <div class="visual-stage" aria-hidden="true">
-              <div class="visual-grid">
-                <div class="statcard">
-                  <div class="statbadge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                      <path d="M4 19V5M20 19V9M8 19V11M12 19V7M16 19V14"/>
-                    </svg>
-                  </div>
-                  <div class="statmeta">
-                    <strong>247% avg. traffic growth</strong>
-                    <span>When you stop guessing and build around what people actually search.</span>
-                  </div>
-                </div>
+          <div class="sw-heroVisual" aria-label="Trajectory visual">
+            <div class="sw-visualStage" aria-hidden="true">
+              <svg class="sw-visualSvg" viewBox="0 0 820 620" role="img" aria-label="Trajectory grid and control panel visual">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="rgba(4,172,236,.65)"/>
+                    <stop offset="1" stop-color="rgba(4,172,236,.10)"/>
+                  </linearGradient>
+                  <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="rgba(255,255,255,.18)"/>
+                    <stop offset="1" stop-color="rgba(255,255,255,.02)"/>
+                  </linearGradient>
+                  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="5" result="b"/>
+                    <feMerge>
+                      <feMergeNode in="b"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
 
-                <div class="statcard">
-                  <div class="statbadge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                      <path d="M4 4h16v16H4z"/>
-                      <path d="M8 9h8M8 13h6M8 17h8"/>
-                    </svg>
-                  </div>
-                  <div class="statmeta">
-                    <strong>50+ articles published</strong>
-                    <span>On-brand, helpful, and structured to win search — without sounding like a robot.</span>
-                  </div>
-                </div>
-              </div>
+                <!-- Grid -->
+                <g opacity="0.55">
+                  <path d="M40 70H780M40 150H780M40 230H780M40 310H780M40 390H780M40 470H780M40 550H780" stroke="rgba(255,255,255,.10)" stroke-width="1"/>
+                  <path d="M70 40V580M160 40V580M250 40V580M340 40V580M430 40V580M520 40V580M610 40V580M700 40V580" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+                </g>
 
-              <div class="statfloat one" aria-hidden="true">
-                <div class="microcard">
-                  <p class="k">Visibility snapshot</p>
-                  <p class="v">“You’re showing up for 3/25 high-intent searches. Let’s fix that.”</p>
-                </div>
-              </div>
+                <!-- Diagonal guide lines -->
+                <g opacity="0.45">
+                  <path d="M120 560L760 120" stroke="rgba(4,172,236,.22)" stroke-width="1.2"/>
+                  <path d="M60 520L700 80" stroke="rgba(4,172,236,.16)" stroke-width="1.2"/>
+                </g>
 
-              <div class="statfloat two" aria-hidden="true">
-                <div class="microcard">
-                  <p class="k">Conversion lift</p>
-                  <p class="v">Clear pages + clear offers = more calls, not just more clicks.</p>
-                </div>
-              </div>
+                <!-- Trajectory path -->
+                <path d="M130 520 C 250 430, 320 370, 410 300 C 520 210, 610 180, 720 120" fill="none" stroke="url(#g1)" stroke-width="3.2" filter="url(#glow)"/>
+                <path d="M130 520 C 250 430, 320 370, 410 300 C 520 210, 610 180, 720 120" fill="none" stroke="rgba(255,255,255,.20)" stroke-width="1.2" opacity=".55"/>
+
+                <!-- Markers -->
+                <g>
+                  <circle cx="130" cy="520" r="6" fill="rgba(4,172,236,1)" filter="url(#glow)"/>
+                  <circle cx="410" cy="300" r="6" fill="rgba(4,172,236,.92)" filter="url(#glow)"/>
+                  <circle cx="720" cy="120" r="7" fill="rgba(4,172,236,1)" filter="url(#glow)"/>
+                  <circle cx="720" cy="120" r="16" fill="none" stroke="rgba(4,172,236,.30)" stroke-width="1.5"/>
+                </g>
+
+                <!-- Panels -->
+                <g transform="translate(54 72)">
+                  <rect x="0" y="0" rx="18" ry="18" width="330" height="150" fill="url(#g2)" stroke="rgba(255,255,255,.14)"/>
+                  <text x="22" y="42" fill="rgba(255,255,255,.88)" font-family="Inter, system-ui" font-weight="800" font-size="14" letter-spacing="1.8">VISIBILITY</text>
+                  <text x="22" y="76" fill="rgba(255,255,255,.90)" font-family="Space Grotesk, Inter, system-ui" font-weight="650" font-size="28">Local intent coverage</text>
+                  <text x="22" y="114" fill="rgba(255,255,255,.68)" font-family="Inter, system-ui" font-weight="600" font-size="13">Map → build → rank for what customers actually search.</text>
+                </g>
+
+                <g transform="translate(436 372)">
+                  <rect x="0" y="0" rx="18" ry="18" width="330" height="170" fill="url(#g2)" stroke="rgba(255,255,255,.14)"/>
+                  <text x="22" y="42" fill="rgba(255,255,255,.88)" font-family="Inter, system-ui" font-weight="800" font-size="14" letter-spacing="1.8">CONVERSION</text>
+                  <text x="22" y="76" fill="rgba(255,255,255,.90)" font-family="Space Grotesk, Inter, system-ui" font-weight="650" font-size="28">Trust-first pages</text>
+                  <text x="22" y="112" fill="rgba(255,255,255,.68)" font-family="Inter, system-ui" font-weight="600" font-size="13">Clear offer + proof + next step. No leakage.</text>
+                  <path d="M22 134H308" stroke="rgba(255,255,255,.14)"/>
+                  <text x="22" y="158" fill="rgba(4,172,236,.92)" font-family="Inter, system-ui" font-weight="800" font-size="13">Lead path: Search → Page → Call</text>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Problem -->
-    <section id="problem" aria-label="Why this feels so hard">
-      <div class="container">
-        <div class="sectionhead">
-          <div class="eyebrow">Why this feels so hard</div>
-          <h2>You’re doing the work. The internet isn’t giving you credit.</h2>
-          <p class="sub">
-            You’ve got a real business, real results, and real customers — but online you’re competing with louder, worse options. Here’s what that looks like in plain language.
-          </p>
+    <!-- Systems -->
+    <section id="systems" class="sw-section" aria-label="Systems">
+      <div class="sw-container">
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom: 26px;">
+          <div class="sw-eyebrow">Precision-engineered growth</div>
+          <h2 class="sw-h2">We don’t sell “marketing.” We build systems.</h2>
+          <p class="sw-sub">Local growth compounds when three things are engineered together: visibility (you show up), trust (you look like the right choice), and action (it’s easy to contact you).</p>
         </div>
 
-        <div class="cards" role="list">
-          <article class="card" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M10 17a5 5 0 1 1 7.07-7.07A5 5 0 0 1 10 17z"/>
-                <path d="M21 21l-4.3-4.3"/>
-              </svg>
-            </div>
-            <h3>Search doesn’t show you</h3>
-            <p>People type exactly what you sell… and Google serves everyone but you. That’s not “bad luck.” It’s structure, relevance, and trust signals.</p>
+        <div class="sw-cards" role="list">
+          <article class="sw-card" role="listitem">
+            <h3>Local SEO system</h3>
+            <p>Keyword maps, location/service architecture, internal linking, and content that targets high-intent searches—so you’re present at the exact moment customers decide.</p>
           </article>
-
-          <article class="card" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M12 2v20"/>
-                <path d="M17 7H9.5a2.5 2.5 0 0 0 0 5H14a2.5 2.5 0 0 1 0 5H6"/>
-              </svg>
-            </div>
-            <h3>Marketing feels like a gamble</h3>
-            <p>You’ve tried “a little SEO,” a few posts, maybe ads. Nothing sticks — because there’s no plan tying visibility to leads.</p>
+          <article class="sw-card" role="listitem">
+            <h3>Trust-first web design</h3>
+            <p>Fast pages with disciplined messaging, proof blocks, and a clear offer. Not “pretty”—credible. Built to reduce doubt and increase calls.</p>
           </article>
-
-          <article class="card" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M3 11h18"/>
-                <path d="M7 7l-4 4 4 4"/>
-                <path d="M17 7l4 4-4 4"/>
-              </svg>
-            </div>
-            <h3>You’re losing leads to competitors</h3>
-            <p>Not because they’re better — because they’re easier to find. The internet rewards the business that shows up and makes the next step obvious.</p>
+          <article class="sw-card" role="listitem">
+            <h3>Conversion infrastructure</h3>
+            <p>Lead capture paths, offer clarity, tracking, and iteration. The goal isn’t traffic; it’s qualified leads you can count.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Solution -->
-    <section id="solution" aria-label="How we fix this">
-      <div class="container">
-        <div class="sectionhead">
-          <div class="eyebrow">How we fix this</div>
-          <h2>Three core services. One outcome: more qualified leads.</h2>
-          <p class="sub">
-            We don’t throw tactics at your business. We build a simple engine: visibility → trust → action.
-          </p>
-        </div>
-
-        <div class="cards" role="list">
-          <article class="card service" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M10 17a5 5 0 1 1 7.07-7.07A5 5 0 0 1 10 17z"/>
-                <path d="M21 21l-4.3-4.3"/>
-              </svg>
-            </div>
-            <h3>SEO &amp; Content</h3>
-            <p>We map what customers search, create pages that deserve to rank, and publish content that builds trust before the first call.</p>
-            <a class="learn" href="seo.html">
-              Learn more
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M5 12h14"/>
-                <path d="M13 6l6 6-6 6"/>
-              </svg>
-            </a>
-          </article>
-
-          <article class="card service" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M4 5h16v4H4z"/>
-                <path d="M4 11h10v10H4z"/>
-                <path d="M16 11h4v10h-4z"/>
-              </svg>
-            </div>
-            <h3>Web Design</h3>
-            <p>Fast, mobile-first pages with a clear offer and clean messaging. Looks premium. Loads fast. Converts like it should.</p>
-            <a class="learn" href="web-design.html">
-              Learn more
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M5 12h14"/>
-                <path d="M13 6l6 6-6 6"/>
-              </svg>
-            </a>
-          </article>
-
-          <article class="card service" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M3 12l7-7 4 4 7-7"/>
-                <path d="M3 20h18"/>
-                <path d="M10 5v14"/>
-              </svg>
-            </div>
-            <h3>Conversion</h3>
-            <p>We tighten the story, remove friction, and make the next step easy. More calls from the same traffic.</p>
-            <a class="learn" href="services.html">
-              Learn more
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M5 12h14"/>
-                <path d="M13 6l6 6-6 6"/>
-              </svg>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process -->
-    <section id="process" aria-label="Our process">
-      <div class="container">
-        <div class="sectionhead">
-          <div class="eyebrow">Our process</div>
-          <h2>Four clear steps. No mystery work.</h2>
-          <p class="sub">
-            You’ll always know where we are, what we’re doing, and what we’re measuring.
-          </p>
-        </div>
-
-        <div class="process">
-          <article class="step">
-            <div class="stepnum" aria-hidden="true">1</div>
-            <div>
-              <h3>Audit</h3>
-              <p>We look at what you have, what’s missing, and where the easy wins are hiding (site, search, messaging).</p>
-            </div>
-          </article>
-          <article class="step">
-            <div class="stepnum" aria-hidden="true">2</div>
-            <div>
-              <h3>Strategy</h3>
-              <p>We build a simple plan: what to rank for, what to publish, and what to fix first so it actually pays off.</p>
-            </div>
-          </article>
-          <article class="step">
-            <div class="stepnum" aria-hidden="true">3</div>
-            <div>
-              <h3>Execute</h3>
-              <p>We ship the work — pages, content, updates — in tight loops. You’re not waiting months to see movement.</p>
-            </div>
-          </article>
-          <article class="step">
-            <div class="stepnum" aria-hidden="true">4</div>
-            <div>
-              <h3>Measure</h3>
-              <p>We track rankings, traffic, and leads. Then we double down on what works and cut what doesn’t.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Transformation -->
-    <section id="transformation" aria-label="What changes">
-      <div class="container">
-        <div class="sectionhead">
-          <div class="eyebrow">What changes</div>
-          <h2>What life looks like after.</h2>
-          <p class="sub">
-            This isn’t about “more traffic.” It’s about stability. Predictable leads. And finally knowing what’s working.
-          </p>
-        </div>
-
-        <div class="transform">
-          <div class="panel">
-            <h3>Before</h3>
-            <ul>
-              <li>Some weeks are packed. Others are silent.</li>
-              <li>No real idea what’s driving leads (or why it stopped).</li>
-              <li>That constant low-grade worry: “Are we falling behind?”</li>
-            </ul>
-          </div>
-          <div class="panel after">
-            <h3>After</h3>
-            <ul>
-              <li>Steady calls from people already looking for what you do.</li>
-              <li>Clear visibility into what’s working and what’s next.</li>
-              <li>More time running the business — not chasing the next tactic.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="sw-divider" aria-hidden="true"></div>
 
     <!-- Work -->
-    <section id="work" aria-label="Work">
-      <div class="container">
-        <div class="sectionhead">
-          <div class="eyebrow">Work</div>
-          <h2>Proof over promises.</h2>
-          <p class="sub">A few examples of what we build: high-intent pages, content systems, and conversion-focused redesigns that turn visibility into leads.</p>
+    <section id="work" class="sw-section" aria-label="Work">
+      <div class="sw-container">
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom: 26px;">
+          <div class="sw-eyebrow">Proof</div>
+          <h2 class="sw-h2">Built to win the local decision window.</h2>
+          <p class="sw-sub">When you show up for high-intent searches and your pages remove doubt, growth looks less like “marketing” and more like controlled ascent.</p>
         </div>
 
-        <div class="cards" role="list">
-          <article class="card" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M4 5h16v14H4z"/>
-                <path d="M8 9h8M8 13h6"/>
-              </svg>
-            </div>
+        <div class="sw-cards" role="list">
+          <article class="sw-card" role="listitem">
             <h3>Search landing pages</h3>
-            <p>Pages built around what customers actually search, with a clear offer and an obvious next step.</p>
+            <p>Service + location pages designed around real queries, with a clear offer and a frictionless next step.</p>
           </article>
-          <article class="card" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M4 4h16v16H4z"/>
-                <path d="M8 16V8M12 16V6M16 16v-4"/>
-              </svg>
-            </div>
-            <h3>Content that ranks</h3>
-            <p>Not “blog for blogging.” Topic maps, internal links, and publishing cadence that compounds.</p>
+          <article class="sw-card" role="listitem">
+            <h3>Topic + internal link systems</h3>
+            <p>Content designed as a network—not random posts. Structured to build authority and keep ranking momentum.</p>
           </article>
-          <article class="card" role="listitem">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M3 12h18"/>
-                <path d="M12 3v18"/>
-              </svg>
-            </div>
-            <h3>Conversion cleanup</h3>
-            <p>Sharper messaging, fewer leaks, better calls-to-action—so the traffic you earn turns into calls.</p>
+          <article class="sw-card" role="listitem">
+            <h3>Conversion tightening</h3>
+            <p>Sharper positioning, stronger proof, fewer leaks. More calls from the traffic you already have.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" aria-label="About">
-      <div class="container">
-        <div class="sectionhead">
-          <div class="eyebrow">About</div>
-          <h2>You’re the hero. We’re the guide.</h2>
-          <p class="sub">You don’t need more marketing noise. You need a simple plan, clean execution, and someone who tells you the truth.</p>
+    <section id="about" class="sw-section" aria-label="About">
+      <div class="sw-container">
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom: 26px;">
+          <div class="sw-eyebrow">Operators, not salespeople</div>
+          <h2 class="sw-h2">Disciplined execution. Transparent reporting.</h2>
+          <p class="sw-sub">You get direct access, clear priorities, and a system you understand—so you’re never paying for mystery work.</p>
         </div>
 
-        <div class="cards" role="list">
-          <article class="card" role="listitem">
+        <div class="sw-cards" role="list">
+          <article class="sw-card" role="listitem">
             <h3>Direct communication</h3>
-            <p>No account-manager maze. You talk to the person building the strategy and shipping the work.</p>
+            <p>No account-manager maze. You talk to the person mapping the system and shipping the work.</p>
           </article>
-          <article class="card" role="listitem">
-            <h3>Clear priorities</h3>
-            <p>We pick the few actions that move the needle and ignore everything that just looks busy.</p>
-          </article>
-          <article class="card" role="listitem">
+          <article class="sw-card" role="listitem">
             <h3>Measured outcomes</h3>
-            <p>Rankings, traffic, leads. If it doesn’t connect to growth, we don’t do it.</p>
+            <p>Rankings, traffic, and leads—tracked like instrumentation. If it doesn’t connect to growth, it doesn’t ship.</p>
+          </article>
+          <article class="sw-card" role="listitem">
+            <h3>Strategic restraint</h3>
+            <p>We don’t chase shiny tactics. We build the few components that create compounding advantage in your local market.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" aria-label="Contact">
-      <div class="container">
-        <div class="sectionhead">
-          <div class="eyebrow">Contact</div>
-          <h2>Want to know what you could be ranking for?</h2>
-          <p class="sub">Send your website and we’ll reply with a quick, honest visibility snapshot and the next 2–3 moves we’d make.</p>
+    <section id="contact" class="sw-section" aria-label="Contact">
+      <div class="sw-container">
+        <div style="display:flex; flex-direction:column; gap:10px; margin-bottom: 26px;">
+          <div class="sw-eyebrow">Next step</div>
+          <h2 class="sw-h2">Get a visibility snapshot. Then a plan.</h2>
+          <p class="sw-sub">Send your website + service area. We’ll reply with a quick read on what you’re showing up for, what you’re missing, and the next 2–3 moves we’d execute first.</p>
         </div>
 
-        <div class="cards" role="list" style="grid-template-columns: 1fr;">
-          <article class="card" role="listitem">
+        <div class="sw-cards" role="list" style="grid-template-columns: 1fr;">
+          <article class="sw-card" role="listitem">
             <h3 style="margin-top:0;">Book a strategy call</h3>
-            <p>Tell us what you sell, where you operate, and what “more leads” would mean for you.</p>
+            <p>Tell us what you sell, where you operate, and what a “qualified lead” is worth to you. We’ll map the quickest path to compounding visibility.</p>
             <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:14px;">
-              <a class="cta" href="mailto:hello@skyward.agency?subject=Strategy%20Call%20%7C%20Skyward%20Works">Email to book</a>
-              <a class="cta secondary" href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Request a visibility check</a>
+              <a class="sw-btn primary" href="mailto:hello@skyward.agency?subject=Strategy%20Call%20%7C%20Skyward%20Works">Email to book</a>
+              <a class="sw-btn ghost" href="mailto:hello@skyward.agency?subject=Visibility%20Snapshot%20%7C%20Skyward%20Works">Request a visibility snapshot</a>
             </div>
-            <p style="margin-top:14px; color: var(--muted-2); font-weight:650;">Email: <a href="mailto:hello@skyward.agency" style="color: var(--cyan); font-weight:800;">hello@skyward.agency</a></p>
+            <p style="margin-top:14px; color: rgba(255,255,255,.62); font-weight:700;">Email: <a href="mailto:hello@skyward.agency" style="color: rgba(4,172,236,.95); font-weight:900; text-decoration: underline; text-underline-offset: 3px;">hello@skyward.agency</a></p>
           </article>
         </div>
-      </div>
-    </section>
 
-    <!-- CTA Band -->
-    <section class="ctaBand" aria-label="Call to action">
-      <div class="container">
-        <div class="sectionhead" style="margin-bottom: 0;">
-          <div class="eyebrow" style="color: rgba(255,255,255,.78);">Next step</div>
-          <h2>Ready to reach new heights?</h2>
-          <p>Let’s talk about your growth potential. No pressure — just clarity.</p>
-
-          <div class="ctaRow">
-            <a class="cta" href="#contact">Book a Strategy Call</a>
-            <a class="plainlink" href="#contact">Or request a free visibility check</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="local" class="localdfw" aria-label="Service area">
-      <div class="container">
-        <div class="sectionhead">
-          <div class="eyebrow">Local</div>
-          <h2>Serving North DFW</h2>
-          <p class="sub">
-            Proudly serving businesses across
-            <a href="mckinney/">McKinney</a>,
-            <a href="frisco/">Frisco</a>,
-            <a href="melissa/">Melissa</a>,
-            <a href="anna/">Anna</a>,
-            <a href="prosper/">Prosper</a>,
-            <a href="allen/">Allen</a>,
-            <a href="plano/">Plano</a>, and
-            <a href="celina/">Celina</a>—with SEO, web design, and paid media built for how North Texas customers actually search.
-          </p>
+        <div style="margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.62);">
+          <div class="sw-eyebrow" style="margin-bottom: 8px;">Service area</div>
+          Serving North DFW: <a href="mckinney/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">McKinney</a>, <a href="frisco/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Frisco</a>, <a href="melissa/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Melissa</a>, <a href="anna/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Anna</a>, <a href="prosper/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Prosper</a>, <a href="allen/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Allen</a>, <a href="plano/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Plano</a>, <a href="celina/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Celina</a>.
         </div>
       </div>
     </section>
   </main>
 
-  <footer aria-label="Footer">
-    <div class="container">
-      <div class="brand" aria-label="Skyward Works">
-        <img src="assets/logo.svg" width="40" height="40" alt="" aria-hidden="true">
-        <span style="color:#fff;">Skyward Works</span>
+  <footer class="sw-footer" aria-label="Footer">
+    <div class="sw-container">
+      <div class="sw-brand" aria-label="Skyward Works">
+        <img src="assets/logo.svg" width="44" height="44" alt="" aria-hidden="true">
+        <span style="color: rgba(255,255,255,.94);">Skyward Works</span>
       </div>
 
-      <div class="footergrid" role="navigation" aria-label="Footer links">
-        <div class="stack" style="gap:10px;">
+      <div class="sw-footergrid" role="navigation" aria-label="Footer links">
+        <div class="sw-stack" style="gap:10px;">
           <h3>Company</h3>
-          <a href="#problem">Why it’s hard</a>
-          <a href="#process">Process</a>
-          <a href="#transformation">What changes</a>
+          <a href="#systems">Systems</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
         </div>
-        <div class="stack" style="gap:10px;">
+        <div class="sw-stack" style="gap:10px;">
           <h3>Services</h3>
-          <a href="seo.html">SEO &amp; Content</a>
+          <a href="seo.html">SEO</a>
           <a href="web-design.html">Web Design</a>
           <a href="services.html">All services</a>
         </div>
-        <div class="stack" style="gap:10px;">
+        <div class="sw-stack" style="gap:10px;">
           <h3>Resources</h3>
           <a href="blog/">Blog</a>
           <a href="services.html">Service overview</a>
         </div>
-        <div class="stack" style="gap:10px;">
+        <div class="sw-stack" style="gap:10px;">
           <h3>Contact</h3>
-          <span style="color: rgba(255,255,255,.78); font-weight: 650;">McKinney, TX</span>
+          <span style="color: rgba(255,255,255,.70); font-weight: 700;">McKinney, TX</span>
           <a href="mailto:hello@skyward.agency">hello@skyward.agency</a>
-          <a href="mailto:hello@skyward.agency?subject=Free%20Visibility%20Check%20%7C%20Skyward%20Works">Request a visibility check</a>
-          <a href="mailto:hello@skyward.agency?subject=Free%20Consultation%20%7C%20Skyward%20Works">Book a consultation</a>
+          <a href="mailto:hello@skyward.agency?subject=Visibility%20Snapshot%20%7C%20Skyward%20Works">Request a visibility snapshot</a>
+          <a href="mailto:hello@skyward.agency?subject=Strategy%20Call%20%7C%20Skyward%20Works">Book a strategy call</a>
         </div>
       </div>
 
-      <div class="footnote">
+      <div class="sw-footnote">
         <div>© <span id="y">2026</span> Skyward Works. All rights reserved.</div>
-        <div class="stack" style="flex-direction: row; flex-wrap: wrap; gap: 10px;">
+        <div class="sw-stack" style="flex-direction: row; flex-wrap: wrap; gap: 10px;">
           <a href="services.html">Services</a>
           <a href="blog/">Blog</a>
         </div>
