@@ -94,193 +94,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500..700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/site.css">
-  <style>
-    *{ box-sizing:border-box; }
-    html{ scroll-behavior:smooth; }
-    body{
-      margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--sw-bg);
-      color: var(--sw-text);
-      text-rendering: optimizeLegibility;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    a{ color: inherit; text-decoration: none; }
-    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, textarea:focus-visible{
-      outline: 3px solid rgba(4,172,236,.45);
-      outline-offset: 3px;
-      border-radius: 10px;
-    }
-
-    main{ overflow-x: clip; }
-
-    .sw-hero{
-      position: relative;
-      padding: clamp(74px, 8vw, 128px) 0 clamp(56px, 6vw, 112px);
-      min-height: clamp(720px, 92vh, 940px);
-      display:grid;
-      align-items:center;
-    }
-    .sw-hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(900px 620px at 16% 18%, rgba(4,172,236,.22) 0%, transparent 62%),
-        radial-gradient(900px 620px at 72% 18%, rgba(4,172,236,.14) 0%, transparent 62%),
-        linear-gradient(135deg, #05070D 0%, #0B1224 42%, #070B14 100%);
-    }
-    .sw-hero::after{
-      content:"";
-      position:absolute;
-      inset:-2px;
-      background:
-        radial-gradient(720px 440px at 46% 22%, rgba(255,255,255,.10), transparent 62%),
-        radial-gradient(900px 560px at 50% 100%, rgba(0,0,0,.28), transparent 60%);
-      pointer-events:none;
-      mix-blend-mode: overlay;
-    }
-    .sw-heroInner{ position: relative; z-index: 2; }
-    .sw-heroLayout{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 26px;
-      align-items: center;
-    }
-    .sw-heroCopy{ max-width: 64ch; }
-    .sw-actions{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 18px;
-      align-items:center;
-    }
-    .sw-trust{
-      display:flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-      color: rgba(255,255,255,.80);
-      font-size: 13px;
-      font-weight: 700;
-    }
-    .sw-trust span{
-      display:inline-flex;
-      align-items:center;
-      gap: 8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.12);
-      backdrop-filter: blur(12px);
-    }
-    .sw-trust svg{ width: 16px; height: 16px; opacity: .92; }
-
-    .sw-heroVisual{
-      position: relative;
-      min-height: 320px;
-    }
-    .sw-visualStage{
-      position: relative;
-      border-radius: clamp(18px, 2.8vw, 26px);
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
-      border: 1px solid rgba(255,255,255,.14);
-      backdrop-filter: blur(16px);
-      overflow: hidden;
-      box-shadow: 0 28px 90px rgba(0,0,0,.44);
-      padding: 18px;
-    }
-    .sw-visualStage::before{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background:
-        radial-gradient(closest-side at 56% 44%, rgba(255,255,255,.12), transparent 66%),
-        conic-gradient(from 210deg, rgba(255,255,255,.08), transparent 72%, rgba(255,255,255,.10));
-      transform: rotate(6deg);
-      opacity: .75;
-      pointer-events:none;
-    }
-    .sw-stack{ display:flex; flex-direction: column; gap: 12px; }
-    .sw-footer{
-      background: #05070D;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: rgba(255,255,255,.70);
-      padding: 56px 0;
-    }
-    .sw-footer a{ color: rgba(255,255,255,.72); font-weight: 650; }
-    .sw-footer a:hover{ color: rgba(255,255,255,.94); }
-    .sw-footergrid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 22px;
-      padding-top: 18px;
-    }
-    .sw-footer h3{
-      margin:0 0 12px;
-      color: rgba(255,255,255,.92);
-      font-size: 13px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      font-weight: 800;
-      font-family: Inter, ui-sans-serif, system-ui;
-    }
-    .sw-footnote{
-      margin-top: 28px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,.10);
-      display:flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: 13.5px;
-      color: rgba(255,255,255,.56);
-    }
-
-    .sw-visualSvg{
-      width: 100%;
-      height: clamp(360px, 42vw, 520px);
-      display:block;
-      position: relative;
-      z-index: 2;
-    }
-
-    .fadeUp{
-      opacity: 0;
-      transform: translateY(10px);
-      animation: fadeUp .9s var(--ease) forwards;
-    }
-    .d1{ animation-delay: .06s; }
-    .d2{ animation-delay: .12s; }
-    .d3{ animation-delay: .18s; }
-    .d4{ animation-delay: .24s; }
-
-    @keyframes fadeUp{
-      to{ opacity: 1; transform: translateY(0); }
-    }
-    @keyframes floatIn{
-      to{ opacity: 1; transform: translateY(0); }
-    }
-    @keyframes bob{
-      0%,100%{ transform: translateY(0); }
-      50%{ transform: translateY(-10px); }
-    }
-
-    @media (min-width: 720px){
-      .sw-footergrid{ grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 18px; }
-    }
-    @media (min-width: 980px){
-      .sw-heroLayout{
-        grid-template-columns: 1.15fr .95fr;
-        gap: 28px;
-      }
-      .sw-heroVisual{ min-height: 520px; }
-    }
-    @media (prefers-reduced-motion: reduce){
-      html{ scroll-behavior: auto; }
-      *{ animation: none !important; transition: none !important; }
-    }
-  </style>
 </head>
 <body class="sw-shell">
   <a class="sw-skip" href="#main">Skip to main content</a>
@@ -526,21 +339,21 @@
           <p class="sw-sub">Send your website + service area. We’ll reply with a quick read on what you’re showing up for, what you’re missing, and the next 2–3 moves we’d execute first.</p>
         </div>
 
-        <div class="sw-cards" role="list" style="grid-template-columns: 1fr;">
+        <div class="sw-cards sw-cards--single" role="list">
           <article class="sw-card" role="listitem">
-            <h3 style="margin-top:0;">Book a strategy call</h3>
+            <h3>Book a strategy call</h3>
             <p>Tell us what you sell, where you operate, and what a “qualified lead” is worth to you. We’ll map the quickest path to compounding visibility.</p>
-            <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:14px;">
+            <div class="sw-actions sw-actions--tight">
               <a class="sw-btn primary" href="mailto:hello@skyward.agency?subject=Strategy%20Call%20%7C%20Skyward%20Works">Email to book</a>
               <a class="sw-btn ghost" href="mailto:hello@skyward.agency?subject=Visibility%20Snapshot%20%7C%20Skyward%20Works">Request a visibility snapshot</a>
             </div>
-            <p style="margin-top:14px; color: rgba(255,255,255,.62); font-weight:700;">Email: <a href="mailto:hello@skyward.agency" style="color: rgba(4,172,236,.95); font-weight:900; text-decoration: underline; text-underline-offset: 3px;">hello@skyward.agency</a></p>
+            <p class="sw-contactEmail">Email: <a href="mailto:hello@skyward.agency">hello@skyward.agency</a></p>
           </article>
         </div>
 
-        <div style="margin-top: 22px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.62);">
-          <div class="sw-eyebrow" style="margin-bottom: 8px;">Service area</div>
-          Serving North DFW: <a href="mckinney/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">McKinney</a>, <a href="frisco/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Frisco</a>, <a href="melissa/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Melissa</a>, <a href="anna/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Anna</a>, <a href="prosper/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Prosper</a>, <a href="allen/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Allen</a>, <a href="plano/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Plano</a>, <a href="celina/" style="color: rgba(4,172,236,.92); font-weight: 850; text-decoration: underline; text-underline-offset: 3px;">Celina</a>.
+        <div class="sw-serviceArea">
+          <div class="sw-eyebrow">Service area</div>
+          Serving North DFW: <a href="mckinney/">McKinney</a>, <a href="frisco/">Frisco</a>, <a href="melissa/">Melissa</a>, <a href="anna/">Anna</a>, <a href="prosper/">Prosper</a>, <a href="allen/">Allen</a>, <a href="plano/">Plano</a>, <a href="celina/">Celina</a>.
         </div>
       </div>
     </section>
