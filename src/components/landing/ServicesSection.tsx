@@ -9,6 +9,7 @@ const pillars = [
     id: "seo",
     label: "Local SEO",
     tagline: "Getting clearly on the map",
+    color: "blue" as const,
     description:
       "Google Business Profile optimization, local citations, review strategy, and service-area pages so you show up when neighbors search for what you do.",
     features: [
@@ -28,6 +29,7 @@ const pillars = [
     id: "web",
     label: "Web Design",
     tagline: "Turning visitors into calls",
+    color: "green" as const,
     description:
       "Fast, mobile-first sites built for conversion—not vanity. Clear calls-to-action, click-to-call, and forms that actually get filled out.",
     features: [
@@ -47,6 +49,7 @@ const pillars = [
     id: "google",
     label: "Google Stack",
     tagline: "Conversion tracking & infrastructure",
+    color: "blue" as const,
     description:
       "Analytics, Tag Manager, conversion tracking, and call attribution so you know exactly what's driving leads—not guessing from a vague monthly report.",
     features: [
@@ -66,23 +69,23 @@ const pillars = [
 export function ServicesSection() {
   const [active, setActive] = useState("seo");
   const current = pillars.find((p) => p.id === active)!;
+  const isBlue = current.color === "blue";
 
   return (
-    <Section id="services" label="What we manage for you" className="border-t border-zinc-800/40">
+    <Section id="services" label="What we manage for you" className="border-t border-slate-200/80">
       <Reveal>
-        <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-white md:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
           Operational infrastructure,{" "}
-          <span className="text-zinc-500">not marketing theater.</span>
+          <span className="text-slate-400">not marketing theater.</span>
         </h2>
-        <p className="mt-4 max-w-xl text-zinc-400">
+        <p className="mt-4 max-w-xl text-slate-600">
           Three pillars. One system. Everything connected so your online
           presence actually drives calls.
         </p>
       </Reveal>
 
       <div className="mt-12">
-        {/* Tab buttons */}
-        <div className="flex flex-col gap-2 sm:flex-row sm:gap-1">
+        <div className="flex flex-col gap-2 rounded-xl border border-slate-200 bg-white p-1.5 sm:flex-row sm:gap-1">
           {pillars.map((pillar) => (
             <button
               key={pillar.id}
@@ -90,14 +93,14 @@ export function ServicesSection() {
               onClick={() => setActive(pillar.id)}
               className={`relative rounded-lg px-5 py-3 text-left text-sm font-semibold transition-all duration-200 ${
                 active === pillar.id
-                  ? "text-zinc-950"
-                  : "text-zinc-400 hover:text-white"
+                  ? "text-white"
+                  : "text-slate-500 hover:text-slate-800"
               }`}
             >
               {active === pillar.id && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 rounded-lg bg-accent"
+                  className={`absolute inset-0 rounded-lg ${pillar.color === "blue" ? "bg-blue-brand" : "bg-green-brand"}`}
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
@@ -106,7 +109,6 @@ export function ServicesSection() {
           ))}
         </div>
 
-        {/* Bento content */}
         <AnimatePresence mode="wait">
           <motion.div
             key={active}
@@ -116,33 +118,41 @@ export function ServicesSection() {
             transition={{ duration: 0.3 }}
             className="mt-4 grid gap-4 md:grid-cols-5"
           >
-            <div className="glass-card accent-glow rounded-xl p-8 md:col-span-3">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl border border-accent/20 bg-accent/10 text-accent">
+            <div className={`glass-card rounded-xl p-8 md:col-span-3 ${isBlue ? "accent-glow" : "green-glow"}`}>
+              <div
+                className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl border ${
+                  isBlue
+                    ? "border-blue-brand/20 bg-blue-brand-muted text-blue-brand"
+                    : "border-green-brand/20 bg-green-brand-muted text-green-brand"
+                }`}
+              >
                 {current.icon}
               </div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+              <p
+                className={`text-xs font-semibold uppercase tracking-wider ${isBlue ? "text-blue-brand" : "text-green-brand"}`}
+              >
                 {current.tagline}
               </p>
-              <h3 className="mt-2 text-2xl font-bold text-white">
+              <h3 className="mt-2 text-2xl font-bold text-slate-900">
                 {current.label}
               </h3>
-              <p className="mt-3 leading-relaxed text-zinc-400">
+              <p className="mt-3 leading-relaxed text-slate-600">
                 {current.description}
               </p>
             </div>
 
             <div className="glass-card rounded-xl p-8 md:col-span-2">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-zinc-500">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-slate-400">
                 What&apos;s included
               </p>
               <ul className="space-y-3">
                 {current.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-start gap-3 text-sm text-zinc-300"
+                    className="flex items-start gap-3 text-sm text-slate-700"
                   >
                     <svg
-                      className="mt-0.5 shrink-0 text-accent"
+                      className={`mt-0.5 shrink-0 ${isBlue ? "text-blue-brand" : "text-green-brand"}`}
                       width="16"
                       height="16"
                       viewBox="0 0 24 24"

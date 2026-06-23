@@ -41,7 +41,7 @@ export function Section({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.5 }}
-            className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent"
+            className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-blue-brand"
           >
             {label}
           </motion.p>

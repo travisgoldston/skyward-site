@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="bg-zinc-950">
+      <main className="bg-surface-subtle">
         <HeroSection />
         <ProblemSection />
         <ServicesSection />

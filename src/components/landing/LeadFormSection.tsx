@@ -31,13 +31,13 @@ export function LeadFormSection() {
     <Section
       id="contact"
       label="Get started"
-      className="border-t border-zinc-800/40"
+      className="border-t border-slate-200/80 bg-white"
     >
       <Reveal>
-        <h2 className="max-w-xl text-3xl font-bold tracking-tight text-white md:text-4xl">
+        <h2 className="max-w-xl text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
           Let&apos;s see where you stand.
         </h2>
-        <p className="mt-4 text-zinc-400">
+        <p className="mt-4 text-slate-600">
           Answer a few quick questions. We&apos;ll review your visibility and
           follow up with honest feedback — no pitch deck required.
         </p>
@@ -47,15 +47,15 @@ export function LeadFormSection() {
         <div className="mx-auto mt-12 max-w-xl">
           {!isSuccess && (
             <div className="mb-8">
-              <div className="mb-2 flex justify-between text-xs text-zinc-500">
+              <div className="mb-2 flex justify-between text-xs text-slate-500">
                 <span>
                   Step {stepNumber} of {FORM_STEPS.length}
                 </span>
                 <span>{Math.round(progress)}%</span>
               </div>
-              <div className="h-1 overflow-hidden rounded-full bg-zinc-800">
+              <div className="h-1.5 overflow-hidden rounded-full bg-slate-200">
                 <motion.div
-                  className="h-full rounded-full bg-accent"
+                  className="progress-gradient h-full rounded-full"
                   animate={{ width: `${progress}%` }}
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                 />
@@ -63,7 +63,7 @@ export function LeadFormSection() {
             </div>
           )}
 
-          <div className="glass-card overflow-hidden rounded-2xl p-8 md:p-10">
+          <div className="glass-card rounded-2xl p-8 md:p-10">
             <AnimatePresence mode="wait" onExitComplete={onExitComplete}>
               {isSuccess ? (
                 <motion.div
@@ -89,7 +89,7 @@ export function LeadFormSection() {
                       type="button"
                       onClick={goBack}
                       disabled={!canGoBack || isTransitioning}
-                      className="text-sm text-zinc-500 transition-colors hover:text-white disabled:invisible"
+                      className="text-sm text-slate-400 transition-colors hover:text-slate-700 disabled:invisible"
                     >
                       ← Back
                     </button>
@@ -97,7 +97,7 @@ export function LeadFormSection() {
                       type="button"
                       onClick={goNext}
                       disabled={!canProceed || isTransitioning}
-                      className="rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-zinc-950 transition-all hover:bg-accent-hover disabled:cursor-not-allowed disabled:opacity-40 active:scale-[0.98]"
+                      className="rounded-lg bg-blue-brand px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-blue-brand-hover disabled:cursor-not-allowed disabled:opacity-40 active:scale-[0.98]"
                     >
                       {isLastStep ? "Submit" : "Continue"}
                     </button>

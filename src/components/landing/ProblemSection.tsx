@@ -43,20 +43,20 @@ const problems = [
 ];
 
 const statusColors = {
-  critical: "text-red-400 bg-red-400/10 border-red-400/20",
-  warning: "text-amber-400 bg-amber-400/10 border-amber-400/20",
-  neutral: "text-zinc-400 bg-zinc-400/10 border-zinc-400/20",
+  critical: "text-red-600 bg-red-50 border-red-200",
+  warning: "text-amber-600 bg-amber-50 border-amber-200",
+  neutral: "text-slate-500 bg-slate-100 border-slate-200",
 };
 
 export function ProblemSection() {
   return (
     <Section id="problem" label="Why this feels so hard">
       <Reveal>
-        <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-white md:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
           You&apos;re great at your work.{" "}
-          <span className="text-zinc-500">Online, you&apos;re invisible.</span>
+          <span className="text-slate-400">Online, you&apos;re invisible.</span>
         </h2>
-        <p className="mt-4 max-w-xl text-zinc-400">
+        <p className="mt-4 max-w-xl text-slate-600">
           Most agencies sell clicks. The real problem is your business lacks the
           infrastructure to be found, trusted, and called.
         </p>
@@ -71,7 +71,7 @@ export function ProblemSection() {
               className="glass-card group relative overflow-hidden rounded-xl p-6"
             >
               <div className="mb-4 flex items-center justify-between">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-900 text-zinc-400 transition-colors group-hover:border-accent/30 group-hover:text-accent">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-surface-subtle text-slate-500 transition-colors group-hover:border-blue-brand/30 group-hover:text-blue-brand">
                   {problem.icon}
                 </div>
                 <span
@@ -80,16 +80,16 @@ export function ProblemSection() {
                   {problem.metric}
                 </span>
               </div>
-              <h3 className="text-base font-semibold text-white">
+              <h3 className="text-base font-semibold text-slate-900">
                 {problem.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+              <p className="mt-2 text-sm leading-relaxed text-slate-500">
                 {problem.description}
               </p>
-              <div className="mt-4 h-px w-full bg-gradient-to-r from-zinc-700 to-transparent" />
+              <div className="mt-4 h-px w-full bg-gradient-to-r from-slate-200 to-transparent" />
               <div className="mt-3 flex items-center gap-2">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-400/80" />
-                <span className="text-[11px] font-medium uppercase tracking-wider text-zinc-600">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-400" />
+                <span className="text-[11px] font-medium uppercase tracking-wider text-slate-400">
                   Needs attention
                 </span>
               </div>

@@ -41,33 +41,37 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <Section id="faq" label="FAQ" className="border-t border-zinc-800/40">
+    <Section id="faq" label="FAQ" className="border-t border-slate-200/80">
       <Reveal>
-        <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+        <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
           Straight answers.
         </h2>
-        <p className="mt-4 text-zinc-400">
+        <p className="mt-4 text-slate-600">
           No fine print. No jargon. Just what you need to know.
         </p>
       </Reveal>
 
-      <div className="mt-10 divide-y divide-zinc-800 border-y border-zinc-800">
+      <div className="mt-10 divide-y divide-slate-200 border-y border-slate-200">
         {faqs.map((faq, i) => (
           <Reveal key={faq.question} delay={i * 0.05}>
             <div>
               <button
                 type="button"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors hover:text-accent"
+                className="flex w-full items-center justify-between gap-4 py-5 text-left transition-colors hover:text-blue-brand"
                 aria-expanded={openIndex === i}
               >
-                <span className="text-sm font-semibold text-white md:text-base">
+                <span className="text-sm font-semibold text-slate-900 md:text-base">
                   {faq.question}
                 </span>
                 <motion.span
                   animate={{ rotate: openIndex === i ? 45 : 0 }}
                   transition={{ duration: 0.2 }}
-                  className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-zinc-700 text-zinc-400"
+                  className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border ${
+                    openIndex === i
+                      ? "border-blue-brand bg-blue-brand-muted text-blue-brand"
+                      : "border-slate-200 text-slate-400"
+                  }`}
                 >
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                     <path d="M12 5v14M5 12h14" />
@@ -83,7 +87,7 @@ export function FAQSection() {
                     transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
-                    <p className="pb-5 text-sm leading-relaxed text-zinc-400">
+                    <p className="pb-5 text-sm leading-relaxed text-slate-600">
                       {faq.answer}
                     </p>
                   </motion.div>

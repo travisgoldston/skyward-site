@@ -16,11 +16,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-zinc-800/60 bg-zinc-950/80 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <Link
           href="/"
-          className="text-sm font-bold tracking-tight text-white md:text-base"
+          className="text-sm font-bold tracking-tight text-slate-900 md:text-base"
         >
           Skyward Works
         </Link>
@@ -30,7 +30,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-zinc-400 transition-colors hover:text-white"
+              className="text-sm text-slate-500 transition-colors hover:text-blue-brand"
             >
               {link.label}
             </Link>
@@ -42,7 +42,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex items-center gap-2 rounded-lg border border-zinc-800 px-3 py-2 text-sm text-zinc-300 md:hidden"
+          className="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm text-slate-600 md:hidden"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label="Toggle menu"
@@ -73,7 +73,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-zinc-800/60 md:hidden"
+            className="overflow-hidden border-t border-slate-200/80 md:hidden"
           >
             <nav className="flex flex-col gap-1 px-5 py-4" aria-label="Mobile">
               {navLinks.map((link) => (
@@ -81,7 +81,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm text-zinc-300 hover:bg-zinc-900"
+                  className="rounded-lg px-3 py-2.5 text-sm text-slate-600 hover:bg-surface-subtle"
                 >
                   {link.label}
                 </Link>
@@ -89,7 +89,7 @@ export function Header() {
               <Link
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 rounded-lg bg-accent px-3 py-2.5 text-center text-sm font-semibold text-zinc-950"
+                className="mt-2 rounded-lg bg-blue-brand px-3 py-2.5 text-center text-sm font-semibold text-white"
               >
                 Book a Call
               </Link>

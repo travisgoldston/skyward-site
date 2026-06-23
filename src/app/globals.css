@@ -1,11 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #c9a227;
-  --color-accent-hover: #dbb84a;
-  --color-accent-muted: #c9a22733;
-  --color-surface: #18181b;
-  --color-surface-elevated: #1f1f23;
+  --color-blue-brand: #04acec;
+  --color-blue-brand-hover: #0390c8;
+  --color-blue-brand-muted: #04acec1a;
+  --color-green-brand: #3cb44c;
+  --color-green-brand-hover: #2fa03d;
+  --color-green-brand-muted: #3cb44c1a;
+  --color-accent: #04acec;
+  --color-accent-hover: #0390c8;
+  --color-accent-secondary: #3cb44c;
+  --color-accent-secondary-hover: #2fa03d;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f0f6fa;
+  --color-surface-muted: #e8f2f8;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -14,38 +22,51 @@ html {
 }
 
 body {
-  background-color: #09090b;
-  color: #fafafa;
+  background-color: #f5f9fb;
+  color: #0f172a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: #c9a22740;
-  color: #fafafa;
+  background-color: #04acec30;
+  color: #0f172a;
 }
 
 .glass-card {
-  background: linear-gradient(
-    135deg,
-    rgba(24, 24, 27, 0.85) 0%,
-    rgba(24, 24, 27, 0.55) 100%
-  );
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(63, 63, 70, 0.6);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 1px 3px rgba(15, 23, 42, 0.04),
+    0 4px 16px rgba(4, 172, 236, 0.04);
 }
 
 .glass-card:hover {
-  border-color: rgba(113, 113, 122, 0.5);
+  border-color: #cbd5e1;
+  box-shadow:
+    0 1px 3px rgba(15, 23, 42, 0.06),
+    0 8px 24px rgba(4, 172, 236, 0.08);
 }
 
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(63, 63, 70, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(63, 63, 70, 0.15) 1px, transparent 1px);
+    linear-gradient(rgba(4, 172, 236, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(4, 172, 236, 0.06) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
 .accent-glow {
-  box-shadow: 0 0 60px -12px rgba(201, 162, 39, 0.25);
+  box-shadow:
+    0 0 0 1px rgba(4, 172, 236, 0.12),
+    0 8px 32px -8px rgba(4, 172, 236, 0.18);
+}
+
+.green-glow {
+  box-shadow:
+    0 0 0 1px rgba(60, 180, 76, 0.15),
+    0 8px 32px -8px rgba(60, 180, 76, 0.2);
+}
+
+.progress-gradient {
+  background: linear-gradient(90deg, #04acec 0%, #3cb44c 100%);
 }

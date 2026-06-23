@@ -23,35 +23,35 @@ export function TransformationSection() {
     <Section
       id="transformation"
       label="The transformation"
-      className="border-t border-zinc-800/40"
+      className="border-t border-slate-200/80"
     >
       <Reveal>
-        <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-white md:text-4xl">
+        <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
           What changes when the infrastructure is in place.
         </h2>
       </Reveal>
 
       <div className="mt-12 grid gap-4 md:grid-cols-2">
         <Reveal delay={0.1}>
-          <div className="glass-card h-full rounded-xl border-red-900/20 p-8">
+          <div className="glass-card h-full rounded-xl border-red-100 p-8">
             <div className="mb-6 flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-red-500/10 text-xs font-bold text-red-400">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-red-50 text-xs font-bold text-red-500">
                 ✕
               </span>
-              <p className="text-xs font-semibold uppercase tracking-wider text-red-400">
+              <p className="text-xs font-semibold uppercase tracking-wider text-red-500">
                 Before
               </p>
             </div>
-            <p className="text-lg font-medium leading-relaxed text-zinc-300">
+            <p className="text-lg font-medium leading-relaxed text-slate-700">
               Some weeks packed, others silent. Marketing feels like a black box.
             </p>
             <ul className="mt-6 space-y-3">
               {beforeItems.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 text-sm text-zinc-500"
+                  className="flex items-start gap-3 text-sm text-slate-500"
                 >
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-red-400/60" />
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-red-300" />
                   {item}
                 </li>
               ))}
@@ -60,16 +60,16 @@ export function TransformationSection() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <div className="glass-card accent-glow h-full rounded-xl border-accent/20 p-8">
+          <div className="glass-card green-glow h-full rounded-xl border-green-brand/20 p-8">
             <div className="mb-6 flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent/10 text-xs font-bold text-accent">
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-green-brand-muted text-xs font-bold text-green-brand">
                 ✓
               </span>
-              <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+              <p className="text-xs font-semibold uppercase tracking-wider text-green-brand">
                 After
               </p>
             </div>
-            <p className="text-lg font-medium leading-relaxed text-white">
+            <p className="text-lg font-medium leading-relaxed text-slate-900">
               Steady demand. Clear view of what&apos;s working. More time for the
               business.
             </p>
@@ -77,10 +77,10 @@ export function TransformationSection() {
               {afterItems.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 text-sm text-zinc-300"
+                  className="flex items-start gap-3 text-sm text-slate-700"
                 >
                   <svg
-                    className="mt-0.5 shrink-0 text-accent"
+                    className="mt-0.5 shrink-0 text-green-brand"
                     width="14"
                     height="14"
                     viewBox="0 0 24 24"
