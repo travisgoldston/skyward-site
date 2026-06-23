@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #c9a227;
+  --color-accent-hover: #dbb84a;
+  --color-accent-muted: #c9a22733;
+  --color-surface: #18181b;
+  --color-surface-elevated: #1f1f23;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #09090b;
+  color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #c9a22740;
+  color: #fafafa;
+}
+
+.glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(24, 24, 27, 0.85) 0%,
+    rgba(24, 24, 27, 0.55) 100%
+  );
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(63, 63, 70, 0.6);
+}
+
+.glass-card:hover {
+  border-color: rgba(113, 113, 122, 0.5);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(63, 63, 70, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63, 63, 70, 0.15) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.accent-glow {
+  box-shadow: 0 0 60px -12px rgba(201, 162, 39, 0.25);
+}
