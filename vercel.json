@@ -1,5 +1,27 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "npm run build",
-  "installCommand": "npm ci"
+  "outputDirectory": "out",
+  "rewrites": [
+    { "source": "/ai-assisted-precision", "destination": "/ai-assisted-precision.html" },
+    { "source": "/brand-strategy", "destination": "/brand-strategy.html" },
+    { "source": "/case-study", "destination": "/case-study.html" },
+    { "source": "/content-creation", "destination": "/content-creation.html" },
+    { "source": "/data-driven-velocity", "destination": "/data-driven-velocity.html" },
+    { "source": "/google-ads", "destination": "/google-ads.html" },
+    { "source": "/meta-ads", "destination": "/meta-ads.html" },
+    { "source": "/performance-marketing", "destination": "/performance-marketing.html" },
+    { "source": "/seo", "destination": "/seo.html" },
+    { "source": "/services", "destination": "/services.html" },
+    { "source": "/web-design", "destination": "/web-design.html" },
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/allen", "destination": "/allen/index.html" },
+    { "source": "/anna", "destination": "/anna/index.html" },
+    { "source": "/celina", "destination": "/celina/index.html" },
+    { "source": "/frisco", "destination": "/frisco/index.html" },
+    { "source": "/mckinney", "destination": "/mckinney/index.html" },
+    { "source": "/melissa", "destination": "/melissa/index.html" },
+    { "source": "/plano", "destination": "/plano/index.html" },
+    { "source": "/prosper", "destination": "/prosper/index.html" }
+  ]
 }
