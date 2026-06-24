@@ -17,50 +17,59 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-        <Logo />
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-100 bg-white">
+      <div className="mx-auto grid max-w-6xl grid-cols-[1fr_auto_1fr] items-center gap-4 px-5 py-3.5">
+        <Logo className="justify-self-start" />
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav
+          className="hidden items-center justify-center gap-8 md:flex"
+          aria-label="Primary"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-dusk-gray transition-colors hover:text-skyward-blue"
+              className="text-sm font-medium text-dusk-gray transition-colors hover:text-skyward-blue"
             >
               {link.label}
             </Link>
           ))}
-          <Button href="#contact" className="!px-5 !py-2.5 !text-sm">
-            Get a Quote
-          </Button>
         </nav>
 
-        <button
-          type="button"
-          className="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm text-dusk-gray md:hidden"
-          onClick={() => setOpen(!open)}
-          aria-expanded={open}
-          aria-label="Toggle menu"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            aria-hidden
+        <div className="flex items-center justify-end gap-3">
+          <Button
+            href="#contact"
+            className="hidden !px-5 !py-2.5 !text-sm md:inline-flex"
           >
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" />
-            ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-          Menu
-        </button>
+            Get a Quote
+          </Button>
+
+          <button
+            type="button"
+            className="flex items-center gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm text-dusk-gray md:hidden"
+            onClick={() => setOpen(!open)}
+            aria-expanded={open}
+            aria-label="Toggle menu"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              aria-hidden
+            >
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+            Menu
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>

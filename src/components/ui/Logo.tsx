@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronIcon } from "./ChevronIcon";
+import { BrandMark } from "./BrandMark";
 
 interface LogoProps {
   variant?: "dark" | "light";
@@ -17,19 +17,13 @@ export function Logo({
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-2.5 ${className}`}
+      className={`inline-flex items-center gap-3 ${className}`}
       aria-label="Skyward Works home"
     >
-      <span
-        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-sm ${
-          isLight ? "bg-white/15 text-white" : "bg-skyward-blue text-white"
-        }`}
-      >
-        <ChevronIcon size={18} />
-      </span>
+      <BrandMark size={40} className="shrink-0" />
       {showWordmark && (
         <span
-          className={`font-display text-sm font-bold tracking-tight md:text-base ${
+          className={`font-display text-[15px] font-bold tracking-tight md:text-base ${
             isLight ? "text-white" : "text-deep-horizon"
           }`}
         >

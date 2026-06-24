@@ -8,7 +8,7 @@ import { HeroMockup } from "./HeroMockup";
 export function HeroSection() {
   return (
     <section aria-label="Hero" className="px-4 pb-4 pt-24 md:px-6 md:pt-28">
-      <div className="hero-gradient relative mx-auto max-w-6xl overflow-hidden rounded-3xl px-6 py-14 md:px-12 md:py-20 lg:overflow-visible">
+      <div className="hero-gradient relative mx-auto max-w-6xl overflow-hidden rounded-3xl px-6 py-14 md:px-10 md:py-16 lg:px-12 lg:py-20">
         <div className="pointer-events-none absolute -right-20 -top-20 h-80 w-80 rounded-full bg-cloud-cyan/20 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-10 -left-10 h-60 w-60 rounded-full bg-white/5 blur-2xl" />
 
@@ -61,7 +61,7 @@ export function HeroSection() {
 
           <motion.div
             variants={fadeUp}
-            className="relative flex items-center justify-center lg:justify-end"
+            className="relative mt-4 flex items-center justify-center pb-6 lg:mt-0 lg:justify-end lg:pb-0"
           >
             <HeroMockup />
           </motion.div>
