@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Section, Reveal } from "@/components/ui/Section";
+import { ChevronIcon } from "@/components/ui/ChevronIcon";
 
 const messages = [
   {
@@ -66,8 +67,8 @@ export function DifferentiatorSection() {
           <div className="mx-auto max-w-sm">
             <div className="glass-card overflow-hidden rounded-2xl">
               <div className="flex items-center gap-3 border-b border-slate-100 px-5 py-4">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-skyward-blue text-xs font-bold text-white">
-                  SW
+                <div className="flex h-9 w-9 items-center justify-center rounded-sm bg-skyward-blue text-white">
+                  <ChevronIcon size={16} />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-deep-horizon">
