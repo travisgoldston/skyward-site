@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,10 +8,16 @@ const inter = Inter({
   display: "swap",
 });
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Skyward Works | Get found on Google. Get more calls.",
+  title: "Skyward Works | Rise above the noise.",
   description:
-    "We build digital infrastructure for local businesses across North Texas so your phone rings and your calendar fills.",
+    "Local SEO, conversion-ready websites, and the Google stack for North Texas service businesses. Clear systems. Real results. No fluff.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -23,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

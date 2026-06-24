@@ -10,14 +10,14 @@ interface LeadFormStepProps {
 export function LeadFormStep({ machine }: LeadFormStepProps) {
   const { currentStep, data, setField } = machine;
   const inputClass =
-    "w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-900 placeholder:text-slate-400 outline-none transition-colors focus:border-blue-brand/50 focus:ring-2 focus:ring-blue-brand/15";
+    "w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-deep-horizon placeholder:text-dusk-gray-light outline-none transition-colors focus:border-skyward-blue/50 focus:ring-2 focus:ring-skyward-blue/10";
 
   return (
     <>
-      <h3 className="text-xl font-bold text-slate-900 md:text-2xl">
+      <h3 className="font-display text-xl font-bold text-deep-horizon md:text-2xl">
         {currentStep.title}
       </h3>
-      <p className="mt-2 text-sm text-slate-500">{currentStep.subtitle}</p>
+      <p className="mt-2 text-sm text-dusk-gray">{currentStep.subtitle}</p>
 
       <div className="mt-6">
         {currentStep.type === "text" && currentStep.field !== "contact" && (
@@ -52,7 +52,7 @@ export function LeadFormStep({ machine }: LeadFormStepProps) {
             <div>
               <label
                 htmlFor="lead-email"
-                className="mb-1.5 block text-xs font-medium text-slate-500"
+                className="mb-1.5 block text-xs font-medium text-dusk-gray"
               >
                 Email
               </label>
@@ -72,7 +72,7 @@ export function LeadFormStep({ machine }: LeadFormStepProps) {
             <div>
               <label
                 htmlFor="lead-phone"
-                className="mb-1.5 block text-xs font-medium text-slate-500"
+                className="mb-1.5 block text-xs font-medium text-dusk-gray"
               >
                 Phone
               </label>
@@ -100,8 +100,8 @@ export function LeadFormStep({ machine }: LeadFormStepProps) {
                 onClick={() => setField("businessType", type)}
                 className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all ${
                   data.businessType === type
-                    ? "border-green-brand bg-green-brand-muted text-green-brand"
-                    : "border-slate-200 text-slate-500 hover:border-blue-brand/40 hover:text-blue-brand"
+                    ? "border-skyward-blue bg-skyward-blue-muted text-skyward-blue"
+                    : "border-slate-200 text-dusk-gray hover:border-skyward-blue/40 hover:text-skyward-blue"
                 }`}
               >
                 {type}

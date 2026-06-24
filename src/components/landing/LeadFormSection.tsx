@@ -31,15 +31,15 @@ export function LeadFormSection() {
     <Section
       id="contact"
       label="Get started"
-      className="border-t border-slate-200/80 bg-white"
+      className="border-t border-slate-100 bg-white"
     >
       <Reveal>
-        <h2 className="max-w-xl text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-          Let&apos;s see where you stand.
+        <h2 className="font-display max-w-xl text-3xl font-bold tracking-tight text-deep-horizon md:text-4xl">
+          Let&apos;s talk about your business.
         </h2>
-        <p className="mt-4 text-slate-600">
-          Answer a few quick questions. We&apos;ll review your visibility and
-          follow up with honest feedback — no pitch deck required.
+        <p className="mt-4 text-dusk-gray">
+          A few quick questions. We&apos;ll review your visibility and follow up
+          with honest feedback.
         </p>
       </Reveal>
 
@@ -47,13 +47,13 @@ export function LeadFormSection() {
         <div className="mx-auto mt-12 max-w-xl">
           {!isSuccess && (
             <div className="mb-8">
-              <div className="mb-2 flex justify-between text-xs text-slate-500">
+              <div className="mb-2 flex justify-between text-xs text-dusk-gray-light">
                 <span>
                   Step {stepNumber} of {FORM_STEPS.length}
                 </span>
                 <span>{Math.round(progress)}%</span>
               </div>
-              <div className="h-1.5 overflow-hidden rounded-full bg-slate-200">
+              <div className="h-1.5 overflow-hidden rounded-full bg-slate-100">
                 <motion.div
                   className="progress-gradient h-full rounded-full"
                   animate={{ width: `${progress}%` }}
@@ -89,7 +89,7 @@ export function LeadFormSection() {
                       type="button"
                       onClick={goBack}
                       disabled={!canGoBack || isTransitioning}
-                      className="text-sm text-slate-400 transition-colors hover:text-slate-700 disabled:invisible"
+                      className="text-sm text-dusk-gray-light transition-colors hover:text-deep-horizon disabled:invisible"
                     >
                       ← Back
                     </button>
@@ -97,7 +97,7 @@ export function LeadFormSection() {
                       type="button"
                       onClick={goNext}
                       disabled={!canProceed || isTransitioning}
-                      className="rounded-lg bg-blue-brand px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-blue-brand-hover disabled:cursor-not-allowed disabled:opacity-40 active:scale-[0.98]"
+                      className="rounded-full bg-skyward-blue px-6 py-2.5 text-sm font-semibold text-white transition-all hover:bg-skyward-blue-hover disabled:cursor-not-allowed disabled:opacity-40 active:scale-[0.98]"
                     >
                       {isLastStep ? "Submit" : "Continue"}
                     </button>

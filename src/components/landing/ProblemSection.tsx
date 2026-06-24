@@ -5,94 +5,71 @@ import { Section, Reveal } from "@/components/ui/Section";
 
 const problems = [
   {
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-      </svg>
-    ),
-    title: "Quiet phones",
+    title: "The phone goes quiet",
     description:
-      "You do great work. But some weeks the phone barely rings, and you can't figure out why.",
+      "You do solid work. But some weeks the calls just stop — and you can't tell why.",
     metric: "0–2 calls/week",
-    status: "critical",
+    status: "critical" as const,
   },
   {
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-        <path d="M3 3v18h18M7 16l4-8 4 4 5-8" />
-      </svg>
-    ),
-    title: "Competitors outranking you",
+    title: "Competitors rank above you",
     description:
-      "Search your service in your town. They're on the map. You're buried on page two—or not there at all.",
+      "Search your service in your town. They're on the map. You're on page two — or nowhere.",
     metric: "Page 2+",
-    status: "warning",
+    status: "warning" as const,
   },
   {
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-      </svg>
-    ),
-    title: "Tired of empty sales pitches",
+    title: "Marketing feels like guesswork",
     description:
-      "Agencies promise the moon, send reports full of jargon, and your business still feels invisible online.",
+      "You've heard the pitches. Paid for the reports. Still don't know what's actually working.",
     metric: "No clarity",
-    status: "neutral",
+    status: "neutral" as const,
   },
 ];
 
 const statusColors = {
   critical: "text-red-600 bg-red-50 border-red-200",
   warning: "text-amber-600 bg-amber-50 border-amber-200",
-  neutral: "text-slate-500 bg-slate-100 border-slate-200",
+  neutral: "text-dusk-gray bg-surface-subtle border-slate-200",
 };
 
 export function ProblemSection() {
   return (
-    <Section id="problem" label="Why this feels so hard">
+    <Section
+      id="problem"
+      label="Sound familiar?"
+      className="border-t border-slate-100 bg-surface-subtle"
+    >
       <Reveal>
-        <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-          You&apos;re great at your work.{" "}
-          <span className="text-slate-400">Online, you&apos;re invisible.</span>
+        <h2 className="font-display max-w-2xl text-3xl font-bold tracking-tight text-deep-horizon md:text-4xl">
+          You&apos;re great at the work.{" "}
+          <span className="text-dusk-gray">Online, you&apos;re hard to find.</span>
         </h2>
-        <p className="mt-4 max-w-xl text-slate-600">
-          Most agencies sell clicks. The real problem is your business lacks the
-          infrastructure to be found, trusted, and called.
+        <p className="mt-4 max-w-xl text-dusk-gray">
+          Most agencies sell noise. The real issue is missing infrastructure —
+          the systems that get you found, trusted, and called.
         </p>
       </Reveal>
 
-      <div className="mt-12 grid gap-4 md:grid-cols-3">
+      <div className="mt-12 grid gap-5 md:grid-cols-3">
         {problems.map((problem, i) => (
           <Reveal key={problem.title} delay={i * 0.1}>
             <motion.div
               whileHover={{ y: -4 }}
               transition={{ duration: 0.2 }}
-              className="glass-card group relative overflow-hidden rounded-xl p-6"
+              className="glass-card rounded-2xl p-6"
             >
-              <div className="mb-4 flex items-center justify-between">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-surface-subtle text-slate-500 transition-colors group-hover:border-blue-brand/30 group-hover:text-blue-brand">
-                  {problem.icon}
-                </div>
-                <span
-                  className={`rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${statusColors[problem.status as keyof typeof statusColors]}`}
-                >
-                  {problem.metric}
-                </span>
-              </div>
-              <h3 className="text-base font-semibold text-slate-900">
+              <span
+                className={`inline-block rounded-full border px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider ${statusColors[problem.status]}`}
+              >
+                {problem.metric}
+              </span>
+              <h3 className="mt-4 font-display text-base font-bold text-deep-horizon">
                 {problem.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-500">
+              <p className="mt-2 text-sm leading-relaxed text-dusk-gray">
                 {problem.description}
               </p>
-              <div className="mt-4 h-px w-full bg-gradient-to-r from-slate-200 to-transparent" />
-              <div className="mt-3 flex items-center gap-2">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-400" />
-                <span className="text-[11px] font-medium uppercase tracking-wider text-slate-400">
-                  Needs attention
-                </span>
-              </div>
             </motion.div>
           </Reveal>
         ))}

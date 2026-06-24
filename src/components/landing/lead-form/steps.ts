@@ -19,8 +19,8 @@ export const FORM_STEPS: StepConfig[] = [
   },
   {
     id: "frustration",
-    title: "What's your biggest marketing frustration?",
-    subtitle: "Be honest. This helps us prepare for your call.",
+    title: "What's getting in the way?",
+    subtitle: "Be honest — it helps us prepare for your call.",
     field: "frustration",
     type: "textarea",
     placeholder:

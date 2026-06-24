@@ -7,29 +7,26 @@ const principles = [
   {
     title: "Not the cheapest",
     description:
-      "Cheap SEO and template sites cost you more in missed calls. We price for work that actually moves the needle.",
-    color: "blue" as const,
+      "Cheap SEO costs more in missed calls. We price for work that moves the needle.",
   },
   {
     title: "Not locked in",
     description:
-      "Month-to-month after setup. If it's not working, you shouldn't be trapped in a 12-month contract.",
-    color: "green" as const,
+      "Month-to-month after setup. If it's not working, you shouldn't be stuck.",
   },
   {
     title: "Built to feel fair",
     description:
-      "You know what you're paying for, what we're doing, and what changed each month. No surprise invoices.",
-    color: "blue" as const,
+      "You know what you're paying for and what changed each month. No surprises.",
   },
 ];
 
 const includes = [
-  "Local SEO & Google Business Profile management",
+  "Local SEO & Google Business Profile",
   "Website hosting, updates & maintenance",
   "Google Analytics & conversion tracking",
-  "Monthly plain-English performance update",
-  "Direct access — no account manager layer",
+  "Monthly plain-English update",
+  "Direct access — no middleman",
 ];
 
 export function PricingSection() {
@@ -37,29 +34,29 @@ export function PricingSection() {
     <Section
       id="pricing"
       label="Investment"
-      className="border-t border-slate-200/80"
+      className="border-t border-slate-100 bg-white"
     >
       <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
         <Reveal>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
-            Not the cheapest. Not locked in.{" "}
-            <span className="text-slate-400">Built to feel fair.</span>
+          <h2 className="font-display text-3xl font-bold tracking-tight text-deep-horizon md:text-4xl">
+            Straightforward pricing.{" "}
+            <span className="text-dusk-gray">No lock-ins.</span>
           </h2>
-          <p className="mt-4 leading-relaxed text-slate-600">
-            Every business is different. Setup depends on where you&apos;re
-            starting from. Ongoing management is straightforward.
+          <p className="mt-4 leading-relaxed text-dusk-gray">
+            Every business starts somewhere different. Setup depends on where you
+            are today. Ongoing management is simple.
           </p>
 
           <div className="mt-8 space-y-4">
             {principles.map((item) => (
               <div
                 key={item.title}
-                className={`border-l-2 pl-4 ${item.color === "blue" ? "border-blue-brand/50" : "border-green-brand/50"}`}
+                className="border-l-2 border-skyward-blue/40 pl-4"
               >
-                <p className="font-semibold text-slate-900">{item.title}</p>
-                <p className="mt-1 text-sm text-slate-500">
-                  {item.description}
+                <p className="font-display font-semibold text-deep-horizon">
+                  {item.title}
                 </p>
+                <p className="mt-1 text-sm text-dusk-gray">{item.description}</p>
               </div>
             ))}
           </div>
@@ -67,34 +64,31 @@ export function PricingSection() {
 
         <Reveal delay={0.15}>
           <div className="glass-card accent-glow rounded-2xl p-8">
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+            <p className="text-xs font-semibold uppercase tracking-wider text-dusk-gray-light">
               Starting range
             </p>
             <div className="mt-3 flex items-baseline gap-1">
-              <span className="text-4xl font-bold text-blue-brand md:text-5xl">
+              <span className="font-display text-4xl font-bold text-skyward-blue md:text-5xl">
                 $650
               </span>
-              <span className="text-lg text-slate-400">to</span>
-              <span className="text-4xl font-bold text-green-brand md:text-5xl">
+              <span className="text-lg text-dusk-gray-light">to</span>
+              <span className="font-display text-4xl font-bold text-deep-horizon md:text-5xl">
                 $900
               </span>
-              <span className="text-sm text-slate-500">/mo</span>
+              <span className="text-sm text-dusk-gray">/mo</span>
             </div>
-            <p className="mt-2 text-sm text-slate-500">after setup</p>
+            <p className="mt-2 text-sm text-dusk-gray">after setup</p>
 
-            <div className="my-6 h-px bg-slate-200" />
+            <div className="my-6 h-px bg-slate-100" />
 
-            <p className="mb-4 text-xs font-semibold uppercase tracking-wider text-slate-400">
-              Typical engagement includes
-            </p>
             <ul className="space-y-3">
               {includes.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-3 text-sm text-slate-700"
+                  className="flex items-start gap-3 text-sm text-deep-horizon"
                 >
                   <svg
-                    className="mt-0.5 shrink-0 text-green-brand"
+                    className="mt-0.5 shrink-0 text-skyward-blue"
                     width="14"
                     height="14"
                     viewBox="0 0 24 24"
@@ -110,19 +104,19 @@ export function PricingSection() {
               ))}
             </ul>
 
-            <div className="mt-8 rounded-lg border border-slate-200 bg-surface-subtle p-4">
-              <p className="text-xs text-slate-500">
+            <div className="mt-8 rounded-xl bg-surface-subtle p-4">
+              <p className="text-xs text-dusk-gray">
                 One-time setup typically runs{" "}
-                <span className="font-semibold text-slate-700">
+                <span className="font-semibold text-deep-horizon">
                   $1,500–$3,500
                 </span>{" "}
-                depending on current site condition, competition level, and
-                scope. We&apos;ll give you an exact number on the strategy call.
+                depending on scope. We&apos;ll give you an exact number on the
+                consultation call.
               </p>
             </div>
 
             <Button href="#contact" className="mt-6 w-full text-center">
-              Book a Strategy Call
+              Get a Free Consultation
             </Button>
           </div>
         </Reveal>
